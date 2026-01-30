@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -65,10 +67,7 @@ export function HeroSection() {
       <div className="relative container mx-auto px-4 sm:px-6 py-24 lg:py-32 z-10">
         <div className="max-w-5xl mx-auto">
           {/* Location Badge */}
-          <div 
-            className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-5 py-2.5 mb-8 hover:bg-white/10 transition-all duration-300"
-            style={{ animationDelay: '0.1s' }}
-          >
+          <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-5 py-2.5 mb-8 hover:bg-white/10 transition-all duration-300">
             <MapPin className="h-4 w-4 text-amber-400" />
             <span className="text-sm font-medium text-zinc-200">
               Harare • Bulawayo • Masvingo • Waterfalls
@@ -76,40 +75,28 @@ export function HeroSection() {
           </div>
 
           {/* Main Headline - Extra Bold & Large */}
-          <h1 
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-8 tracking-tight"
-            style={{ 
-              animationDelay: '0.2s',
-              fontFamily: "'Outfit', 'Inter', sans-serif"
-            }}
-          >
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-8 tracking-tight">
             <span className="block text-white">
               Building Better
             </span>
-            <span className="block bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 bg-clip-text text-transparent animate-gradient">
+            <span className="block bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite]">
               Homes.
             </span>
             <span className="block mt-2 text-white">
               Feeding Better
             </span>
-            <span className="block bg-gradient-to-r from-red-500 via-red-400 to-orange-500 bg-clip-text text-transparent animate-gradient [animation-delay:0.5s]">
+            <span className="block bg-gradient-to-r from-red-500 via-red-400 to-orange-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite] [animation-delay:0.5s]">
               Lives.
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p 
-            className="text-xl sm:text-2xl text-zinc-300 mb-12 max-w-3xl leading-relaxed font-light"
-            style={{ animationDelay: '0.3s' }}
-          >
+          <p className="text-xl sm:text-2xl text-zinc-300 mb-12 max-w-3xl leading-relaxed font-light">
             Zimbabwe's most trusted partner for <strong className="font-semibold text-amber-300">quality renovations</strong> and <strong className="font-semibold text-red-400">premium farm-to-table meats</strong>
           </p>
 
           {/* CTA Buttons */}
-          <div 
-            className="flex flex-col sm:flex-row gap-4 mb-16"
-            style={{ animationDelay: '0.4s' }}
-          >
+          <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <Link href="/quote" className="group">
               <div className="relative overflow-hidden rounded-2xl">
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 opacity-100 group-hover:opacity-90 transition-opacity" />
@@ -134,10 +121,7 @@ export function HeroSection() {
           </div>
 
           {/* Trust Indicators - Enhanced */}
-          <div 
-            className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl"
-            style={{ animationDelay: '0.5s' }}
-          >
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl">
             <div className="flex flex-col gap-2 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
               <Award className="h-8 w-8 text-amber-400 mb-1" />
               <div className="text-3xl font-black text-white">500+</div>
@@ -172,25 +156,6 @@ export function HeroSection() {
           <div className="w-1.5 h-1.5 bg-amber-400 rounded-full" />
         </div>
       </div>
-
-      {/* CSS for gradient animation */}
-      <style jsx>{`
-        @keyframes gradient {
-          0%, 100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-        
-        .animate-gradient {
-          background-size: 200% auto;
-          animation: gradient 3s ease infinite;
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap');
-      `}</style>
     </section>
   )
 }
