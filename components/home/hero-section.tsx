@@ -1,109 +1,196 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { MapPin, ArrowRight } from "lucide-react"
+import { MapPin, ArrowRight, Hammer, Beef, CheckCircle2, Award, Users, Clock } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center">
-      {/* Background Images - Split Design */}
-      <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
-        <div className="relative">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-zinc-950">
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-20" />
+      
+      {/* Gradient Orbs */}
+      <div className="absolute top-0 -left-48 w-96 h-96 bg-amber-500/20 rounded-full blur-[128px] animate-pulse" />
+      <div className="absolute bottom-0 -right-48 w-96 h-96 bg-red-600/20 rounded-full blur-[128px] animate-pulse [animation-delay:1s]" />
+
+      {/* Split Image Panels with Enhanced Overlays */}
+      <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
+        {/* Renovations Side */}
+        <div className="relative group">
           <Image
             src="/images/hero-renovations.jpg"
-            alt="Quality home renovations in Zimbabwe"
+            alt="Premium home renovations"
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-950/95 via-zinc-950/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />
+          
+          {/* Division Label */}
+          <div className="absolute top-8 left-8 z-10">
+            <div className="inline-flex items-center gap-3 bg-amber-500/10 backdrop-blur-md border border-amber-500/30 rounded-2xl px-6 py-3">
+              <Hammer className="h-5 w-5 text-amber-400" />
+              <span className="text-sm font-semibold tracking-wide text-amber-100 uppercase">Renovations & Construction</span>
+            </div>
+          </div>
         </div>
-        <div className="relative hidden md:block">
+
+        {/* Meats Side */}
+        <div className="relative group hidden lg:block">
           <Image
             src="/images/hero-meats.jpg"
-            alt="Premium farm-fresh meats in Zimbabwe"
+            alt="Premium farm-fresh meats"
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-foreground/80 via-foreground/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-bl from-zinc-950/95 via-zinc-950/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />
+          
+          {/* Division Label */}
+          <div className="absolute top-8 right-8 z-10">
+            <div className="inline-flex items-center gap-3 bg-red-500/10 backdrop-blur-md border border-red-500/30 rounded-2xl px-6 py-3">
+              <Beef className="h-5 w-5 text-red-400" />
+              <span className="text-sm font-semibold tracking-wide text-red-100 uppercase">Premium Meats & Butchery</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Mobile overlay */}
-      <div className="absolute inset-0 bg-foreground/50 md:hidden" />
+      {/* Mobile Overlay */}
+      <div className="absolute inset-0 bg-zinc-950/60 lg:hidden" />
 
-      {/* Content */}
-      <div className="relative container mx-auto px-4 py-20">
-        <div className="max-w-3xl mx-auto text-center text-background">
+      {/* Main Content */}
+      <div className="relative container mx-auto px-4 sm:px-6 py-24 lg:py-32 z-10">
+        <div className="max-w-5xl mx-auto">
           {/* Location Badge */}
-          <div className="inline-flex items-center gap-2 bg-background/10 backdrop-blur-sm border border-background/20 rounded-full px-4 py-2 mb-8">
-            <MapPin className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium">Serving Harare, Bulawayo, Masvingo & Waterfalls</span>
+          <div 
+            className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-5 py-2.5 mb-8 hover:bg-white/10 transition-all duration-300"
+            style={{ animationDelay: '0.1s' }}
+          >
+            <MapPin className="h-4 w-4 text-amber-400" />
+            <span className="text-sm font-medium text-zinc-200">
+              Harare • Bulawayo • Masvingo • Waterfalls
+            </span>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-balance">
-            Building Better Homes.{" "}
-            <span className="text-secondary">Feeding Better Lives.</span>
+          {/* Main Headline - Extra Bold & Large */}
+          <h1 
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-8 tracking-tight"
+            style={{ 
+              animationDelay: '0.2s',
+              fontFamily: "'Outfit', 'Inter', sans-serif"
+            }}
+          >
+            <span className="block text-white">
+              Building Better
+            </span>
+            <span className="block bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 bg-clip-text text-transparent animate-gradient">
+              Homes.
+            </span>
+            <span className="block mt-2 text-white">
+              Feeding Better
+            </span>
+            <span className="block bg-gradient-to-r from-red-500 via-red-400 to-orange-500 bg-clip-text text-transparent animate-gradient [animation-delay:0.5s]">
+              Lives.
+            </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-background/90 mb-10 max-w-2xl mx-auto leading-relaxed text-pretty">
-            Zimbabwe's trusted partner for quality renovations and premium farm-to-table meats across Harare, Bulawayo, and Masvingo
+          <p 
+            className="text-xl sm:text-2xl text-zinc-300 mb-12 max-w-3xl leading-relaxed font-light"
+            style={{ animationDelay: '0.3s' }}
+          >
+            Zimbabwe's most trusted partner for <strong className="font-semibold text-amber-300">quality renovations</strong> and <strong className="font-semibold text-red-400">premium farm-to-table meats</strong>
           </p>
 
-          {/* Dual CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
-            >
-              <Link href="/quote">
-                Plan Your Renovation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
-            >
-              <Link href="/order">
-                Order Premium Meats
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+          {/* CTA Buttons */}
+          <div 
+            className="flex flex-col sm:flex-row gap-4 mb-16"
+            style={{ animationDelay: '0.4s' }}
+          >
+            <Link href="/quote" className="group">
+              <div className="relative overflow-hidden rounded-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 opacity-100 group-hover:opacity-90 transition-opacity" />
+                <div className="relative flex items-center justify-center gap-3 px-10 py-5 text-lg font-bold text-zinc-950">
+                  <Hammer className="h-5 w-5" />
+                  Plan Your Renovation
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/order" className="group">
+              <div className="relative overflow-hidden rounded-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600 opacity-100 group-hover:opacity-90 transition-opacity" />
+                <div className="relative flex items-center justify-center gap-3 px-10 py-5 text-lg font-bold text-white">
+                  <Beef className="h-5 w-5" />
+                  Order Premium Meats
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </div>
+              </div>
+            </Link>
           </div>
 
-          {/* Trust indicators */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-background/70">
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-secondary" />
-              <span>500+ Projects Completed</span>
+          {/* Trust Indicators - Enhanced */}
+          <div 
+            className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl"
+            style={{ animationDelay: '0.5s' }}
+          >
+            <div className="flex flex-col gap-2 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+              <Award className="h-8 w-8 text-amber-400 mb-1" />
+              <div className="text-3xl font-black text-white">500+</div>
+              <div className="text-sm text-zinc-400 font-medium">Projects Completed</div>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-secondary" />
-              <span>Quality Guaranteed</span>
+
+            <div className="flex flex-col gap-2 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+              <CheckCircle2 className="h-8 w-8 text-emerald-400 mb-1" />
+              <div className="text-3xl font-black text-white">100%</div>
+              <div className="text-sm text-zinc-400 font-medium">Quality Guaranteed</div>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-secondary" />
-              <span>Family-Owned Business</span>
+
+            <div className="flex flex-col gap-2 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+              <Users className="h-8 w-8 text-blue-400 mb-1" />
+              <div className="text-3xl font-black text-white">Family</div>
+              <div className="text-sm text-zinc-400 font-medium">Owned Business</div>
+            </div>
+
+            <div className="flex flex-col gap-2 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300">
+              <Clock className="h-8 w-8 text-purple-400 mb-1" />
+              <div className="text-3xl font-black text-white">2026</div>
+              <div className="text-sm text-zinc-400 font-medium">Modern Standards</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="flex flex-col items-center gap-2 text-background/60">
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <div className="w-6 h-10 border-2 border-background/30 rounded-full flex justify-center pt-2">
-            <div className="w-1.5 h-1.5 bg-background/60 rounded-full animate-bounce" />
-          </div>
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 hidden lg:flex flex-col items-center gap-3 animate-bounce">
+        <span className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold">Explore</span>
+        <div className="w-7 h-11 border-2 border-zinc-700 rounded-full flex justify-center pt-2">
+          <div className="w-1.5 h-1.5 bg-amber-400 rounded-full" />
         </div>
       </div>
+
+      {/* CSS for gradient animation */}
+      <style jsx>{`
+        @keyframes gradient {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+        
+        .animate-gradient {
+          background-size: 200% auto;
+          animation: gradient 3s ease infinite;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap');
+      `}</style>
     </section>
   )
 }
