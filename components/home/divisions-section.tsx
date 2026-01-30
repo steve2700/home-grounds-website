@@ -1,134 +1,247 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Home, Beef, Wrench, Utensils, Building2, Truck } from "lucide-react"
+import { ArrowRight, Home, Beef, Wrench, Utensils, Building2, Truck, Hammer, ChefHat, Sparkles, Shield, Clock, Award } from "lucide-react"
 
 export function DivisionsSection() {
   return (
-    <section className="py-20 bg-muted">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Two Divisions, One Commitment to Quality
+    <section className="relative py-32 bg-white overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
+      <div className="absolute top-20 right-0 w-[600px] h-[600px] bg-amber-100/30 rounded-full blur-[150px]" />
+      <div className="absolute bottom-20 left-0 w-[600px] h-[600px] bg-red-100/30 rounded-full blur-[150px]" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
+            <Sparkles className="h-4 w-4 text-amber-600" />
+            <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Our Divisions</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
+            Two Divisions,<br />
+            <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">One Commitment</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            From transforming your living spaces to delivering farm-fresh meats to your table, we're your trusted partner for a better life.
+          <p className="text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
+            From transforming your living spaces to delivering farm-fresh meats to your table, 
+            we're Zimbabwe's trusted partner for quality living.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Division Cards */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
           {/* Renovations Division */}
-          <Card className="group relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div className="absolute inset-0">
-              <Image
-                src="/images/hero-renovations.jpg"
-                alt="Home Grounds Renovations"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/70 to-foreground/20" />
-            </div>
-            <CardContent className="relative p-8 min-h-[500px] flex flex-col justify-end text-background">
-              <div className="mb-6">
-                <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
-                  <Home className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-primary">Renovations & Improvements</span>
+          <div className="group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-3xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500" />
+            <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl border border-zinc-200/50">
+              {/* Image Section */}
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/hero-renovations.jpg"
+                  alt="Home Grounds Renovations"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
+                
+                {/* Floating Badge */}
+                <div className="absolute top-6 left-6">
+                  <div className="flex items-center gap-3 bg-amber-500 text-white rounded-2xl px-5 py-3 shadow-lg">
+                    <Hammer className="h-5 w-5" />
+                    <span className="font-bold text-sm uppercase tracking-wide">Renovations</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Transform Your Space</h3>
-                <p className="text-background/80 mb-6">
-                  Professional renovation services for homes and businesses across Zimbabwe. Quality craftsmanship, on-time delivery.
-                </p>
+
+                {/* Stats Overlay */}
+                <div className="absolute bottom-6 left-6 right-6 flex gap-4">
+                  <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                    <div className="text-2xl font-black text-white">500+</div>
+                    <div className="text-xs text-white/80 font-medium">Projects</div>
+                  </div>
+                  <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                    <div className="text-2xl font-black text-white">15+</div>
+                    <div className="text-xs text-white/80 font-medium">Years</div>
+                  </div>
+                </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Wrench className="h-4 w-4 text-primary" />
-                  </div>
-                  <span>Kitchen & Bathroom Renovations</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Building2 className="h-4 w-4 text-primary" />
-                  </div>
-                  <span>Commercial Fit-Outs</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Home className="h-4 w-4 text-primary" />
-                  </div>
-                  <span>Property Maintenance</span>
-                </li>
-              </ul>
+              {/* Content Section */}
+              <div className="p-8">
+                <h3 className="text-3xl font-black text-zinc-900 mb-4">
+                  Transform Your Space
+                </h3>
+                <p className="text-zinc-600 text-lg mb-8 leading-relaxed">
+                  Professional renovation services for homes and businesses across Zimbabwe. 
+                  Quality craftsmanship, modern designs, on-time delivery.
+                </p>
 
-              <Button
-                asChild
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group/btn"
-              >
-                <Link href="/renovations">
-                  Explore Renovation Services
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                {/* Feature List */}
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-amber-50 rounded-lg group-hover/item:bg-amber-100 transition-colors">
+                      <Wrench className="h-5 w-5 text-amber-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Kitchen & Bathroom Renovations</div>
+                      <div className="text-sm text-zinc-600">Complete remodels with modern finishes</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-amber-50 rounded-lg group-hover/item:bg-amber-100 transition-colors">
+                      <Building2 className="h-5 w-5 text-amber-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Commercial Fit-Outs</div>
+                      <div className="text-sm text-zinc-600">Office spaces and retail renovations</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-amber-50 rounded-lg group-hover/item:bg-amber-100 transition-colors">
+                      <Home className="h-5 w-5 text-amber-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Property Maintenance</div>
+                      <div className="text-sm text-zinc-600">Ongoing care and improvements</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <Link href="/renovations" className="block group/btn">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500" />
+                    <div className="relative flex items-center justify-center gap-2 px-8 py-4 text-white font-bold">
+                      Explore Renovation Services
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                    </div>
+                  </div>
                 </Link>
-              </Button>
-            </CardContent>
-          </Card>
+              </div>
+            </div>
+          </div>
 
           {/* Meats Division */}
-          <Card className="group relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div className="absolute inset-0">
-              <Image
-                src="/images/hero-meats.jpg"
-                alt="Home Grounds Premium Meats"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/70 to-foreground/20" />
-            </div>
-            <CardContent className="relative p-8 min-h-[500px] flex flex-col justify-end text-background">
-              <div className="mb-6">
-                <div className="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
-                  <Beef className="h-4 w-4 text-secondary" />
-                  <span className="text-sm font-medium text-secondary">Meats & Butcher</span>
+          <div className="group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-3xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500" />
+            <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl border border-zinc-200/50">
+              {/* Image Section */}
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/hero-meats.jpg"
+                  alt="Home Grounds Premium Meats"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
+                
+                {/* Floating Badge */}
+                <div className="absolute top-6 left-6">
+                  <div className="flex items-center gap-3 bg-red-600 text-white rounded-2xl px-5 py-3 shadow-lg">
+                    <Beef className="h-5 w-5" />
+                    <span className="font-bold text-sm uppercase tracking-wide">Premium Meats</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Farm-Fresh Quality</h3>
-                <p className="text-background/80 mb-6">
-                  Premium beef, pork, and poultry from Zimbabwe's finest farms. Hygienic processing, delivered fresh.
-                </p>
+
+                {/* Stats Overlay */}
+                <div className="absolute bottom-6 left-6 right-6 flex gap-4">
+                  <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                    <div className="text-2xl font-black text-white">Daily</div>
+                    <div className="text-xs text-white/80 font-medium">Fresh Supply</div>
+                  </div>
+                  <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                    <div className="text-2xl font-black text-white">100%</div>
+                    <div className="text-xs text-white/80 font-medium">Quality</div>
+                  </div>
+                </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Beef className="h-4 w-4 text-secondary" />
-                  </div>
-                  <span>Premium Beef & Pork Cuts</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Utensils className="h-4 w-4 text-secondary" />
-                  </div>
-                  <span>Custom Butchery Services</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="h-8 w-8 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Truck className="h-4 w-4 text-secondary" />
-                  </div>
-                  <span>Fresh Delivery Available</span>
-                </li>
-              </ul>
+              {/* Content Section */}
+              <div className="p-8">
+                <h3 className="text-3xl font-black text-zinc-900 mb-4">
+                  Farm-Fresh Quality
+                </h3>
+                <p className="text-zinc-600 text-lg mb-8 leading-relaxed">
+                  Premium beef, pork, and poultry from Zimbabwe's finest farms. 
+                  Hygienic processing, exceptional taste, delivered fresh.
+                </p>
 
-              <Button
-                asChild
-                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground group/btn"
-              >
-                <Link href="/meats">
-                  Shop Premium Meats
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                {/* Feature List */}
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-red-50 rounded-lg group-hover/item:bg-red-100 transition-colors">
+                      <Beef className="h-5 w-5 text-red-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Premium Beef & Pork Cuts</div>
+                      <div className="text-sm text-zinc-600">Finest quality meats, expertly prepared</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-red-50 rounded-lg group-hover/item:bg-red-100 transition-colors">
+                      <ChefHat className="h-5 w-5 text-red-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Custom Butchery Services</div>
+                      <div className="text-sm text-zinc-600">Cuts prepared to your specifications</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-red-50 rounded-lg group-hover/item:bg-red-100 transition-colors">
+                      <Truck className="h-5 w-5 text-red-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Fresh Delivery Available</div>
+                      <div className="text-sm text-zinc-600">Reliable delivery across all regions</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <Link href="/meats" className="block group/btn">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600" />
+                    <div className="relative flex items-center justify-center gap-2 px-8 py-4 text-white font-bold">
+                      Shop Premium Meats
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                    </div>
+                  </div>
                 </Link>
-              </Button>
-            </CardContent>
-          </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="text-center p-6 bg-zinc-50 rounded-2xl border border-zinc-200/50">
+            <Shield className="h-10 w-10 text-amber-600 mx-auto mb-3" />
+            <div className="text-2xl font-black text-zinc-900 mb-1">Licensed</div>
+            <div className="text-sm text-zinc-600">Fully Certified</div>
+          </div>
+
+          <div className="text-center p-6 bg-zinc-50 rounded-2xl border border-zinc-200/50">
+            <Award className="h-10 w-10 text-red-600 mx-auto mb-3" />
+            <div className="text-2xl font-black text-zinc-900 mb-1">Quality</div>
+            <div className="text-sm text-zinc-600">Guaranteed</div>
+          </div>
+
+          <div className="text-center p-6 bg-zinc-50 rounded-2xl border border-zinc-200/50">
+            <Clock className="h-10 w-10 text-blue-600 mx-auto mb-3" />
+            <div className="text-2xl font-black text-zinc-900 mb-1">On-Time</div>
+            <div className="text-sm text-zinc-600">Delivery</div>
+          </div>
+
+          <div className="text-center p-6 bg-zinc-50 rounded-2xl border border-zinc-200/50">
+            <Sparkles className="h-10 w-10 text-purple-600 mx-auto mb-3" />
+            <div className="text-2xl font-black text-zinc-900 mb-1">Family</div>
+            <div className="text-sm text-zinc-600">Owned</div>
+          </div>
         </div>
       </div>
     </section>
