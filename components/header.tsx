@@ -12,7 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 import { Menu, Phone, MessageCircle, X, ChevronDown, Hammer, Beef } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -36,9 +36,9 @@ export function Header() {
   const [meatsOpen, setMeatsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/95 backdrop-blur-md shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white backdrop-blur-md shadow-sm">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        {/* Logo */}
+        {/* Logo - FIXED PATH */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative h-12 w-28 transition-transform group-hover:scale-105">
             <Image
@@ -64,8 +64,8 @@ export function Header() {
                 <Hammer className="h-4 w-4 mr-2" />
                 Renovations
               </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2 bg-white">
+              <NavigationMenuContent className="!bg-white !shadow-xl !border !border-zinc-200">
+                <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2">
                   {renovationsLinks.map((item) => (
                     <li key={item.title}>
                       <NavigationMenuLink asChild>
@@ -101,8 +101,8 @@ export function Header() {
                 <Beef className="h-4 w-4 mr-2" />
                 Meats
               </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2 bg-white">
+              <NavigationMenuContent className="!bg-white !shadow-xl !border !border-zinc-200">
+                <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2">
                   {meatsLinks.map((item) => (
                     <li key={item.title}>
                       <NavigationMenuLink asChild>
@@ -194,21 +194,24 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full sm:w-[400px] p-0 bg-white">
               <div className="flex flex-col h-full">
-                {/* Mobile Header */}
+                {/* Mobile Header - FIXED PATH */}
                 <div className="flex items-center justify-between p-4 border-b border-zinc-200">
                   <div className="flex items-center gap-2">
                     <div className="relative h-10 w-24">
                       <Image
-                        src="/images/hg-logo-transparent.png"
+                        src="/hg-logo-transparent.png"
                         alt="Home Grounds"
                         fill
                         className="object-contain"
                       />
                     </div>
                   </div>
-                  <Button variant="ghost" size="icon" onClick={() => setMobileOpen(false)} className="hover:bg-zinc-100">
-                    <X className="h-6 w-6" />
-                  </Button>
+                  <SheetClose asChild>
+                    <Button variant="ghost" size="icon" className="hover:bg-zinc-100">
+                      <X className="h-6 w-6" />
+                      <span className="sr-only">Close menu</span>
+                    </Button>
+                  </SheetClose>
                 </div>
 
                 {/* Mobile Navigation */}
