@@ -1,6 +1,7 @@
+"use client"
+
 import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Phone, Clock, ArrowRight } from "lucide-react"
+import { MapPin, Phone, Clock, ArrowRight, Building2, Star, CheckCircle } from "lucide-react"
 
 const locations = [
   {
@@ -10,6 +11,7 @@ const locations = [
     phone: "+263 78 028 9132",
     hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/harare",
+    color: "amber",
   },
   {
     city: "Bulawayo",
@@ -18,6 +20,7 @@ const locations = [
     phone: "+263 78 028 9132",
     hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/bulawayo",
+    color: "blue",
   },
   {
     city: "Masvingo",
@@ -26,6 +29,7 @@ const locations = [
     phone: "+263 78 028 9132",
     hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/masvingo",
+    color: "green",
   },
   {
     city: "Waterfalls",
@@ -35,65 +39,199 @@ const locations = [
     hours: "Mon-Sat: 7AM-6PM",
     href: "/locations/waterfalls",
     isHeadquarters: true,
+    color: "red",
   },
 ]
 
+const colorClasses = {
+  amber: {
+    glow: 'bg-gradient-to-r from-amber-500 to-yellow-500',
+    badge: 'bg-amber-50 text-amber-700 border-amber-200',
+    icon: 'text-amber-600',
+    iconBg: 'bg-amber-50',
+  },
+  blue: {
+    glow: 'bg-gradient-to-r from-blue-500 to-cyan-500',
+    badge: 'bg-blue-50 text-blue-700 border-blue-200',
+    icon: 'text-blue-600',
+    iconBg: 'bg-blue-50',
+  },
+  green: {
+    glow: 'bg-gradient-to-r from-green-500 to-emerald-500',
+    badge: 'bg-green-50 text-green-700 border-green-200',
+    icon: 'text-green-600',
+    iconBg: 'bg-green-50',
+  },
+  red: {
+    glow: 'bg-gradient-to-r from-red-500 to-orange-500',
+    badge: 'bg-red-50 text-red-700 border-red-200',
+    icon: 'text-red-600',
+    iconBg: 'bg-red-50',
+  },
+}
+
 export function LocationsSection() {
   return (
-    <section className="py-20 bg-muted">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            We Come To You
+    <section className="relative py-32 bg-white overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
+      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-100/30 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute bottom-1/3 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-red-100/30 to-transparent rounded-full blur-[100px]" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
+            <MapPin className="h-4 w-4 text-amber-600" />
+            <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Our Locations</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
+            We Come{" "}
+            <span className="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
+              To You
+            </span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
             With locations across Zimbabwe, quality renovations and fresh meats are always within reach
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {locations.map((location, index) => (
-            <Link key={index} href={location.href}>
-              <Card className={`h-full border-0 shadow-md hover:shadow-xl transition-all duration-300 group ${location.isHeadquarters ? 'ring-2 ring-primary' : ''}`}>
-                <CardContent className="p-6">
-                  {location.isHeadquarters && (
-                    <span className="inline-block bg-primary text-primary-foreground text-xs font-medium px-2 py-1 rounded mb-4">
-                      Head Office
-                    </span>
-                  )}
-                  <div className="flex items-center gap-2 mb-3">
-                    <MapPin className="h-5 w-5 text-primary" />
-                    <h3 className="text-xl font-semibold text-foreground">{location.city}</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-4">{location.description}</p>
+        {/* Locations Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
+          {locations.map((location, index) => {
+            const colors = colorClasses[location.color as keyof typeof colorClasses]
+            
+            return (
+              <Link key={index} href={location.href} className="group block">
+                {/* Card Container */}
+                <div className="relative h-full">
+                  {/* Glow Effect */}
+                  <div className={`absolute -inset-0.5 ${colors.glow} rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300`} />
                   
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2 text-sm">
-                      <Phone className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-muted-foreground">{location.phone}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Clock className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-muted-foreground">{location.hours}</span>
-                    </div>
-                  </div>
+                  {/* Card */}
+                  <div className={`relative h-full bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border ${
+                    location.isHeadquarters 
+                      ? 'border-red-300 ring-2 ring-red-200' 
+                      : 'border-zinc-200/50'
+                  }`}>
+                    {/* Head Office Badge */}
+                    {location.isHeadquarters && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white text-xs font-bold uppercase tracking-wide px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                          <Star className="h-3 w-3 fill-white" />
+                          Head Office
+                        </div>
+                      </div>
+                    )}
 
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {location.services.map((service, i) => (
-                      <span key={i} className="bg-muted text-muted-foreground text-xs px-2 py-1 rounded">
-                        {service}
+                    {/* City Icon & Name */}
+                    <div className="flex items-center gap-3 mb-4 mt-2">
+                      <div className={`${colors.iconBg} p-3 rounded-2xl`}>
+                        <Building2 className={`h-6 w-6 ${colors.icon}`} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-zinc-900">{location.city}</h3>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-zinc-600 text-sm leading-relaxed mb-6">
+                      {location.description}
+                    </p>
+
+                    {/* Contact Info */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3">
+                        <div className="bg-zinc-100 p-2 rounded-lg">
+                          <Phone className="h-4 w-4 text-zinc-600" />
+                        </div>
+                        <span className="text-sm text-zinc-700 font-medium">{location.phone}</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="bg-zinc-100 p-2 rounded-lg">
+                          <Clock className="h-4 w-4 text-zinc-600" />
+                        </div>
+                        <span className="text-sm text-zinc-700 font-medium">{location.hours}</span>
+                      </div>
+                    </div>
+
+                    {/* Services Tags */}
+                    <div className="flex flex-wrap gap-2 mb-6 pb-6 border-b border-zinc-200">
+                      {location.services.map((service, i) => (
+                        <div key={i} className={`${colors.badge} text-xs font-semibold px-3 py-1.5 rounded-lg border`}>
+                          {service}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* View Location Link */}
+                    <div className="flex items-center justify-between text-zinc-900 font-bold">
+                      <span className="relative">
+                        View Location
+                        <span className={`absolute -bottom-1 left-0 h-0.5 ${colors.glow} w-0 group-hover:w-full transition-all duration-300`} />
                       </span>
-                    ))}
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </div>
                   </div>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
 
-                  <div className="flex items-center text-primary font-medium text-sm">
-                    View Location
-                    <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+        {/* Coverage Map Visual */}
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-gradient-to-br from-zinc-50 to-white border border-zinc-200 rounded-3xl p-12 shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-black text-zinc-900 mb-3">
+                Complete Zimbabwe Coverage
+              </h3>
+              <p className="text-zinc-600 text-lg">
+                Same-day service in major cities, next-day delivery to surrounding areas
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Coverage Feature 1 */}
+              <div className="text-center p-6 bg-white rounded-2xl border border-zinc-200">
+                <div className="bg-amber-50 w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-7 w-7 text-amber-600" />
+                </div>
+                <h4 className="font-bold text-zinc-900 mb-2">Same-Day Service</h4>
+                <p className="text-sm text-zinc-600">Available in Harare, Bulawayo, and Waterfalls</p>
+              </div>
+
+              {/* Coverage Feature 2 */}
+              <div className="text-center p-6 bg-white rounded-2xl border border-zinc-200">
+                <div className="bg-blue-50 w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="h-7 w-7 text-blue-600" />
+                </div>
+                <h4 className="font-bold text-zinc-900 mb-2">Wide Reach</h4>
+                <p className="text-sm text-zinc-600">Serving all major provinces and cities</p>
+              </div>
+
+              {/* Coverage Feature 3 */}
+              <div className="text-center p-6 bg-white rounded-2xl border border-zinc-200">
+                <div className="bg-red-50 w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Phone className="h-7 w-7 text-red-600" />
+                </div>
+                <h4 className="font-bold text-zinc-900 mb-2">Easy Contact</h4>
+                <p className="text-sm text-zinc-600">One number for all locations and services</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <p className="text-zinc-600 mb-6 text-lg">
+            Not sure which location to contact?
+          </p>
+          <a 
+            href="tel:+263780289132" 
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-500 text-zinc-900 font-bold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <Phone className="h-5 w-5" />
+            Call +263 78 028 9132
+          </a>
         </div>
       </div>
     </section>
