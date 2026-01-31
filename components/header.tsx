@@ -42,7 +42,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative h-12 w-28 transition-transform group-hover:scale-105">
             <Image
-              src="/images/hg-logo-transparent.png"
+              src="/hg-logo-transparent.png"
               alt="Home Grounds Investments"
               fill
               className="object-contain"
