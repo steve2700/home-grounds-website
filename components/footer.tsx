@@ -19,8 +19,6 @@ export function Footer() {
                 <Image
                   src="/hg-logo-transparent.png"
                   alt="Home Grounds Investments"
-                  fill
-                  className="object-contain brightness-0 invert"
                 />
               </div>
             </Link>
