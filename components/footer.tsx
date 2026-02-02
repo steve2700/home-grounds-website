@@ -118,7 +118,7 @@ export function Footer() {
                 </Link>
               </li>
               
-              <li className="pt-2">
+              <li>
                 <Link href="/renovations" className="text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors flex items-center gap-2">
                   View All Services
                   <ArrowRight className="h-4 w-4" />
