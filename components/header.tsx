@@ -20,7 +20,7 @@ const renovationsLinks = [
   { title: "Residential", href: "/renovations/residential", description: "Kitchen, bathroom & full home renovations" },
   { title: "Commercial", href: "/renovations/commercial", description: "Office fit-outs & retail renovations" },
   { title: "Maintenance", href: "/renovations/maintenance", description: "Property maintenance & repairs" },
-  { title: "Sustainable Solutions", href: "/renovations/sustainable", description: "Solar, energy & smart home systems" },
+  { title: "Sustainable Solutions", href: "/renovations/sustainable-solutions", description: "Solar, energy & smart home systems" },
 ]
 
 const meatsLinks = [
