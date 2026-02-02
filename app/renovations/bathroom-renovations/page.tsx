@@ -221,8 +221,8 @@ export default function BathroomRenovationPage() {
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute top-20 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px]" />
-          <div className="absolute bottom-20 left-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px]" />
+          <div className="absolute top-20 right-0 w-96 h-96 bg-amber-500/20 rounded-full blur-[120px]" />
+          <div className="absolute bottom-20 left-0 w-96 h-96 bg-yellow-500/20 rounded-full blur-[120px]" />
 
           <div className="relative container mx-auto px-4 py-24">
             <div className="max-w-3xl">
@@ -236,15 +236,15 @@ export default function BathroomRenovationPage() {
               </nav>
 
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-blue-500/10 backdrop-blur-md border border-blue-500/30 rounded-full px-5 py-2 mb-8">
-                <Bath className="h-4 w-4 text-blue-400" />
-                <span className="text-sm font-bold text-blue-100 uppercase tracking-wide">Bathroom Renovations</span>
+              <div className="inline-flex items-center gap-2 bg-amber-500/10 backdrop-blur-md border border-amber-500/30 rounded-full px-5 py-2 mb-8">
+                <Bath className="h-4 w-4 text-amber-400" />
+                <span className="text-sm font-bold text-amber-100 uppercase tracking-wide">Bathroom Renovations</span>
               </div>
 
               {/* Headline */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1]">
                 Transform Your{" "}
-                <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-400 to-yellow-500 bg-clip-text text-transparent">
                   Bathroom
                 </span>
               </h1>
@@ -258,8 +258,8 @@ export default function BathroomRenovationPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/quote" className="group">
                   <div className="relative overflow-hidden rounded-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500" />
-                    <div className="relative flex items-center justify-center gap-2 px-8 py-5 text-lg font-bold text-white">
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500" />
+                    <div className="relative flex items-center justify-center gap-2 px-8 py-5 text-lg font-bold text-zinc-900">
                       Get Free Quote
                       <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </div>
@@ -309,12 +309,12 @@ export default function BathroomRenovationPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
-                <Sparkles className="h-4 w-4 text-blue-600" />
+                <Sparkles className="h-4 w-4 text-amber-600" />
                 <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Real Transformations</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
                 Before &{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
                   After
                 </span>
               </h2>
@@ -326,7 +326,7 @@ export default function BathroomRenovationPage() {
             {/* Before/After Image */}
             <div className="max-w-5xl mx-auto">
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
+                <div className="absolute -inset-4 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-zinc-200">
                   <Image
                     src="/images/bathroom-before-after.jpg"
@@ -341,15 +341,15 @@ export default function BathroomRenovationPage() {
               {/* Results Cards */}
               <div className="grid md:grid-cols-3 gap-6 mt-12">
                 <div className="bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm text-center">
-                  <div className="text-4xl font-black text-blue-600 mb-2">3 Weeks</div>
+                  <div className="text-4xl font-black text-amber-600 mb-2">3 Weeks</div>
                   <div className="text-zinc-600 font-medium">Completion Time</div>
                 </div>
                 <div className="bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm text-center">
-                  <div className="text-4xl font-black text-blue-600 mb-2">+28%</div>
+                  <div className="text-4xl font-black text-amber-600 mb-2">+28%</div>
                   <div className="text-zinc-600 font-medium">Property Value Increase</div>
                 </div>
                 <div className="bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm text-center">
-                  <div className="text-4xl font-black text-blue-600 mb-2">100%</div>
+                  <div className="text-4xl font-black text-amber-600 mb-2">100%</div>
                   <div className="text-zinc-600 font-medium">Waterproof Guaranteed</div>
                 </div>
               </div>
@@ -363,12 +363,12 @@ export default function BathroomRenovationPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {whyChooseUs.map((item, index) => (
                 <div key={index} className="group relative">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity" />
                   <div className="relative bg-white rounded-3xl p-6 border border-zinc-200 shadow-sm hover:shadow-lg transition-all h-full">
-                    <div className="bg-blue-50 w-14 h-14 rounded-2xl flex items-center justify-center mb-4">
-                      <item.icon className="h-7 w-7 text-blue-600" />
+                    <div className="bg-amber-50 w-14 h-14 rounded-2xl flex items-center justify-center mb-4">
+                      <item.icon className="h-7 w-7 text-amber-600" />
                     </div>
-                    <div className="text-3xl font-black text-blue-600 mb-2">{item.stat}</div>
+                    <div className="text-3xl font-black text-amber-600 mb-2">{item.stat}</div>
                     <h3 className="text-lg font-bold text-zinc-900 mb-2">{item.title}</h3>
                     <p className="text-zinc-600 text-sm leading-relaxed">{item.description}</p>
                   </div>
@@ -383,12 +383,12 @@ export default function BathroomRenovationPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-20">
               <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
-                <Wrench className="h-4 w-4 text-blue-600" />
+                <Wrench className="h-4 w-4 text-amber-600" />
                 <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Our Services</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
                 Complete Bathroom{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
                   Solutions
                 </span>
               </h2>
@@ -400,17 +400,17 @@ export default function BathroomRenovationPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {bathroomServices.map((service, index) => (
                 <div key={index} className="group relative">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity" />
                   <div className="relative bg-white rounded-3xl p-8 border border-zinc-200 shadow-lg hover:shadow-2xl transition-all h-full">
-                    <div className="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3">
-                      <service.icon className="h-8 w-8 text-blue-600" />
+                    <div className="bg-amber-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                      <service.icon className="h-8 w-8 text-amber-600" />
                     </div>
                     <h3 className="text-2xl font-bold text-zinc-900 mb-4">{service.title}</h3>
                     <p className="text-zinc-600 mb-6 leading-relaxed">{service.description}</p>
                     <ul className="space-y-3">
                       {service.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-3">
-                          <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                          <CheckCircle className="h-5 w-5 text-amber-600 flex-shrink-0" />
                           <span className="text-zinc-700 font-medium text-sm">{feature}</span>
                         </li>
                       ))}
@@ -428,7 +428,7 @@ export default function BathroomRenovationPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black text-zinc-900 mb-6">
                 Popular Bathroom{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
                   Styles
                 </span>
               </h2>
@@ -439,7 +439,7 @@ export default function BathroomRenovationPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {bathroomStyles.map((style, index) => (
-                <div key={index} className="bg-zinc-50 rounded-2xl p-6 border border-zinc-200 hover:border-blue-300 hover:bg-white transition-all">
+                <div key={index} className="bg-zinc-50 rounded-2xl p-6 border border-zinc-200 hover:border-amber-300 hover:bg-white transition-all">
                   <h3 className="text-xl font-bold text-zinc-900 mb-3">{style.style}</h3>
                   <p className="text-zinc-600 text-sm leading-relaxed">{style.description}</p>
                 </div>
@@ -450,18 +450,18 @@ export default function BathroomRenovationPage() {
 
         {/* Process Section */}
         <section className="py-24 bg-gradient-to-b from-zinc-50 to-white relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-[100px]" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/30 rounded-full blur-[100px]" />
+          <div className="absolute top-0 left-0 w-96 h-96 bg-amber-200/30 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-200/30 rounded-full blur-[100px]" />
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-20">
               <div className="inline-flex items-center gap-2 bg-white border border-zinc-200 rounded-full px-5 py-2 mb-6 shadow-sm">
-                <Clock className="h-4 w-4 text-blue-600" />
+                <Clock className="h-4 w-4 text-amber-600" />
                 <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Our Process</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
                 How We{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
                   Work
                 </span>
               </h2>
@@ -474,16 +474,16 @@ export default function BathroomRenovationPage() {
               {processSteps.map((step, index) => (
                 <div key={index} className="group relative">
                   {index < processSteps.length - 1 && (
-                    <div className="absolute left-6 top-20 w-0.5 h-12 bg-gradient-to-b from-blue-200 to-transparent" />
+                    <div className="absolute left-6 top-20 w-0.5 h-12 bg-gradient-to-b from-amber-200 to-transparent" />
                   )}
                   
                   <div className="flex gap-6 items-start bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm hover:shadow-lg transition-all">
-                    <div className="flex-shrink-0 h-14 w-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white flex items-center justify-center font-black text-xl shadow-lg">
+                    <div className="flex-shrink-0 h-14 w-14 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-500 text-white flex items-center justify-center font-black text-xl shadow-lg">
                       {step.step}
                     </div>
                     <div className="flex-1 pt-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <step.icon className="h-5 w-5 text-blue-600" />
+                        <step.icon className="h-5 w-5 text-amber-600" />
                         <h3 className="text-2xl font-bold text-zinc-900">{step.title}</h3>
                       </div>
                       <p className="text-zinc-600 leading-relaxed">{step.description}</p>
@@ -500,12 +500,12 @@ export default function BathroomRenovationPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
-                <Home className="h-4 w-4 text-blue-600" />
+                <Home className="h-4 w-4 text-amber-600" />
                 <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Service Areas</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-zinc-900 mb-6">
                 Bathroom Renovations{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
                   Across Zimbabwe
                 </span>
               </h2>
@@ -530,9 +530,9 @@ export default function BathroomRenovationPage() {
                 },
               ].map((area, index) => (
                 <div key={index} className="group relative">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
                   <div className="relative bg-white border border-zinc-200 rounded-3xl p-6 text-center shadow-sm hover:shadow-lg transition-all">
-                    <Home className="h-10 w-10 text-blue-600 mx-auto mb-4" />
+                    <Home className="h-10 w-10 text-amber-600 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-zinc-900 mb-2">{area.name}</h3>
                     <p className="text-zinc-600 text-sm leading-relaxed">{area.description}</p>
                   </div>
@@ -547,12 +547,12 @@ export default function BathroomRenovationPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
-                <Sparkles className="h-4 w-4 text-blue-600" />
+                <Sparkles className="h-4 w-4 text-amber-600" />
                 <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Common Questions</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
                 Bathroom Renovation{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
                   FAQs
                 </span>
               </h2>
@@ -564,7 +564,7 @@ export default function BathroomRenovationPage() {
             <div className="max-w-4xl mx-auto space-y-6">
               {bathroomFAQs.map((faq, index) => (
                 <div key={index} className="group relative">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-10 group-hover:opacity-20 transition-opacity" />
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl blur opacity-10 group-hover:opacity-20 transition-opacity" />
                   <div className="relative bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
                     <h3 className="text-lg font-bold text-zinc-900 mb-3">{faq.question}</h3>
                     <p className="text-zinc-600 leading-relaxed">{faq.answer}</p>
@@ -581,7 +581,7 @@ export default function BathroomRenovationPage() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-black text-zinc-900 mb-6">
                 What Our{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-600 to-yellow-600 bg-clip-text text-transparent">
                   Clients Say
                 </span>
               </h2>
@@ -609,11 +609,11 @@ export default function BathroomRenovationPage() {
                 },
               ].map((testimonial, index) => (
                 <div key={index} className="group relative">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
                   <div className="relative bg-white border border-zinc-200 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all">
                     <div className="flex gap-1 mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-blue-400 text-blue-400" />
+                        <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
                       ))}
                     </div>
                     <p className="text-zinc-600 mb-6 italic leading-relaxed">"{testimonial.review}"</p>
@@ -633,8 +633,8 @@ export default function BathroomRenovationPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-zinc-800" />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
           
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px]" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/20 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-500/20 rounded-full blur-[120px]" />
 
           <div className="container mx-auto px-4 text-center relative z-10">
             <div className="max-w-3xl mx-auto">
@@ -648,8 +648,8 @@ export default function BathroomRenovationPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/quote" className="group">
                   <div className="relative overflow-hidden rounded-2xl">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500" />
-                    <div className="relative flex items-center justify-center gap-2 px-10 py-5 text-lg font-bold text-white">
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500" />
+                    <div className="relative flex items-center justify-center gap-2 px-10 py-5 text-lg font-bold text-zinc-900">
                       Get Free Quote
                       <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </div>
