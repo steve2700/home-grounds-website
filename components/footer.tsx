@@ -33,7 +33,7 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex gap-3">
               <a 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/profile.php?id=61587095136669"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800 hover:bg-amber-500 text-zinc-300 hover:text-white transition-all"
@@ -98,6 +98,13 @@ export function Footer() {
                   Sustainable Solutions
                 </Link>
               </li>
+              <li>
+                <Link href="/renovations/roofing-waterproofing" className="text-sm hover:text-amber-400 transition-colors flex items-center gap-2 group">
+                  <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  Roofing & Waterproofing
+                </Link>
+              </li>
+              
               <li className="pt-2">
                 <Link href="/renovations" className="text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors flex items-center gap-2">
                   View All Services
