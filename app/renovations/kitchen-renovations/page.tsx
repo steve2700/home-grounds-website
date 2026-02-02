@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   title: "Expert Kitchen Renovations Zimbabwe | Modern Kitchen Remodeling Harare, Bulawayo, Masvingo",
   description: "Transform your kitchen with professional renovation services in Zimbabwe. Custom cabinetry, modern layouts, granite countertops, plumbing & electrical upgrades. Serving Harare, Bulawayo, Masvingo. Free quotes available.",
   keywords: "kitchen renovation Zimbabwe, kitchen remodeling Harare, custom kitchen cabinets, modern kitchen design Bulawayo, kitchen countertops Masvingo, kitchen plumbing electrical, kitchen makeover Zimbabwe",
+  openGraph: {
+    title: "Expert Kitchen Renovations Zimbabwe | Home Grounds Investments",
+    description: "Professional kitchen remodeling with custom cabinetry, granite countertops, and modern layouts. Transform your kitchen in 3-6 weeks.",
+    type: "website",
+    locale: "en_ZW",
+  },
+  alternates: {
+    canonical: "https://homegrounds.co.zw/renovations/kitchen-renovation",
+  },
 }
 
 const kitchenServices = [
@@ -131,10 +140,70 @@ const kitchenStyles = [
   },
 ]
 
+const kitchenFAQs = [
+  {
+    question: "How long does a kitchen renovation take in Zimbabwe?",
+    answer: "Most kitchen renovations in Zimbabwe take 3-6 weeks from start to finish. This includes demolition, installation of new cabinets, countertops, plumbing, electrical work, tiling, and painting. Simple cabinet replacements can be done in 1-2 weeks, while full renovations with structural changes may take 6-8 weeks. We provide a detailed timeline during your consultation.",
+  },
+  {
+    question: "How much does a kitchen renovation cost in Zimbabwe?",
+    answer: "Kitchen renovation costs in Zimbabwe vary based on size and finishes. A basic kitchen refresh (painting, new countertops, fixtures) starts from USD $3,000-5,000. Mid-range renovations with new cabinets and appliances range from $8,000-15,000. High-end custom kitchens with premium materials can be $20,000+. We provide detailed quotes with transparent pricing and material options.",
+  },
+  {
+    question: "Can you work with my existing kitchen layout?",
+    answer: "Absolutely! We specialize in both refreshing existing layouts and complete redesigns. If your current layout works well, we can update cabinets, countertops, and finishes while keeping plumbing and electrical in place—this is more cost-effective and faster. If you want to change the layout for better workflow, we handle all structural, plumbing, and electrical modifications.",
+  },
+  {
+    question: "What countertop materials do you recommend for Zimbabwe?",
+    answer: "For Zimbabwe's climate, we recommend granite (locally available and heat-resistant), quartz (durable and low-maintenance), or solid surface materials. Granite is most popular due to local availability and affordability. We help you choose based on your budget, cooking habits, and style preferences. All our countertops come with professional installation and sealing.",
+  },
+  {
+    question: "Do you provide 3D designs before starting work?",
+    answer: "Yes! We provide detailed 3D renderings of your new kitchen so you can visualize the final result before we begin. This includes cabinet layouts, color schemes, countertops, and lighting. You can request changes until you're completely satisfied. This design service is included in our comprehensive quotes.",
+  },
+  {
+    question: "What warranty do you offer on kitchen renovations?",
+    answer: "We provide a 2-year warranty on all workmanship including cabinet installation, plumbing, electrical work, and tiling. Cabinet manufacturers typically offer 5-10 year warranties on their products. Countertop materials come with manufacturer warranties (granite sealed for 15 years, quartz for 10+ years). We also offer ongoing maintenance support.",
+  },
+  {
+    question: "Can I use my kitchen during the renovation?",
+    answer: "Partial use is possible during most renovations. We set up temporary washing stations and protect appliances. However, there will be 3-5 days when the kitchen is completely unusable (during countertop installation, plumbing connections, electrical work). We work efficiently to minimize disruption and can discuss scheduling to accommodate your needs.",
+  },
+  {
+    question: "Do you handle electrical and plumbing upgrades?",
+    answer: "Yes, we have licensed electricians and plumbers on our team. We upgrade wiring for modern appliances, add power points, install under-cabinet lighting, relocate plumbing for new sink positions, install dishwasher connections, and upgrade to water-efficient fixtures. All work complies with Zimbabwe building codes and is professionally certified.",
+  },
+]
+
 export default function KitchenRenovationPage() {
+  // Schema markup for SEO
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Kitchen Renovation and Remodeling Services",
+    "provider": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Home Grounds Investments",
+      "url": "https://homegrounds.co.zw",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ZW"
+      },
+      "telephone": "+263780289132",
+      "areaServed": ["Harare", "Bulawayo", "Masvingo"],
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  }
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
       <main className="bg-white">
         {/* Hero Section */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden">
@@ -204,6 +273,31 @@ export default function KitchenRenovationPage() {
                     </div>
                   </div>
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction Section - SEO Content */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-6">
+                Zimbabwe's Premier Kitchen Renovation & Remodeling Experts
+              </h2>
+              <div className="prose prose-lg max-w-none text-zinc-600 space-y-4">
+                <p>
+                  Home Grounds Investments is Zimbabwe's leading kitchen renovation specialist, transforming outdated kitchens into modern, functional spaces that enhance your home's value and your daily living experience. With over 200 successfully completed kitchen projects across Harare, Bulawayo, and Masvingo, we bring unmatched expertise in custom kitchen design, professional installation, and complete project management.
+                </p>
+                <p>
+                  A kitchen renovation is one of the most valuable home improvements you can make in Zimbabwe. Recent property market data shows that professionally renovated kitchens can increase property values by 25-35%, while dramatically improving functionality and aesthetics. Whether you're planning a simple refresh with new countertops and cabinets, or a complete kitchen redesign with structural changes, our team delivers exceptional results on time and within budget.
+                </p>
+                <p>
+                  We specialize in custom cabinetry designed specifically for your space—from modern handleless designs with high-gloss finishes to timeless traditional styles with detailed craftsmanship. Our in-house team includes expert cabinet makers, licensed electricians, certified plumbers, and professional tilers who work together seamlessly to ensure every aspect of your kitchen renovation exceeds expectations. From initial 3D design renderings to final installation and quality checks, we manage every detail of your project.
+                </p>
+                <p>
+                  Most kitchen renovations in Zimbabwe take 3-6 weeks from start to finish, and we're known for our exceptional on-time completion rate. We work with trusted local and international suppliers to provide premium materials at competitive prices—from durable granite and quartz countertops sourced from reliable quarries, to high-quality cabinetry hardware, water-efficient fixtures, and energy-saving LED lighting systems. Our comprehensive warranties and ongoing support ensure your investment is protected for years to come.
+                </p>
               </div>
             </div>
           </div>
@@ -392,6 +486,139 @@ export default function KitchenRenovationPage() {
                         <h3 className="text-2xl font-bold text-zinc-900">{step.title}</h3>
                       </div>
                       <p className="text-zinc-600 leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Areas Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
+                <Home className="h-4 w-4 text-amber-600" />
+                <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Service Areas</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-zinc-900 mb-6">
+                Kitchen Renovations{" "}
+                <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+                  Across Zimbabwe
+                </span>
+              </h2>
+              <p className="text-xl text-zinc-600 max-w-3xl mx-auto">
+                Professional kitchen remodeling services in your area
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {[
+                { 
+                  name: "Harare", 
+                  description: "Serving all suburbs including Borrowdale, Mount Pleasant, Highlands, Avondale, and surrounding areas with expert kitchen renovations" 
+                },
+                { 
+                  name: "Bulawayo", 
+                  description: "Professional kitchen remodeling across all Bulawayo suburbs with custom designs and quality installations" 
+                },
+                { 
+                  name: "Masvingo", 
+                  description: "Complete kitchen renovation services throughout Masvingo province with local expertise and support" 
+                },
+              ].map((area, index) => (
+                <div key={index} className="group relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
+                  <div className="relative bg-white border border-zinc-200 rounded-3xl p-6 text-center shadow-sm hover:shadow-lg transition-all">
+                    <Home className="h-10 w-10 text-amber-600 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-zinc-900 mb-2">{area.name}</h3>
+                    <p className="text-zinc-600 text-sm leading-relaxed">{area.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-24 bg-gradient-to-b from-zinc-50 to-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
+                <Sparkles className="h-4 w-4 text-amber-600" />
+                <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Common Questions</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
+                Kitchen Renovation{" "}
+                <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+                  FAQs
+                </span>
+              </h2>
+              <p className="text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
+                Common questions about kitchen remodeling in Zimbabwe
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              {kitchenFAQs.map((faq, index) => (
+                <div key={index} className="group relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl blur opacity-10 group-hover:opacity-20 transition-opacity" />
+                  <div className="relative bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
+                    <h3 className="text-lg font-bold text-zinc-900 mb-3">{faq.question}</h3>
+                    <p className="text-zinc-600 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-black text-zinc-900 mb-6">
+                What Our{" "}
+                <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+                  Clients Say
+                </span>
+              </h2>
+              <p className="text-xl text-zinc-600 max-w-3xl mx-auto">
+                Real feedback from homeowners we've helped transform their kitchens
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                { 
+                  name: "Sarah M.", 
+                  location: "Borrowdale, Harare", 
+                  review: "Our kitchen transformation exceeded all expectations. The team was professional, on time, and the quality is outstanding. We now have our dream kitchen and our property value increased by 30%!" 
+                },
+                { 
+                  name: "David K.", 
+                  location: "Bulawayo", 
+                  review: "From design to completion in just 4 weeks! The 3D renderings helped us visualize everything perfectly. The custom cabinets and granite countertops are beautiful. Highly recommend Home Grounds." 
+                },
+                { 
+                  name: "Chipo T.", 
+                  location: "Masvingo", 
+                  review: "They completely redesigned our outdated kitchen into a modern, functional space. The attention to detail was impressive and they worked within our budget. Best decision we made for our home." 
+                },
+              ].map((testimonial, index) => (
+                <div key={index} className="group relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity" />
+                  <div className="relative bg-white border border-zinc-200 rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all">
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <p className="text-zinc-600 mb-6 italic leading-relaxed">"{testimonial.review}"</p>
+                    <div>
+                      <p className="font-bold text-zinc-900">{testimonial.name}</p>
+                      <p className="text-sm text-zinc-500">{testimonial.location}</p>
                     </div>
                   </div>
                 </div>
