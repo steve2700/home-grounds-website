@@ -5,12 +5,11 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Home, Building2, Wrench, Sun, CheckCircle, Phone } from "lucide-react"
+import { ArrowRight, Home, Building2, Wrench, Sun, CheckCircle, Phone, Sparkles, Award, Clock, Shield, Hammer } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Renovations & Property Improvements",
-  description: "Professional residential & commercial renovation services across Zimbabwe. Kitchen, bathroom, office renovations, maintenance and sustainable solutions.",
+  title: "Professional Renovations & Property Improvements | Home Grounds Zimbabwe",
+  description: "Expert residential & commercial renovation services across Zimbabwe. Kitchen, bathroom, office renovations, maintenance and sustainable solutions. Quality guaranteed.",
 }
 
 const services = [
@@ -19,8 +18,9 @@ const services = [
     description: "Transform your home with expert renovations for kitchens, bathrooms, bedrooms, and full house makeovers.",
     icon: Home,
     href: "/renovations/residential",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
+    color: "text-amber-600",
+    bgColor: "bg-amber-50",
+    borderColor: "border-amber-200",
     features: ["Kitchen Renovations", "Bathroom Remodeling", "Full House Renovations", "Extensions & Additions"],
   },
   {
@@ -28,8 +28,9 @@ const services = [
     description: "Professional office fit-outs, retail renovations, and tenant installations for businesses.",
     icon: Building2,
     href: "/renovations/commercial",
-    color: "text-secondary",
-    bgColor: "bg-secondary/10",
+    color: "text-blue-600",
+    bgColor: "bg-blue-50",
+    borderColor: "border-blue-200",
     features: ["Office Fit-Outs", "Retail Renovations", "Restaurant Renovations", "Warehouse Refurbishments"],
   },
   {
@@ -37,8 +38,9 @@ const services = [
     description: "Preventive maintenance and emergency repairs to keep your property in top condition.",
     icon: Wrench,
     href: "/renovations/maintenance",
-    color: "text-primary",
-    bgColor: "bg-primary/10",
+    color: "text-green-600",
+    bgColor: "bg-green-50",
+    borderColor: "border-green-200",
     features: ["General Maintenance", "Waterproofing", "Structural Repairs", "Electrical & Plumbing"],
   },
   {
@@ -46,27 +48,36 @@ const services = [
     description: "Modern eco-friendly upgrades including solar, smart home systems, and energy efficiency.",
     icon: Sun,
     href: "/renovations/sustainable",
-    color: "text-secondary",
-    bgColor: "bg-secondary/10",
+    color: "text-orange-600",
+    bgColor: "bg-orange-50",
+    borderColor: "border-orange-200",
     features: ["Solar Installations", "Energy Efficiency", "Smart Home Systems", "Water-Wise Solutions"],
   },
 ]
 
 const processSteps = [
-  { step: 1, title: "Free Consultation", description: "We visit your property to discuss your vision and requirements" },
-  { step: 2, title: "Detailed Quote", description: "Receive a comprehensive quote with timeline and material options" },
-  { step: 3, title: "Design & Planning", description: "Our team creates detailed plans and schedules the project" },
-  { step: 4, title: "Quality Construction", description: "Expert craftsmen bring your vision to life with precision" },
-  { step: 5, title: "Final Walkthrough", description: "We ensure everything meets your expectations before handover" },
+  { step: 1, title: "Free Consultation", description: "We visit your property to discuss your vision and requirements", icon: Phone },
+  { step: 2, title: "Detailed Quote", description: "Receive a comprehensive quote with timeline and material options", icon: CheckCircle },
+  { step: 3, title: "Design & Planning", description: "Our team creates detailed plans and schedules the project", icon: Sparkles },
+  { step: 4, title: "Quality Construction", description: "Expert craftsmen bring your vision to life with precision", icon: Hammer },
+  { step: 5, title: "Final Walkthrough", description: "We ensure everything meets your expectations before handover", icon: Award },
+]
+
+const whyChooseUs = [
+  { icon: Award, title: "500+ Projects", description: "Successfully completed across Zimbabwe" },
+  { icon: Shield, title: "Quality Guaranteed", description: "We stand behind every project" },
+  { icon: Clock, title: "On-Time Delivery", description: "Respect for your time and schedule" },
+  { icon: CheckCircle, title: "Licensed & Insured", description: "Fully certified professionals" },
 ]
 
 export default function RenovationsPage() {
   return (
     <>
       <Header />
-      <main>
-        {/* Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center">
+      <main className="bg-white">
+        {/* Hero Section - Enhanced */}
+        <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+          {/* Background */}
           <div className="absolute inset-0">
             <Image
               src="/images/hero-renovations.jpg"
@@ -75,104 +86,191 @@ export default function RenovationsPage() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/50" />
+            <div className="absolute inset-0 bg-gradient-to-r from-zinc-900/95 via-zinc-900/80 to-zinc-900/60" />
           </div>
-          <div className="relative container mx-auto px-4 py-20">
-            <div className="max-w-2xl text-background">
-              <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                <Home className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium">Renovations & Improvements</span>
+
+          {/* Decorative Elements */}
+          <div className="absolute top-20 right-0 w-96 h-96 bg-amber-500/20 rounded-full blur-[120px]" />
+          <div className="absolute bottom-20 left-0 w-96 h-96 bg-orange-500/20 rounded-full blur-[120px]" />
+
+          <div className="relative container mx-auto px-4 py-24">
+            <div className="max-w-3xl">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-amber-500/10 backdrop-blur-md border border-amber-500/30 rounded-full px-5 py-2 mb-8">
+                <Hammer className="h-4 w-4 text-amber-400" />
+                <span className="text-sm font-bold text-amber-100 uppercase tracking-wide">Renovations & Improvements</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Transform Your Space
+
+              {/* Headline */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1]">
+                Transform Your{" "}
+                <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                  Space
+                </span>
               </h1>
-              <p className="text-xl text-background/90 mb-8 leading-relaxed">
+
+              {/* Description */}
+              <p className="text-xl md:text-2xl text-zinc-300 mb-10 leading-relaxed">
                 Professional renovation services for homes and businesses across Zimbabwe. Quality craftsmanship, transparent pricing, on-time delivery.
               </p>
+
+              {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="/quote">
-                    Get Free Quote
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-background text-background hover:bg-background hover:text-foreground bg-transparent">
-                  <a href="tel:+263780289132">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call Now
-                  </a>
-                </Button>
+                <Link href="/quote" className="group">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500" />
+                    <div className="relative flex items-center justify-center gap-2 px-8 py-5 text-lg font-bold text-zinc-900">
+                      Get Free Quote
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+                <a href="tel:+263780289132" className="group">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border-2 border-white/30" />
+                    <div className="relative flex items-center justify-center gap-2 px-8 py-5 text-lg font-bold text-white">
+                      <Phone className="h-5 w-5" />
+                      Call Now
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20 bg-background">
+        {/* Why Choose Us Section */}
+        <section className="py-20 bg-gradient-to-b from-zinc-50 to-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Our Renovation Services
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {whyChooseUs.map((item, index) => (
+                <div key={index} className="text-center p-6 bg-white rounded-2xl border border-zinc-200 shadow-sm hover:shadow-md transition-all">
+                  <div className="bg-amber-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="h-8 w-8 text-amber-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-900 mb-2">{item.title}</h3>
+                  <p className="text-zinc-600 text-sm">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid - Enhanced */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            {/* Section Header */}
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-2 bg-zinc-100 rounded-full px-5 py-2 mb-6">
+                <Sparkles className="h-4 w-4 text-amber-600" />
+                <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">What We Offer</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
+                Our Renovation{" "}
+                <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+                  Services
+                </span>
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              <p className="text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
                 From minor repairs to complete transformations, we handle projects of all sizes with the same dedication to quality.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Services Cards */}
+            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {services.map((service, index) => (
-                <Link key={index} href={service.href}>
-                  <Card className="h-full border border-border shadow-sm hover:shadow-lg transition-all duration-300 group">
-                    <CardContent className="p-8">
-                      <div className={`inline-flex h-14 w-14 items-center justify-center rounded-lg ${service.bgColor} mb-6 transition-transform group-hover:scale-110`}>
-                        <service.icon className={`h-7 w-7 ${service.color}`} />
+                <Link key={index} href={service.href} className="group block">
+                  <div className="relative h-full">
+                    {/* Glow Effect */}
+                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.bgColor} rounded-3xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300`} />
+                    
+                    {/* Card */}
+                    <div className={`relative h-full bg-white rounded-3xl p-8 border ${service.borderColor} shadow-lg hover:shadow-2xl transition-all duration-300`}>
+                      {/* Icon */}
+                      <div className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl ${service.bgColor} mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300`}>
+                        <service.icon className={`h-8 w-8 ${service.color}`} />
                       </div>
-                      <h3 className="text-2xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+
+                      {/* Content */}
+                      <h3 className="text-2xl font-bold text-zinc-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-amber-600 group-hover:to-orange-600 group-hover:bg-clip-text transition-all">
                         {service.title}
                       </h3>
-                      <p className="text-muted-foreground mb-6">{service.description}</p>
-                      <ul className="space-y-2 mb-6">
+                      <p className="text-zinc-600 mb-6 leading-relaxed">{service.description}</p>
+
+                      {/* Features */}
+                      <ul className="space-y-3 mb-8">
                         {service.features.map((feature, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm">
-                            <CheckCircle className="h-4 w-4 text-secondary" />
-                            <span className="text-foreground">{feature}</span>
+                          <li key={i} className="flex items-center gap-3">
+                            <CheckCircle className={`h-5 w-5 ${service.color} flex-shrink-0`} />
+                            <span className="text-zinc-700 font-medium">{feature}</span>
                           </li>
                         ))}
                       </ul>
-                      <div className="flex items-center text-primary font-medium">
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+
+                      {/* CTA */}
+                      <div className="flex items-center gap-2 font-bold text-zinc-900 group-hover:gap-3 transition-all">
+                        <span className="relative">
+                          Learn More
+                          <span className={`absolute -bottom-1 left-0 h-0.5 ${service.bgColor} w-0 group-hover:w-full transition-all duration-300`} />
+                        </span>
+                        <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className="py-20 bg-muted">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Our Process
+        {/* Process Section - Enhanced */}
+        <section className="py-24 bg-gradient-to-b from-zinc-50 to-white relative overflow-hidden">
+          {/* Background Decoration */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-amber-200/30 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-200/30 rounded-full blur-[100px]" />
+
+          <div className="container mx-auto px-4 relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-2 bg-white border border-zinc-200 rounded-full px-5 py-2 mb-6 shadow-sm">
+                <Clock className="h-4 w-4 text-amber-600" />
+                <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">How It Works</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
+                Our Simple{" "}
+                <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+                  Process
+                </span>
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                A simple, transparent process from initial consultation to final handover
+              <p className="text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
+                A transparent journey from initial consultation to final handover
               </p>
             </div>
 
+            {/* Process Steps */}
             <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {processSteps.map((step, index) => (
-                  <div key={index} className="flex gap-6 items-start">
-                    <div className="flex-shrink-0 h-12 w-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
-                      {step.step}
-                    </div>
-                    <div className="flex-1 pt-2">
-                      <h3 className="text-xl font-semibold text-foreground mb-2">{step.title}</h3>
-                      <p className="text-muted-foreground">{step.description}</p>
+                  <div key={index} className="group relative">
+                    {/* Connector Line */}
+                    {index < processSteps.length - 1 && (
+                      <div className="absolute left-6 top-20 w-0.5 h-12 bg-gradient-to-b from-amber-200 to-transparent" />
+                    )}
+                    
+                    <div className="flex gap-6 items-start bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm hover:shadow-lg transition-all">
+                      {/* Step Number */}
+                      <div className="flex-shrink-0 h-14 w-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-white flex items-center justify-center font-black text-xl shadow-lg">
+                        {step.step}
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-1 pt-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <step.icon className="h-5 w-5 text-amber-600" />
+                          <h3 className="text-2xl font-bold text-zinc-900">{step.title}</h3>
+                        </div>
+                        <p className="text-zinc-600 leading-relaxed">{step.description}</p>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -181,22 +279,46 @@ export default function RenovationsPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-primary">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              Ready to Transform Your Space?
-            </h2>
-            <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
-              Get a free consultation and detailed quote for your renovation project
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90">
-                <Link href="/quote">Get Free Quote</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent">
-                <Link href="/portfolio">View Our Work</Link>
-              </Button>
+        {/* CTA Section - Enhanced */}
+        <section className="relative py-24 overflow-hidden">
+          {/* Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-zinc-800" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+          
+          {/* Gradient Orbs */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/20 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/20 rounded-full blur-[120px]" />
+
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+                Ready to Transform Your Space?
+              </h2>
+              <p className="text-xl text-zinc-300 mb-10 leading-relaxed">
+                Get a free consultation and detailed quote for your renovation project
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/quote" className="group">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500" />
+                    <div className="relative flex items-center justify-center gap-2 px-10 py-5 text-lg font-bold text-zinc-900">
+                      Get Free Quote
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link href="/portfolio" className="group">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-white/10 backdrop-blur-sm border-2 border-white/30" />
+                    <div className="relative flex items-center justify-center gap-2 px-10 py-5 text-lg font-bold text-white">
+                      View Our Work
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
