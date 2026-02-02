@@ -9,7 +9,7 @@ const services = [
     title: "Kitchen Renovations",
     description: "Modern kitchen designs with quality finishes and expert craftsmanship",
     image: "/images/hero-renovations.jpg",
-    href: "/renovations/residential",
+    href: "/renovations/kitchen-renovations",
     category: "Renovations",
     categoryColor: "bg-amber-500",
     categoryIcon: Hammer,
