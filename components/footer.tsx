@@ -97,27 +97,25 @@ export function Footer() {
                   <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Sustainable Solutions
                 </Link>
-                 <li>
+              </li>
+              <li>
                 <Link href="/renovations/kitchen-renovations" className="text-sm hover:text-amber-400 transition-colors flex items-center gap-2 group">
                   <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Kitchen Renovations
                 </Link>
               </li>
-                
-               <li>
+              <li>
                 <Link href="/renovations/bathroom-renovations" className="text-sm hover:text-amber-400 transition-colors flex items-center gap-2 group">
                   <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Bathroom Renovations
                 </Link>
               </li>
-              
               <li>
                 <Link href="/renovations/roofing-waterproofing" className="text-sm hover:text-amber-400 transition-colors flex items-center gap-2 group">
                   <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Roofing & Waterproofing
                 </Link>
               </li>
-              
               <li>
                 <Link href="/renovations" className="text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors flex items-center gap-2">
                   View All Services
