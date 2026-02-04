@@ -149,13 +149,14 @@ const categories = [
 ]
 
 const projectTypes = [
-  { name: "Kitchen", icon: <Home className="h-4 w-4" /> },
-  { name: "Bathroom", icon: <Wrench className="h-4 w-4" /> },
-  { name: "Office", icon: <Building2 className="h-4 w-4" /> },
-  { name: "Restaurant", icon: <Building2 className="h-4 w-4" /> },
-  { name: "Retail", icon: <Building2 className="h-4 w-4" /> },
-  { name: "Full House", icon: <Home className="h-4 w-4" /> },
-  { name: "Exterior", icon: <PaintBucket className="h-4 w-4" /> },
+  { name: "Kitchen", icon: <Home className="h-4 w-4" />, href: "/renovations/kitchen-renovation" },
+  { name: "Bathroom", icon: <Wrench className="h-4 w-4" />, href: "/renovations/bathroom-renovation" },
+  { name: "Interior", icon: <PaintBucket className="h-4 w-4" />, href: "/renovations/interior-remodeling" },
+  { name: "Office", icon: <Building2 className="h-4 w-4" />, href: "/renovations/commercial" },
+  { name: "Restaurant", icon: <Building2 className="h-4 w-4" />, href: "/renovations/commercial" },
+  { name: "Retail", icon: <Building2 className="h-4 w-4" />, href: "/renovations/commercial" },
+  { name: "Full House", icon: <Home className="h-4 w-4" />, href: "/renovations/residential" },
+  { name: "Exterior", icon: <PaintBucket className="h-4 w-4" />, href: "/renovations/exterior" },
 ]
 
 const testimonials = [
@@ -343,7 +344,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        {/* Project Types */}
+        {/* Project Types - WITH INTERNAL LINKS */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -357,14 +358,19 @@ export default function PortfolioPage() {
 
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
               {projectTypes.map((type, index) => (
-                <Card key={index} className="border border-border hover:border-primary transition-colors">
-                  <CardContent className="p-4 flex items-center gap-3">
-                    <div className="p-2 rounded-full bg-primary/10 text-primary">
-                      {type.icon}
-                    </div>
-                    <span className="font-medium text-foreground">{type.name} Renovations</span>
-                  </CardContent>
-                </Card>
+                <Link key={index} href={type.href} className="group">
+                  <Card className="border border-border hover:border-primary hover:shadow-lg transition-all">
+                    <CardContent className="p-4 flex items-center gap-3">
+                      <div className="p-2 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        {type.icon}
+                      </div>
+                      <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                        {type.name} Renovations
+                      </span>
+                      <ArrowRight className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity ml-auto" />
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
