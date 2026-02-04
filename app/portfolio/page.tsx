@@ -31,7 +31,7 @@ const projects = [
     category: "Residential",
     type: "Kitchen",
     description: "Complete kitchen transformation featuring custom cabinetry, imported granite countertops, modern stainless steel appliances, and ambient lighting. This project included removing a wall to create an open-plan layout connecting to the dining area.",
-    image: "/images/hero-renovations.jpg",
+    image: "/images/kitchen-renovation-harare.jpg",
     duration: "4 weeks",
     size: "25 sqm",
     year: "2024",
