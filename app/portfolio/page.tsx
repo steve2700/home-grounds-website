@@ -115,7 +115,7 @@ const projects = [
     category: "Commercial",
     type: "Medical",
     description: "Complete medical clinic renovation including reception area, consultation rooms, treatment room, sterilization area, and patient facilities. All work completed to health department specifications with medical-grade finishes.",
-    image: "/images/commercial-renovation.jpg",
+    image: "/images/medical-clinic-renovation.jpg",
     duration: "7 weeks",
     size: "180 sqm",
     year: "2023",
