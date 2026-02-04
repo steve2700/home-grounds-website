@@ -67,7 +67,7 @@ const projects = [
     category: "Commercial",
     type: "Restaurant",
     description: "Complete restaurant interior redesign with commercial kitchen upgrade, new seating for 80 guests, ambient lighting system, bar area construction, and health compliance upgrades. The renovation was completed in phases to minimize business disruption.",
-    image: "/images/commercial-renovation.jpg",
+    image: "/images/restaurant-interior-renovation-avondale.jpg",
     duration: "8 weeks",
     size: "200 sqm",
     year: "2024",
