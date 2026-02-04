@@ -91,7 +91,7 @@ const projects = [
     category: "Commercial",
     type: "Retail",
     description: "Complete retail space redesign for a fashion boutique including modern display systems, strategic lighting to highlight merchandise, fitting rooms, POS area, and customer flow optimization. The design maximized the 120 sqm space.",
-    image: "/images/commercial-renovation.jpg",
+    image: "/images/retail-store-transformation-eastgate.jpg",
     duration: "5 weeks",
     size: "120 sqm",
     year: "2023",
