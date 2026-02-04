@@ -79,7 +79,7 @@ const projects = [
     category: "Residential",
     type: "Bathroom",
     description: "Luxury master bathroom renovation featuring walk-in rain shower, freestanding bathtub, double vanity with marble countertops, heated flooring, and modern fixtures. Included complete waterproofing and ventilation upgrades.",
-    image: "/images/hero-renovations.jpg",
+    image: "/images/master-bathroom-spa-remodel.jpg",
     duration: "3 weeks",
     size: "15 sqm",
     year: "2024",
