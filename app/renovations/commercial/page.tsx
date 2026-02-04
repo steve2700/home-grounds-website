@@ -173,7 +173,7 @@ export default function CommercialPage() {
         <section className="relative min-h-[60vh] flex items-center">
           <div className="absolute inset-0">
             <Image
-              src="/images/commercial-renovation.jpg"
+              src="/images/medical-clinic-renovation.jpg"
               alt="Professional commercial renovations in Harare Zimbabwe - office fit-outs and retail store renovations"
               fill
               className="object-cover"
