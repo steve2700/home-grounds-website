@@ -149,14 +149,14 @@ const categories = [
 ]
 
 const projectTypes = [
-  { name: "Kitchen", icon: <Home className="h-4 w-4" />, href: "/renovations/kitchen-renovation" },
-  { name: "Bathroom", icon: <Wrench className="h-4 w-4" />, href: "/renovations/bathroom-renovation" },
+  { name: "Kitchen", icon: <Home className="h-4 w-4" />, href: "/renovations/kitchen-renovations" },
+  { name: "Bathroom", icon: <Wrench className="h-4 w-4" />, href: "/renovations/bathroom-renovations" },
   { name: "Interior", icon: <PaintBucket className="h-4 w-4" />, href: "/renovations/interior-remodeling" },
   { name: "Office", icon: <Building2 className="h-4 w-4" />, href: "/renovations/commercial" },
   { name: "Restaurant", icon: <Building2 className="h-4 w-4" />, href: "/renovations/commercial" },
   { name: "Retail", icon: <Building2 className="h-4 w-4" />, href: "/renovations/commercial" },
   { name: "Full House", icon: <Home className="h-4 w-4" />, href: "/renovations/residential" },
-  { name: "Exterior", icon: <PaintBucket className="h-4 w-4" />, href: "/renovations/exterior" },
+  { name: "Exterior", icon: <PaintBucket className="h-4 w-4" />, href: "/renovations/exterior-home-improvements" },
 ]
 
 const testimonials = [
