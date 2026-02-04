@@ -18,9 +18,13 @@ import { cn } from "@/lib/utils"
 
 const renovationsLinks = [
   { title: "Residential", href: "/renovations/residential", description: "Kitchen, bathroom & full home renovations" },
+  { title: "Kitchen Renovations", href: "/renovations/kitchen-renovations", description: "Expert kitchen remodeling" },
+  { title: "Bathroom Renovations", href: "/renovations/bathroom-renovations", description: "Expert bathroom remodeling" },
   { title: "Commercial", href: "/renovations/commercial", description: "Office fit-outs & retail renovations" },
   { title: "Maintenance", href: "/renovations/maintenance", description: "Property maintenance & repairs" },
   { title: "Sustainable Solutions", href: "/renovations/sustainable-solutions", description: "Solar, energy & smart home systems" },
+  { title: "Interior Remodeling", href: "/renovations/interior-remodeling", description: "Modern interior improvements" },
+  { title: "Exterior Home Improvements", href: "/renovations/exterior-home-improvements", description: "Modern interior improvements" },  
 ]
 
 const meatsLinks = [
