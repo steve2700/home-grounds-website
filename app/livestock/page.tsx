@@ -328,7 +328,7 @@ export default function LivestockPage() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl blur opacity-20" />
                 <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-zinc-200">
                   <Image
-                    src="/images/livestock-farm-operation.jpg"
+                    src="/images/livestock-hero.jpg"
                     alt="Professional livestock farming operation in Zimbabwe"
                     fill
                     className="object-cover"
