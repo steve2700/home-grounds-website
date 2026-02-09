@@ -6,11 +6,11 @@ import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Sprout, Beef, Egg, PiggyBank, Tractor, HeartHandshake, TrendingUp, Shield, CheckCircle, Phone, Award, Leaf, ChefHat, Users, Target, Sparkles } from "lucide-react"
+import { ArrowRight, Sprout, Beef, Egg, PiggyBank, Tractor, HeartHandshake, TrendingUp, Shield, CheckCircle, Phone, Award, Leaf, ChefHat, Users, Target, Sparkles, Mountain, Milk } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Professional Livestock Farming Solutions | Cattle, Poultry & Pigs | Home Grounds Zimbabwe",
-  description: "Commercial livestock farming in Zimbabwe. Expert cattle, poultry, and pig farming services. Modern farm management, breeding stock, feed programs. Harare, Bulawayo, Masvingo.",
+  title: "Professional Livestock Farming Solutions | Cattle, Poultry, Goats & More | Home Grounds Zimbabwe",
+  description: "Commercial livestock farming in Zimbabwe. Expert cattle, poultry, goats, sheep, and pig farming services. Modern farm management, breeding stock, feed programs. Harare, Bulawayo, Masvingo.",
 }
 
 const livestockProducts = [
@@ -20,6 +20,20 @@ const livestockProducts = [
     image: "/images/livestock-cattle.jpg",
     href: "/livestock/cattle",
     features: ["Beef & Dairy Cattle", "Breed Selection & Procurement", "Pasture Management", "Veterinary Care Programs"],
+  },
+  {
+    title: "Goat Farming",
+    description: "Commercial goat farming with Boer, dairy, and indigenous breeds. Expert breeding, dairy production, and meat goat operations for profitable returns.",
+    image: "/images/livestock-goats.jpg",
+    href: "/livestock/goats",
+    features: ["Boer & Dairy Goats", "Breeding Programs", "Milk Production", "Meat Goat Operations"],
+  },
+  {
+    title: "Sheep Farming",
+    description: "Quality sheep farming with wool and meat production. Expert flock management, breeding programs, and sustainable grazing systems.",
+    image: "/images/livestock-sheep.jpg",
+    href: "/livestock/sheep",
+    features: ["Wool & Meat Breeds", "Flock Management", "Breeding Selection", "Pasture Systems"],
   },
   {
     title: "Poultry Farming",
@@ -136,7 +150,7 @@ export default function LivestockPage() {
 
               {/* Description */}
               <p className="text-xl md:text-2xl text-zinc-300 mb-10 leading-relaxed">
-                Expert livestock farming solutions across Zimbabwe. From cattle to poultry and pigs - we deliver sustainable, profitable farming operations with modern technology and proven methods.
+                Expert livestock farming solutions across Zimbabwe. From cattle to poultry, goats, sheep, and pigs - we deliver sustainable, profitable farming operations with modern technology and proven methods.
               </p>
 
               {/* CTAs */}
@@ -245,8 +259,8 @@ export default function LivestockPage() {
               </p>
             </div>
 
-            {/* Product Cards */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Product Cards - Now 3 columns grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {livestockProducts.map((product, index) => (
                 <Link key={index} href={product.href} className="group block">
                   <div className="relative h-full">
@@ -256,7 +270,7 @@ export default function LivestockPage() {
                     {/* Card */}
                     <Card className="relative h-full overflow-hidden border border-zinc-200 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300">
                       {/* Image */}
-                      <div className="relative h-64">
+                      <div className="relative h-48">
                         <Image
                           src={product.image || "/placeholder.svg"}
                           alt={product.title}
@@ -267,29 +281,29 @@ export default function LivestockPage() {
                       </div>
 
                       {/* Content */}
-                      <CardContent className="p-8 bg-white">
-                        <h3 className="text-2xl font-bold text-zinc-900 mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-green-600 group-hover:to-emerald-600 group-hover:bg-clip-text transition-all">
+                      <CardContent className="p-6 bg-white">
+                        <h3 className="text-xl font-bold text-zinc-900 mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-green-600 group-hover:to-emerald-600 group-hover:bg-clip-text transition-all">
                           {product.title}
                         </h3>
-                        <p className="text-zinc-600 mb-6 leading-relaxed">{product.description}</p>
+                        <p className="text-zinc-600 mb-4 text-sm leading-relaxed">{product.description}</p>
 
                         {/* Features */}
-                        <ul className="space-y-3 mb-8">
+                        <ul className="space-y-2 mb-6">
                           {product.features.map((feature, i) => (
-                            <li key={i} className="flex items-center gap-3">
-                              <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
-                              <span className="text-zinc-700 font-medium">{feature}</span>
+                            <li key={i} className="flex items-center gap-2">
+                              <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                              <span className="text-zinc-700 text-sm font-medium">{feature}</span>
                             </li>
                           ))}
                         </ul>
 
                         {/* CTA */}
-                        <div className="flex items-center gap-2 font-bold text-zinc-900 group-hover:gap-3 transition-all">
+                        <div className="flex items-center gap-2 font-bold text-zinc-900 group-hover:gap-3 transition-all text-sm">
                           <span className="relative">
                             Learn More
                             <span className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-green-600 to-emerald-600 w-0 group-hover:w-full transition-all duration-300" />
                           </span>
-                          <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </div>
                       </CardContent>
                     </Card>
