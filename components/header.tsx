@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
-import { Menu, Phone, MessageCircle, X, ChevronDown, Hammer, Beef } from "lucide-react"
+import { Menu, Phone, MessageCircle, X, ChevronDown, Hammer, Beef, Sprout } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const renovationsLinks = [
@@ -34,43 +34,55 @@ const meatsLinks = [
   { title: "Butchery Services", href: "/meats/butchery", description: "Custom cutting & party packs" },
 ]
 
+const livestockLinks = [
+  { title: "Cattle Farming", href: "/livestock/cattle", description: "Beef and dairy cattle operations" },
+  { title: "Poultry Farming", href: "/livestock/poultry", description: "Commercial chicken farming" },
+  { title: "Pig Farming", href: "/livestock/pigs", description: "Quality pork production" },
+  { title: "Farm Management", href: "/livestock/management", description: "Modern farming solutions" },
+]
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [renovationsOpen, setRenovationsOpen] = useState(false)
   const [meatsOpen, setMeatsOpen] = useState(false)
+  const [livestockOpen, setLivestockOpen] = useState(false)
 
   return (
     <>
-      {/* Add global style to force dropdown visibility */}
+      {/* Enhanced global styles to fix dropdown visibility */}
       <style jsx global>{`
         [data-radix-navigation-menu-viewport] {
           background: white !important;
           border: 1px solid #e4e4e7 !important;
-          box-shadow: 0 10px 38px -10px rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 0 10px 38px -10px rgba(0, 0, 0, 0.35), 0 10px 20px -15px rgba(0, 0, 0, 0.2) !important;
           z-index: 9999 !important;
+          position: relative !important;
         }
         
         [data-radix-popper-content-wrapper] {
           z-index: 9999 !important;
+          position: relative !important;
+        }
+
+        [data-radix-navigation-menu-content] {
+          background: white !important;
+          z-index: 9999 !important;
+          position: relative !important;
         }
       `}</style>
 
       <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white backdrop-blur-md shadow-sm">
         <div className="container mx-auto flex h-20 items-center justify-between px-4">
-          {/* Logo */}
+          {/* Updated Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-12 w-28 transition-transform group-hover:scale-105">
+            <div className="relative h-14 w-48 transition-transform group-hover:scale-105">
               <Image
-                src="/hg-logo-transparent.png"
-                alt="Home Grounds Investments"
+                src="/Home_Ground_Logo_Final-01.jpg"
+                alt="Home Grounds Investments - Growing value from the ground up"
                 fill
                 className="object-contain"
                 priority
               />
-            </div>
-            <div className="hidden xl:block">
-              <div className="text-sm font-black text-zinc-900 leading-tight">HOME GROUNDS</div>
-              <div className="text-xs text-zinc-600 font-medium">Investments</div>
             </div>
           </Link>
 
@@ -81,19 +93,12 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger 
                   className="h-11 bg-transparent text-zinc-900 hover:bg-amber-50 hover:text-amber-900 data-[state=open]:bg-amber-50 data-[state=open]:text-amber-900 font-semibold"
-                  style={{ position: 'relative', zIndex: 100 }}
                 >
                   <Hammer className="h-4 w-4 mr-2" />
                   Renovations
                 </NavigationMenuTrigger>
                 <NavigationMenuContent 
-                  className="bg-white shadow-2xl border border-zinc-200"
-                  style={{ 
-                    position: 'absolute',
-                    zIndex: 9999,
-                    backgroundColor: 'white',
-                    minHeight: '200px'
-                  }}
+                  className="!bg-white shadow-2xl border border-zinc-200"
                 >
                   <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2 bg-white">
                     {renovationsLinks.map((item) => (
@@ -129,19 +134,12 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger 
                   className="h-11 bg-transparent text-zinc-900 hover:bg-red-50 hover:text-red-900 data-[state=open]:bg-red-50 data-[state=open]:text-red-900 font-semibold"
-                  style={{ position: 'relative', zIndex: 100 }}
                 >
                   <Beef className="h-4 w-4 mr-2" />
                   Meats
                 </NavigationMenuTrigger>
                 <NavigationMenuContent 
-                  className="bg-white shadow-2xl border border-zinc-200"
-                  style={{ 
-                    position: 'absolute',
-                    zIndex: 9999,
-                    backgroundColor: 'white',
-                    minHeight: '200px'
-                  }}
+                  className="!bg-white shadow-2xl border border-zinc-200"
                 >
                   <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2 bg-white">
                     {meatsLinks.map((item) => (
@@ -166,6 +164,47 @@ export function Header() {
                           className="flex items-center gap-2 text-sm font-bold text-red-600 hover:text-red-700 hover:gap-3 transition-all"
                         >
                           Order Premium Meats Now →
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* NEW: Livestock Farming Dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger 
+                  className="h-11 bg-transparent text-zinc-900 hover:bg-green-50 hover:text-green-900 data-[state=open]:bg-green-50 data-[state=open]:text-green-900 font-semibold"
+                >
+                  <Sprout className="h-4 w-4 mr-2" />
+                  Livestock
+                </NavigationMenuTrigger>
+                <NavigationMenuContent 
+                  className="!bg-white shadow-2xl border border-zinc-200"
+                >
+                  <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2 bg-white">
+                    {livestockLinks.map((item) => (
+                      <li key={item.title}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href={item.href}
+                            className="block select-none space-y-1 rounded-xl p-4 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-green-900 focus:bg-green-50 focus:text-green-900 border border-transparent hover:border-green-200 bg-white"
+                          >
+                            <div className="text-sm font-bold leading-none text-zinc-900">{item.title}</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-zinc-600 mt-2">
+                              {item.description}
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                    <li className="col-span-2 border-t border-zinc-200 pt-4 mt-2 bg-white">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/livestock"
+                          className="flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-700 hover:gap-3 transition-all"
+                        >
+                          Explore Livestock Farming →
                         </Link>
                       </NavigationMenuLink>
                     </li>
@@ -238,9 +277,9 @@ export function Header() {
                   {/* Mobile Header */}
                   <div className="flex items-center justify-between p-4 border-b border-zinc-200">
                     <div className="flex items-center gap-2">
-                      <div className="relative h-10 w-24">
+                      <div className="relative h-10 w-32">
                         <Image
-                          src="/hg-logo-transparent.png"
+                          src="/Home_Ground_Logo_Final-01.jpg"
                           alt="Home Grounds"
                           fill
                           className="object-contain"
@@ -331,6 +370,41 @@ export function Header() {
                               onClick={() => setMobileOpen(false)}
                             >
                               Order Now →
+                            </Link>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* NEW: Livestock Accordion */}
+                      <div>
+                        <button
+                          onClick={() => setLivestockOpen(!livestockOpen)}
+                          className="flex w-full items-center justify-between py-2 text-lg font-bold text-zinc-900 hover:text-green-600 transition-colors"
+                        >
+                          <span className="flex items-center gap-2">
+                            <Sprout className="h-5 w-5" />
+                            Livestock
+                          </span>
+                          <ChevronDown className={cn("h-5 w-5 transition-transform", livestockOpen && "rotate-180")} />
+                        </button>
+                        {livestockOpen && (
+                          <div className="ml-4 mt-2 space-y-2 border-l-2 border-green-600 pl-4">
+                            {livestockLinks.map((item) => (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                className="block py-1.5 text-zinc-600 hover:text-green-600 font-medium transition-colors"
+                                onClick={() => setMobileOpen(false)}
+                              >
+                                {item.title}
+                              </Link>
+                            ))}
+                            <Link
+                              href="/livestock"
+                              className="block py-1.5 font-bold text-green-600 hover:text-green-700 transition-colors"
+                              onClick={() => setMobileOpen(false)}
+                            >
+                              Learn More →
                             </Link>
                           </div>
                         )}
