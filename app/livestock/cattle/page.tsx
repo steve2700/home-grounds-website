@@ -154,7 +154,7 @@ export default function CattlePage() {
           {/* Background */}
           <div className="absolute inset-0">
             <Image
-              src="/images/cattle-hero-zimbabwe.jpg"
+              src="/images/livestock-cattle.jpg"
               alt="Home Grounds cattle farming operations in Zimbabwe"
               fill
               className="object-cover"
