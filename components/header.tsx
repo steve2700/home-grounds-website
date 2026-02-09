@@ -36,6 +36,8 @@ const meatsLinks = [
 
 const livestockLinks = [
   { title: "Cattle Farming", href: "/livestock/cattle", description: "Beef and dairy cattle operations" },
+  { title: "Goat Farming", href: "/livestock/goats", description: "Boer, dairy & indigenous goats" },
+  { title: "Sheep Farming", href: "/livestock/sheep", description: "Wool & meat sheep production" },
   { title: "Poultry Farming", href: "/livestock/poultry", description: "Commercial chicken farming" },
   { title: "Pig Farming", href: "/livestock/pigs", description: "Quality pork production" },
   { title: "Farm Management", href: "/livestock/management", description: "Modern farming solutions" },
@@ -171,7 +173,7 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* NEW: Livestock Farming Dropdown */}
+              {/* Livestock Farming Dropdown - UPDATED */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger 
                   className="h-11 bg-transparent text-zinc-900 hover:bg-green-50 hover:text-green-900 data-[state=open]:bg-green-50 data-[state=open]:text-green-900 font-semibold"
@@ -182,7 +184,7 @@ export function Header() {
                 <NavigationMenuContent 
                   className="!bg-white shadow-2xl border border-zinc-200"
                 >
-                  <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2 bg-white">
+                  <ul className="grid w-[450px] gap-3 p-6 md:w-[600px] md:grid-cols-2 bg-white">
                     {livestockLinks.map((item) => (
                       <li key={item.title}>
                         <NavigationMenuLink asChild>
@@ -204,7 +206,7 @@ export function Header() {
                           href="/livestock"
                           className="flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-700 hover:gap-3 transition-all"
                         >
-                          Explore Livestock Farming →
+                          Explore All Livestock Farming →
                         </Link>
                       </NavigationMenuLink>
                     </li>
@@ -375,7 +377,7 @@ export function Header() {
                         )}
                       </div>
 
-                      {/* NEW: Livestock Accordion */}
+                      {/* Livestock Accordion - UPDATED */}
                       <div>
                         <button
                           onClick={() => setLivestockOpen(!livestockOpen)}
