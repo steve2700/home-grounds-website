@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Home, Beef, Wrench, Utensils, Building2, Truck, Hammer, ChefHat, Sparkles, Shield, Clock, Award } from "lucide-react"
+import { ArrowRight, Home, Beef, Wrench, Utensils, Building2, Truck, Hammer, ChefHat, Sparkles, Shield, Clock, Award, Sprout, TreePine } from "lucide-react"
 
 export function DivisionsSection() {
   return (
@@ -21,17 +21,17 @@ export function DivisionsSection() {
             <span className="text-sm font-semibold text-zinc-700 uppercase tracking-wide">Our Divisions</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-zinc-900 mb-6 tracking-tight">
-            Two Divisions,<br />
+            Four Divisions,<br />
             <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">One Commitment</span>
           </h2>
           <p className="text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
-            From transforming your living spaces to delivering farm-fresh meats to your table, 
-            we're Zimbabwe's trusted partner for quality living.
+            From farm to table, from ground to finish - transforming spaces, raising quality livestock, 
+            and delivering premium meats across Zimbabwe.
           </p>
         </div>
 
         {/* Division Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
           {/* Renovations Division */}
           <div className="group relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-3xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500" />
@@ -165,8 +165,8 @@ export function DivisionsSection() {
                   Farm-Fresh Quality
                 </h3>
                 <p className="text-zinc-600 text-lg mb-8 leading-relaxed">
-                  Premium beef, pork, and poultry from Zimbabwe's finest farms. 
-                  Hygienic processing, exceptional taste, delivered fresh.
+                  Premium beef, pork, and poultry from our Chivhu farms, processed in our own abattoir, 
+                  and delivered fresh in refrigerated vehicles.
                 </p>
 
                 {/* Feature List */}
@@ -186,8 +186,8 @@ export function DivisionsSection() {
                       <ChefHat className="h-5 w-5 text-red-600" />
                     </div>
                     <div>
-                      <div className="font-bold text-zinc-900 mb-1">Custom Butchery Services</div>
-                      <div className="text-sm text-zinc-600">Cuts prepared to your specifications</div>
+                      <div className="font-bold text-zinc-900 mb-1">Own Abattoir Processing</div>
+                      <div className="text-sm text-zinc-600">Hygienic processing with quality control</div>
                     </div>
                   </div>
 
@@ -196,8 +196,8 @@ export function DivisionsSection() {
                       <Truck className="h-5 w-5 text-red-600" />
                     </div>
                     <div>
-                      <div className="font-bold text-zinc-900 mb-1">Fresh Delivery Available</div>
-                      <div className="text-sm text-zinc-600">Reliable delivery across all regions</div>
+                      <div className="font-bold text-zinc-900 mb-1">Refrigerated Delivery</div>
+                      <div className="text-sm text-zinc-600">Fresh delivery to homes and butcheries</div>
                     </div>
                   </div>
                 </div>
@@ -208,6 +208,190 @@ export function DivisionsSection() {
                     <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600" />
                     <div className="relative flex items-center justify-center gap-2 px-8 py-4 text-white font-bold">
                       Shop Premium Meats
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Livestock Farming Division */}
+          <div className="group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500" />
+            <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl border border-zinc-200/50">
+              {/* Image Section */}
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/hero-livestock.jpg"
+                  alt="Home Grounds Livestock Farming"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
+                
+                {/* Floating Badge */}
+                <div className="absolute top-6 left-6">
+                  <div className="flex items-center gap-3 bg-green-600 text-white rounded-2xl px-5 py-3 shadow-lg">
+                    <Sprout className="h-5 w-5" />
+                    <span className="font-bold text-sm uppercase tracking-wide">Livestock Farming</span>
+                  </div>
+                </div>
+
+                {/* Stats Overlay */}
+                <div className="absolute bottom-6 left-6 right-6 flex gap-4">
+                  <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                    <div className="text-2xl font-black text-white">Chivhu</div>
+                    <div className="text-xs text-white/80 font-medium">Farms</div>
+                  </div>
+                  <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                    <div className="text-2xl font-black text-white">Quality</div>
+                    <div className="text-xs text-white/80 font-medium">Breeding</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="p-8">
+                <h3 className="text-3xl font-black text-zinc-900 mb-4">
+                  Sustainable Farming
+                </h3>
+                <p className="text-zinc-600 text-lg mb-8 leading-relaxed">
+                  Quality livestock raised on our Chivhu farms with sustainable practices, 
+                  ensuring healthy animals and superior meat quality.
+                </p>
+
+                {/* Feature List */}
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-green-50 rounded-lg group-hover/item:bg-green-100 transition-colors">
+                      <Beef className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Premium Cattle Breeding</div>
+                      <div className="text-sm text-zinc-600">Quality genetics and expert care</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-green-50 rounded-lg group-hover/item:bg-green-100 transition-colors">
+                      <TreePine className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Sustainable Practices</div>
+                      <div className="text-sm text-zinc-600">Environmental stewardship and animal welfare</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-green-50 rounded-lg group-hover/item:bg-green-100 transition-colors">
+                      <Shield className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Health Monitoring</div>
+                      <div className="text-sm text-zinc-600">Veterinary care and disease prevention</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <Link href="/livestock" className="block group/btn">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600" />
+                    <div className="relative flex items-center justify-center gap-2 px-8 py-4 text-white font-bold">
+                      Explore Livestock Farming
+                      <ArrowRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Feedlot Farming Division */}
+          <div className="group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-lg opacity-25 group-hover:opacity-40 transition-opacity duration-500" />
+            <div className="relative bg-white rounded-3xl overflow-hidden shadow-xl border border-zinc-200/50">
+              {/* Image Section */}
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/images/hero-feedlot.jpg"
+                  alt="Home Grounds Feedlot Farming"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
+                
+                {/* Floating Badge */}
+                <div className="absolute top-6 left-6">
+                  <div className="flex items-center gap-3 bg-blue-600 text-white rounded-2xl px-5 py-3 shadow-lg">
+                    <Utensils className="h-5 w-5" />
+                    <span className="font-bold text-sm uppercase tracking-wide">Feedlot Farming</span>
+                  </div>
+                </div>
+
+                {/* Stats Overlay */}
+                <div className="absolute bottom-6 left-6 right-6 flex gap-4">
+                  <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                    <div className="text-2xl font-black text-white">Expert</div>
+                    <div className="text-xs text-white/80 font-medium">Finishing</div>
+                  </div>
+                  <div className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3">
+                    <div className="text-2xl font-black text-white">Prime</div>
+                    <div className="text-xs text-white/80 font-medium">Quality</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="p-8">
+                <h3 className="text-3xl font-black text-zinc-900 mb-4">
+                  Premium Finishing
+                </h3>
+                <p className="text-zinc-600 text-lg mb-8 leading-relaxed">
+                  Professional feedlot operations ensuring optimal weight gain and meat quality 
+                  through controlled nutrition and expert management.
+                </p>
+
+                {/* Feature List */}
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-blue-50 rounded-lg group-hover/item:bg-blue-100 transition-colors">
+                      <Utensils className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Controlled Feeding Programs</div>
+                      <div className="text-sm text-zinc-600">Scientifically formulated nutrition plans</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-blue-50 rounded-lg group-hover/item:bg-blue-100 transition-colors">
+                      <Award className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Superior Marbling</div>
+                      <div className="text-sm text-zinc-600">Premium meat quality and tenderness</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group/item">
+                    <div className="mt-1 p-2 bg-blue-50 rounded-lg group-hover/item:bg-blue-100 transition-colors">
+                      <Clock className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-zinc-900 mb-1">Professional Management</div>
+                      <div className="text-sm text-zinc-600">Optimized finishing timelines</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <Link href="/feedlot-farming" className="block group/btn">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600" />
+                    <div className="relative flex items-center justify-center gap-2 px-8 py-4 text-white font-bold">
+                      Discover Feedlot Operations
                       <ArrowRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
                     </div>
                   </div>
