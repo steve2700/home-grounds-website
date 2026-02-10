@@ -183,7 +183,7 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/feedlot-farming" className="text-sm hover:text-green-400 transition-colors flex items-center gap-2 group">
+                  <Link href="/livestock/feedlot-farming" className="text-sm hover:text-green-400 transition-colors flex items-center gap-2 group">
                     <ArrowRight className="h-3 w-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                     <span className="group-hover:translate-x-1 transition-transform">Feedlot Farming</span>
                   </Link>
