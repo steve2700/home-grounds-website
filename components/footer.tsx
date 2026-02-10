@@ -17,7 +17,7 @@ export function Footer() {
             <Link href="/" className="inline-block group">
               <div className="relative h-16 w-48 mb-4 transition-transform group-hover:scale-105">
                 <Image
-                  src="/Home_Ground_Logo_Final-01.jpg"
+                  src="/Home_Ground_Logo_Final-01-removebg-preview.png"
                   alt="Home Ground Investments"
                   fill
                   className="object-contain"
