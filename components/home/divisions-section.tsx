@@ -387,7 +387,7 @@ export function DivisionsSection() {
                 </div>
 
                 {/* CTA Button */}
-                <Link href="/feedlot-farming" className="block group/btn">
+                <Link href="/livestock/feedlot-farming" className="block group/btn">
                   <div className="relative overflow-hidden rounded-2xl">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600" />
                     <div className="relative flex items-center justify-center gap-2 px-8 py-4 text-white font-bold">
