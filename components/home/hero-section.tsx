@@ -33,7 +33,7 @@ export function HeroSection() {
           <div className="absolute top-8 left-8 z-10">
             <div className="inline-flex items-center gap-3 bg-amber-500/10 backdrop-blur-md border border-amber-500/30 rounded-2xl px-6 py-3">
               <Hammer className="h-5 w-5 text-amber-400" />
-              <span className="text-sm font-semibold tracking-wide text-amber-100 uppercase">Renovations & Maintenance</span>
+              <span className="text-sm font-semibold tracking-wide text-amber-100 uppercase">Property Renovations & Maintenance</span>
             </div>
           </div>
         </div>
