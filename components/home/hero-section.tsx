@@ -33,7 +33,7 @@ export function HeroSection() {
           <div className="absolute top-8 left-8 z-10">
             <div className="inline-flex items-center gap-3 bg-amber-500/10 backdrop-blur-md border border-amber-500/30 rounded-2xl px-6 py-3">
               <Hammer className="h-5 w-5 text-amber-400" />
-              <span className="text-sm font-semibold tracking-wide text-amber-100 uppercase">Renovations & Construction</span>
+              <span className="text-sm font-semibold tracking-wide text-amber-100 uppercase">Renovations & Maintenance</span>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ export function HeroSection() {
           <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-5 py-2.5 mb-8 hover:bg-white/10 transition-all duration-300">
             <MapPin className="h-4 w-4 text-amber-400" />
             <span className="text-sm font-medium text-zinc-200">
-              Harare • Bulawayo • Masvingo • Waterfalls
+              Harare • Bulawayo • Masvingo • Waterfalls .Chivhu
             </span>
           </div>
 
