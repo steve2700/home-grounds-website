@@ -77,7 +77,7 @@ export function Header() {
         <div className="container mx-auto flex h-20 items-center justify-between px-4">
           {/* Updated Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-14 w-48 transition-transform group-hover:scale-105">
+            <div className="relative h-16 w-44 sm:h-20 sm:w-56 lg:h-24 lg:w-64 mb-4 transition-transform group-hover:scale-105">
               <Image
                 src="/Home_Ground_Logo_Final-01.jpg"
                 alt="Home Grounds Investments - Growing value from the ground up"
