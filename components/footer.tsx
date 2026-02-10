@@ -20,7 +20,7 @@ export function Footer() {
                   src="/Home_Ground_Logo_Final-01.jpg"
                   alt="Home Ground Investments"
                   fill
-                  className="object-contain brightness-0 invert"
+                  className="object-contain"
                   priority
                 />
               </div>
