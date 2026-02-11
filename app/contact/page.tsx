@@ -98,7 +98,13 @@ ${formData.message}
         <section className="relative bg-[#2D2D2D] py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#2D2D2D] via-[#2D2D2D]/95 to-[#2D2D2D]/80 z-10" />
           <div className="absolute inset-0 opacity-20">
-            <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600')] bg-cover bg-center" />
+            <Image
+              src="/images/kitchen-renovation-harare.jpg"
+              alt="Kitchen Renovation Harare"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
           <div className="container mx-auto px-4 relative z-20">
             <div className="max-w-3xl">
