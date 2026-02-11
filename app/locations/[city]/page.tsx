@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { MapPin, Phone, ArrowRight, Building2, Star, CheckCircle, Tractor } from "lucide-react"
+import { MapPin, Phone, Clock, ArrowRight, Building2, Star, CheckCircle, Tractor } from "lucide-react"
 
 const locations = [
   {
@@ -10,6 +10,7 @@ const locations = [
     description: "Headquarters serving greater Harare area",
     services: ["Full Renovations", "Meat Delivery", "Consultations"],
     phone: "+263 78 028 9132",
+    hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/harare",
     isHeadquarters: true,
     color: "amber",
@@ -19,6 +20,7 @@ const locations = [
     description: "Serving Bulawayo and surrounding provinces",
     services: ["Residential", "Commercial", "Pickup Available"],
     phone: "+263 78 028 9132",
+    hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/bulawayo",
     color: "blue",
   },
@@ -27,6 +29,7 @@ const locations = [
     description: "Southern region services and delivery",
     services: ["Home Renovations", "Fresh Meats", "Pickup Available"],
     phone: "+263 78 028 9132",
+    hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/masvingo",
     color: "green",
   },
@@ -35,6 +38,7 @@ const locations = [
     description: "Our farms and livestock operations center",
     services: ["Livestock Sales", "Farm Visits", "Pickup Available"],
     phone: "+263 78 028 9132",
+    hours: "Mon-Sat: 7AM-6PM",
     href: "/locations/chivhu",
     isFarmLocation: true,
     color: "emerald",
@@ -90,7 +94,7 @@ export function LocationsSection() {
             </span>
           </h2>
           <p className="text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
-            With locations across Zimbabwe, quality renovations and fresh meats are always within reach
+            With locations across Zimbabwe, quality renovations and fresh meats from Home Ground Investment are always within reach
           </p>
         </div>
 
@@ -166,6 +170,12 @@ export function LocationsSection() {
                         </div>
                         <span className="text-sm text-zinc-700 font-medium">{location.phone}</span>
                       </div>
+                      <div className="flex items-center gap-3">
+                        <div className="bg-zinc-100 p-2 rounded-lg">
+                          <Clock className="h-4 w-4 text-zinc-600" />
+                        </div>
+                        <span className="text-sm text-zinc-700 font-medium">{location.hours}</span>
+                      </div>
                     </div>
 
                     {/* Services Tags */}
@@ -220,7 +230,7 @@ export function LocationsSection() {
                   <Tractor className="h-7 w-7 text-emerald-600" />
                 </div>
                 <h4 className="font-bold text-zinc-900 mb-2">Farm Pickups</h4>
-                <p className="text-sm text-zinc-600">Visit our farms in Chivhu for livestock</p>
+                <p className="text-sm text-zinc-600">Visit our farms in Chivhu for fresh livestock</p>
               </div>
 
               {/* Coverage Feature 3 */}
