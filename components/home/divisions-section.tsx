@@ -315,7 +315,7 @@ export function DivisionsSection() {
               {/* Image Section */}
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/images/hero-feedlot.jpg"
+                  src="/images/cattle.jpg"
                   alt="Home Grounds Feedlot Farming"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
