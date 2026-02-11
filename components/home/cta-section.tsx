@@ -68,10 +68,7 @@ export function CTASection() {
           </div>
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 border-t border-background/10">
-            
-              href="tel:+263780289132"
-              className="flex items-center gap-3 text-background/80 hover:text-background transition-colors"
-            >
+            <a href="tel:+263780289132" className="flex items-center gap-3 text-background/80 hover:text-background transition-colors">
               <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
                 <Phone className="h-5 w-5 text-primary" />
               </div>
@@ -80,12 +77,7 @@ export function CTASection() {
                 <div className="font-semibold">+263 78 028 9132</div>
               </div>
             </a>
-            
-              href="https://wa.me/27614366718"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-background/80 hover:text-background transition-colors"
-            >
+            <a href="https://wa.me/27614366718" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-background/80 hover:text-background transition-colors">
               <div className="h-12 w-12 rounded-full bg-secondary/20 flex items-center justify-center">
                 <MessageCircle className="h-5 w-5 text-secondary" />
               </div>
