@@ -33,12 +33,30 @@ const services = [
     categoryIcon: Hammer,
   },
   {
+    title: "Quality Cattle",
+    description: "Premium breeding stock and grass-fed cattle for meat production",
+    image: "/images/cattle.jpg",
+    href: "/livestock/cattle",
+    category: "Livestock",
+    categoryColor: "bg-amber-800",
+    categoryIcon: Beef,
+  },
+  {
     title: "Fresh Poultry",
     description: "Farm-fresh chicken delivered daily with quality guarantee",
     image: "/images/poultry.jpg",
     href: "/meats/poultry",
     category: "Meats",
     categoryColor: "bg-red-600",
+    categoryIcon: Beef,
+  },
+  {
+    title: "Healthy Goats",
+    description: "Hardy breeds for meat, dairy, and breeding purposes",
+    image: "/images/goats.jpg",
+    href: "/livestock/goats",
+    category: "Livestock",
+    categoryColor: "bg-yellow-700",
     categoryIcon: Beef,
   },
   {
@@ -51,12 +69,39 @@ const services = [
     categoryIcon: Hammer,
   },
   {
+    title: "Quality Sheep",
+    description: "Wool and meat breeds with excellent genetics and care",
+    image: "/images/sheep.jpg",
+    href: "/livestock/sheep",
+    category: "Livestock",
+    categoryColor: "bg-sky-600",
+    categoryIcon: Beef,
+  },
+  {
     title: "Quality Pork",
     description: "Fresh cuts, sausages, and smoked products prepared expertly",
     image: "/images/pork.jpg",
     href: "/meats/pork",
     category: "Meats",
     categoryColor: "bg-red-600",
+    categoryIcon: Beef,
+  },
+  {
+    title: "Live Poultry",
+    description: "Chickens, ducks, and turkeys for farming and backyard flocks",
+    image: "/images/live-poultry.jpg",
+    href: "/livestock/poultry",
+    category: "Livestock",
+    categoryColor: "bg-orange-500",
+    categoryIcon: Beef,
+  },
+  {
+    title: "Premium Pigs",
+    description: "Quality breeding stock and feeder pigs for profitable farming",
+    image: "/images/pigs.jpg",
+    href: "/livestock/pigs",
+    category: "Livestock",
+    categoryColor: "bg-pink-600",
     categoryIcon: Beef,
   },
 ]
@@ -68,6 +113,8 @@ export function FeaturedServices() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-100/40 to-transparent rounded-full blur-[100px]" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-red-100/40 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-gradient-to-br from-pink-100/40 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-sky-100/40 to-transparent rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -83,7 +130,7 @@ export function FeaturedServices() {
             </span>
           </h2>
           <p className="text-xl text-zinc-600 max-w-3xl mx-auto leading-relaxed">
-            Explore our most popular offerings across both divisions
+            Explore our most popular offerings across renovations, meats, and livestock
           </p>
         </div>
 
@@ -177,6 +224,17 @@ export function FeaturedServices() {
                 <div className="relative flex items-center justify-center gap-2 px-8 py-4 text-white font-bold">
                   <Beef className="h-5 w-5" />
                   Browse All Meat Products
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/livestock" className="group/btn">
+              <div className="relative overflow-hidden rounded-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600" />
+                <div className="relative flex items-center justify-center gap-2 px-8 py-4 text-white font-bold">
+                  <Beef className="h-5 w-5" />
+                  View All Livestock
                   <ArrowRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
                 </div>
               </div>
