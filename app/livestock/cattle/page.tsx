@@ -50,13 +50,13 @@ const breedingPrograms = [
   {
     title: "Tuli Cattle",
     description: "Indigenous African breed known for excellent meat quality and adaptability to local conditions.",
-    image: "/images/cattle-tuli.jpg",
+    image: "/images/livestock-cattle.jpg",
     features: ["Indigenous Breed", "Lean Quality Beef", "Low Maintenance", "Excellent Mothering"],
   },
   {
     title: "Mashona Cattle",
     description: "Traditional Zimbabwean cattle with outstanding hardiness and fertility in challenging environments.",
-    image: "/images/cattle-mashona.jpg",
+    image: "/images/mashona-cattle.webp",
     features: ["Zimbabwe Native", "Tick Resistant", "High Fertility", "Drought Tolerant"],
   },
   {
