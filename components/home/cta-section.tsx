@@ -6,15 +6,14 @@ export function CTASection() {
   return (
     <section className="py-20 bg-foreground text-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
           <p className="text-background/80 text-lg mb-12 max-w-2xl mx-auto">
-            Whether you're planning a renovation or need quality meats delivered, we're here to help. Get in touch today.
+            Whether you're planning a renovation, need quality meats, or looking for livestock, we're here to help. Get in touch today.
           </p>
-
-          <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             {/* Renovations CTA */}
             <div className="bg-background/5 backdrop-blur-sm border border-background/10 rounded-2xl p-8">
               <h3 className="text-xl font-semibold mb-4">Plan Your Renovation</h3>
@@ -32,7 +31,6 @@ export function CTASection() {
                 </Link>
               </Button>
             </div>
-
             {/* Meats CTA */}
             <div className="bg-background/5 backdrop-blur-sm border border-background/10 rounded-2xl p-8">
               <h3 className="text-xl font-semibold mb-4">Order Premium Meats</h3>
@@ -50,11 +48,27 @@ export function CTASection() {
                 </Link>
               </Button>
             </div>
+            {/* Livestock CTA */}
+            <div className="bg-background/5 backdrop-blur-sm border border-background/10 rounded-2xl p-8">
+              <h3 className="text-xl font-semibold mb-4">Browse Livestock</h3>
+              <p className="text-background/70 mb-6">
+                Explore our quality livestock and find the perfect animals for your needs
+              </p>
+              <Button
+                asChild
+                size="lg"
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+              >
+                <Link href="/livestock">
+                  View Livestock
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
-
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 border-t border-background/10">
-            <a
+            
               href="tel:+263780289132"
               className="flex items-center gap-3 text-background/80 hover:text-background transition-colors"
             >
@@ -66,8 +80,8 @@ export function CTASection() {
                 <div className="font-semibold">+263 78 028 9132</div>
               </div>
             </a>
-            <a
-              href="https://wa.me/263780289132"
+            
+              href="https://wa.me/27614366718"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-background/80 hover:text-background transition-colors"
@@ -77,11 +91,10 @@ export function CTASection() {
               </div>
               <div className="text-left">
                 <div className="text-sm text-background/60">WhatsApp</div>
-                <div className="font-semibold">Send Message</div>
+                <div className="font-semibold">+27 61 436 6718</div>
               </div>
             </a>
           </div>
-
           <p className="mt-8 text-sm text-background/50">
             Operating Hours: Monday - Friday: 8AM - 5PM | Saturday: 8AM - 2PM
           </p>
