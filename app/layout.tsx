@@ -20,48 +20,60 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://homegrounds.co.zw'),
+  metadataBase: new URL('https://homegroundinvestments.co.zw'),
   
   title: {
-    default: 'Home Grounds Investments | Premium Renovations & Farm-Fresh Meats Zimbabwe',
-    template: '%s | Home Grounds Investments'
+    default: 'Home Ground Investments | Quality Renovations & Premium Meats in Zimbabwe',
+    template: '%s | Home Ground Investments'
   },
   
-  description: "Zimbabwe's most trusted partner for quality home & commercial renovations, and farm-fresh premium meats. Serving Harare, Bulawayo, Masvingo, and Waterfalls with excellence since 2010.",
+  description: "Zimbabwe's trusted provider of quality home renovations, commercial fit-outs, and premium farm-fresh meats. Serving Harare, Bulawayo, Masvingo, and Chivhu. Growing value from the ground up.",
   
   keywords: [
-    // Renovation keywords
-    'zimbabwe renovations',
-    'harare home improvement',
-    'bulawayo construction',
-    'masvingo renovations',
-    'kitchen renovation harare',
-    'bathroom renovation zimbabwe',
-    'commercial renovations zimbabwe',
-    'office fit-outs harare',
+    // Renovation keywords - Zimbabwe focused
+    'home renovations zimbabwe',
+    'commercial renovations harare',
+    'kitchen remodeling zimbabwe',
+    'bathroom renovation harare',
     'property maintenance zimbabwe',
-    'home extensions zimbabwe',
+    'residential renovations bulawayo',
+    'office fit-outs harare',
+    'commercial fit-outs zimbabwe',
+    'home extensions harare',
+    'property renovations masvingo',
+    'house renovation chivhu',
+    'heritage property restoration bulawayo',
     
-    // Meat keywords
-    'zimbabwe butcher',
+    // Meat & Butchery keywords
     'premium meats zimbabwe',
+    'butchery harare',
     'farm fresh meat zimbabwe',
     'beef supplier harare',
     'pork zimbabwe',
-    'poultry zimbabwe',
-    'butchery services harare',
+    'fresh poultry harare',
     'meat delivery zimbabwe',
+    'butchery services borrowdale',
+    'wholesale meat supplier zimbabwe',
+    'custom butchery harare',
+    'livestock zimbabwe',
     
-    // Location keywords
+    // Location-specific
+    'borrowdale butchery',
+    'crowhill views',
     'harare renovations',
     'bulawayo meats',
     'masvingo construction',
-    'waterfalls butchery',
+    'chivhu delivery',
+    
+    // Brand
+    'home ground investments',
+    'home grounds zimbabwe',
+    'growing value from the ground up',
   ],
   
-  authors: [{ name: 'Home Grounds Investments Company' }],
-  creator: 'Home Grounds Investments',
-  publisher: 'Home Grounds Investments Company',
+  authors: [{ name: 'Home Ground Investments' }],
+  creator: 'Home Ground Investments',
+  publisher: 'Home Ground Investments',
   
   formatDetection: {
     email: false,
@@ -72,25 +84,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_ZW',
-    url: 'https://homegrounds.co.zw',
-    title: 'Home Grounds Investments | Premium Renovations & Farm-Fresh Meats Zimbabwe',
-    description: 'Building Better Homes. Feeding Better Lives. Quality renovations and farm-to-table meats across Zimbabwe.',
-    siteName: 'Home Grounds Investments',
+    url: 'https://homegroundinvestments.co.zw',
+    title: 'Home Ground Investments | Quality Renovations & Premium Meats',
+    description: "Zimbabwe's trusted provider of quality home renovations and premium farm-fresh meats. Serving Harare, Bulawayo, Masvingo, and Chivhu.",
+    siteName: 'Home Ground Investments',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Home Grounds Investments - Renovations & Premium Meats Zimbabwe',
+        alt: 'Home Ground Investments - Growing value from the ground up',
       }
     ],
   },
   
   twitter: {
     card: 'summary_large_image',
-    title: 'Home Grounds Investments Zimbabwe',
-    description: 'Building Better Homes. Feeding Better Lives.',
-    images: ['/images/og-image.jpg'],
+    title: 'Home Ground Investments | Quality Renovations & Premium Meats',
+    description: "Zimbabwe's trusted provider of quality home renovations and premium farm-fresh meats.",
+    images: ['/og-image.png'],
+    creator: '@homegroundzw',
   },
   
   robots: {
@@ -108,8 +121,8 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
@@ -117,7 +130,7 @@ export const metadata: Metadata = {
     other: [
       {
         rel: 'mask-icon',
-        url: '/images/hg-logo-transparent.png',
+        url: '/favicon-512.png',
       },
     ],
   },
@@ -125,16 +138,24 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
   
   alternates: {
-    canonical: 'https://homegrounds.co.zw',
+    canonical: 'https://homegroundinvestments.co.zw',
   },
   
   verification: {
-    // Add your verification codes when available
+    // Add your verification codes when you set up Google Search Console
     // google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
+    // To get this: https://search.google.com/search-console
   },
   
   category: 'business',
+  
+  // Additional metadata for better SEO
+  other: {
+    'geo.region': 'ZW-HA',
+    'geo.placename': 'Harare',
+    'geo.position': '-17.8252;31.0335',
+    'ICBM': '-17.8252, 31.0335',
+  },
 }
 
 export default function RootLayout({
@@ -145,15 +166,33 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Additional meta tags */}
-        <meta name="theme-color" content="#f59e0b" />
+        {/* Theme and mobile app configuration */}
+        <meta name="theme-color" content="#E31E24" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Home Grounds" />
+        <meta name="apple-mobile-web-app-title" content="Home Ground" />
         
         {/* Preconnect to external domains for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://homegroundinvestments.co.zw" />
+        
+        {/* Geographic meta tags for local SEO */}
+        <meta name="geo.region" content="ZW-HA" />
+        <meta name="geo.placename" content="Harare, Zimbabwe" />
+        <meta name="geo.position" content="-17.8252;31.0335" />
+        <meta name="ICBM" content="-17.8252, 31.0335" />
+        
+        {/* Business/Organization info */}
+        <meta property="business:contact_data:street_address" content="Stand 2688 Crowhill Views Borrowdale" />
+        <meta property="business:contact_data:locality" content="Harare" />
+        <meta property="business:contact_data:region" content="Harare" />
+        <meta property="business:contact_data:postal_code" content="" />
+        <meta property="business:contact_data:country_name" content="Zimbabwe" />
+        <meta property="business:contact_data:phone_number" content="+263 78 028 9132" />
+        <meta property="business:contact_data:email" content="info@homegroundinvestments.co.zw" />
       </head>
       <body 
         className={`${outfit.variable} ${inter.variable} font-sans antialiased`}
