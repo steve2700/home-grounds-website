@@ -16,33 +16,35 @@ import {
   ArrowRight,
   Home,
   Beef,
+  Truck,
 } from "lucide-react"
 
-const locationData: Record<
+const locationData: Record
   string,
   {
     name: string
-    address: string
+    isHeadOffice?: boolean
+    deliveryArea: string
     phone: string
     email: string
     hours: { day: string; time: string }[]
     description: string
     services: string[]
-    isHeadOffice?: boolean
   }
 > = {
   harare: {
     name: "Harare",
-    address: "123 Samora Machel Avenue, Harare CBD",
+    isHeadOffice: true,
+    deliveryArea: "Harare and surrounding suburbs including Avondale, Borrowdale, Mt Pleasant, Greendale, and more",
     phone: "+263 78 028 9132",
-    email: "harare@homegrounds.co.zw",
+    email: "info@homegroundinvestments.co.zw",
     hours: [
       { day: "Monday - Friday", time: "8:00 AM - 5:00 PM" },
       { day: "Saturday", time: "8:00 AM - 1:00 PM" },
       { day: "Sunday", time: "Closed" },
     ],
     description:
-      "Our Harare branch serves the greater Harare metropolitan area, including Avondale, Borrowdale, Mt Pleasant, and surrounding suburbs. We offer full renovation services and our butchery is stocked with fresh meats daily.",
+      "Our head office and main branch located in Crowhill Views, Borrowdale. We serve the greater Harare metropolitan area with full renovation services and our butchery is stocked with fresh meats daily.",
     services: [
       "Residential Renovations",
       "Commercial Fit-Outs",
@@ -51,71 +53,78 @@ const locationData: Record<
       "Premium Beef & Pork",
       "Fresh Poultry",
       "Custom Butchery Services",
+      "Free Delivery in Harare",
     ],
   },
   bulawayo: {
     name: "Bulawayo",
-    address: "45 Main Street, Bulawayo CBD",
+    deliveryArea: "Bulawayo and Matabeleland region",
     phone: "+263 78 028 9132",
-    email: "bulawayo@homegrounds.co.zw",
+    email: "info@homegroundinvestments.co.zw",
     hours: [
       { day: "Monday - Friday", time: "8:00 AM - 5:00 PM" },
       { day: "Saturday", time: "8:00 AM - 1:00 PM" },
       { day: "Sunday", time: "Closed" },
     ],
     description:
-      "Serving Bulawayo and the Matabeleland region, our branch offers comprehensive renovation services and quality meats. We understand the unique architectural heritage of Bulawayo and specialize in both modern and heritage-sensitive renovations.",
+      "We deliver quality renovation services and premium meats to Bulawayo and the Matabeleland region. We understand the unique architectural heritage of Bulawayo and specialize in both modern and heritage-sensitive renovations.",
     services: [
       "Residential Renovations",
       "Heritage Property Restoration",
       "Commercial Renovations",
       "Property Maintenance",
-      "Premium Meats",
+      "Premium Meats Delivery",
       "Wholesale Supply",
     ],
   },
   masvingo: {
     name: "Masvingo",
-    address: "12 Robert Mugabe Way, Masvingo",
+    deliveryArea: "Masvingo and surrounding areas",
     phone: "+263 78 028 9132",
-    email: "masvingo@homegrounds.co.zw",
+    email: "info@homegroundinvestments.co.zw",
     hours: [
       { day: "Monday - Friday", time: "8:00 AM - 5:00 PM" },
       { day: "Saturday", time: "8:00 AM - 12:00 PM" },
       { day: "Sunday", time: "Closed" },
     ],
     description:
-      "Our Masvingo branch serves the historic city and surrounding areas. Close to Great Zimbabwe, we bring quality renovation services and farm-fresh meats to the Masvingo Province.",
+      "Serving the historic city of Masvingo and surrounding areas. Close to Great Zimbabwe, we bring quality renovation services and farm-fresh meats to the Masvingo Province through our reliable delivery service.",
     services: [
       "Residential Renovations",
       "Commercial Projects",
       "Property Maintenance",
-      "Premium Meats",
+      "Premium Meats Delivery",
       "Farm Partnerships",
     ],
   },
-  waterfalls: {
-    name: "Waterfalls (Head Office)",
-    address: "14A, 6th Avenue Parktown, Waterfalls, Harare",
+  chivhu: {
+    name: "Chivhu",
+    deliveryArea: "Chivhu and surrounding areas",
     phone: "+263 78 028 9132",
-    email: "info@homegrounds.co.zw",
+    email: "info@homegroundinvestments.co.zw",
     hours: [
       { day: "Monday - Friday", time: "8:00 AM - 5:00 PM" },
-      { day: "Saturday", time: "8:00 AM - 1:00 PM" },
-      { day: "Sunday", time: "Closed (Butchery: 8AM-1PM)" },
+      { day: "Saturday", time: "8:00 AM - 12:00 PM" },
+      { day: "Sunday", time: "Closed" },
     ],
     description:
-      "Our head office in Waterfalls is the hub of Home Grounds Investments operations. This is where our executive team is based and where we coordinate all nationwide projects. Our flagship butchery is also located here with the widest selection of premium meats.",
+      "We proudly serve Chivhu and the surrounding areas with our renovation services and premium meat delivery. Our team is committed to bringing quality products and services to your doorstep.",
     services: [
-      "All Renovation Services",
-      "Project Coordination",
-      "Executive Consultations",
-      "Full Butchery Services",
-      "Wholesale Operations",
-      "Corporate Inquiries",
+      "Residential Renovations",
+      "Commercial Projects",
+      "Property Maintenance",
+      "Premium Meats Delivery",
+      "Local Farm Partnerships",
     ],
-    isHeadOffice: true,
   },
+}
+
+// Physical head office address (used for all locations)
+const headOfficeAddress = {
+  street: "Stand 2688 Crowhill Views Borrowdale",
+  city: "Harare",
+  country: "Zimbabwe",
+  full: "Stand 2688 Crowhill Views Borrowdale, Harare, Zimbabwe",
 }
 
 export async function generateStaticParams() {
@@ -139,14 +148,14 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${location.name} Branch | Renovations & Meats`,
-    description: `Home Grounds Investments ${location.name} - ${location.description.slice(0, 150)}...`,
+    title: `${location.name} ${location.isHeadOffice ? "Head Office" : "Delivery"} | Renovations & Meats`,
+    description: `Home Ground Investments serving ${location.name} - ${location.description.slice(0, 150)}...`,
     alternates: {
-      canonical: `https://homegrounds.co.zw/locations/${city}`,
+      canonical: `https://homegroundinvestments.co.zw/locations/${city}`,
     },
     openGraph: {
-      title: `Home Grounds ${location.name} Branch`,
-      description: `Quality renovations and premium meats in ${location.name}`,
+      title: `Home Ground ${location.name} ${location.isHeadOffice ? "Head Office" : "Delivery"}`,
+      description: `Quality renovations and premium meats ${location.isHeadOffice ? "in" : "delivered to"} ${location.name}`,
     },
   }
 }
@@ -178,8 +187,13 @@ export default async function LocationPage({
                   Head Office
                 </span>
               )}
+              {!location.isHeadOffice && (
+                <span className="inline-block bg-[#E31E24] text-white text-sm font-medium px-3 py-1 rounded-full mb-4">
+                  Delivery Service Available
+                </span>
+              )}
               <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-                Home Grounds {location.name}
+                {location.isHeadOffice ? "Home Ground Investments" : `Serving ${location.name}`}
               </h1>
               <p className="text-lg md:text-xl text-gray-300 mb-8 text-pretty">
                 {location.description}
@@ -189,7 +203,7 @@ export default async function LocationPage({
                   <Link href="/quote">Get a Quote</Link>
                 </Button>
                 <Button asChild className="bg-[#8DC63F] hover:bg-[#7ab635]">
-                  <Link href="/order">Order Meats</Link>
+                  <Link href="/meats">Order Meats</Link>
                 </Button>
               </div>
             </div>
@@ -205,18 +219,31 @@ export default async function LocationPage({
                 {/* Location Details */}
                 <div>
                   <h2 className="text-2xl font-bold mb-6">
-                    Visit Our {location.name} Branch
+                    {location.isHeadOffice ? "Visit Our Head Office" : `Delivery to ${location.name}`}
                   </h2>
                   <div className="grid md:grid-cols-2 gap-6">
                     <Card>
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
-                          <MapPin className="h-6 w-6 text-[#E31E24] flex-shrink-0" />
+                          {location.isHeadOffice ? (
+                            <MapPin className="h-6 w-6 text-[#E31E24] flex-shrink-0" />
+                          ) : (
+                            <Truck className="h-6 w-6 text-[#E31E24] flex-shrink-0" />
+                          )}
                           <div>
-                            <h3 className="font-semibold mb-2">Address</h3>
+                            <h3 className="font-semibold mb-2">
+                              {location.isHeadOffice ? "Our Address" : "Delivery Area"}
+                            </h3>
                             <p className="text-muted-foreground">
-                              {location.address}
+                              {location.isHeadOffice
+                                ? headOfficeAddress.full
+                                : location.deliveryArea}
                             </p>
+                            {!location.isHeadOffice && (
+                              <p className="text-sm text-muted-foreground mt-2">
+                                Head Office: {headOfficeAddress.full}
+                              </p>
+                            )}
                           </div>
                         </div>
                       </CardContent>
@@ -227,7 +254,7 @@ export default async function LocationPage({
                           <Phone className="h-6 w-6 text-[#E31E24] flex-shrink-0" />
                           <div>
                             <h3 className="font-semibold mb-2">Phone</h3>
-                            <a
+                            
                               href={`tel:${location.phone.replace(/\s/g, "")}`}
                               className="text-muted-foreground hover:text-[#E31E24]"
                             >
@@ -243,9 +270,9 @@ export default async function LocationPage({
                           <Mail className="h-6 w-6 text-[#E31E24] flex-shrink-0" />
                           <div>
                             <h3 className="font-semibold mb-2">Email</h3>
-                            <a
+                            
                               href={`mailto:${location.email}`}
-                              className="text-muted-foreground hover:text-[#E31E24]"
+                              className="text-muted-foreground hover:text-[#E31E24] break-all"
                             >
                               {location.email}
                             </a>
@@ -258,14 +285,14 @@ export default async function LocationPage({
                         <div className="flex items-start gap-4">
                           <Clock className="h-6 w-6 text-[#E31E24] flex-shrink-0" />
                           <div>
-                            <h3 className="font-semibold mb-2">Hours</h3>
+                            <h3 className="font-semibold mb-2">Operating Hours</h3>
                             <div className="space-y-1 text-sm text-muted-foreground">
                               {location.hours.map((h) => (
                                 <div
                                   key={h.day}
                                   className="flex justify-between gap-4"
                                 >
-                                  <span>{h.day}</span>
+                                  <span className="font-medium">{h.day}</span>
                                   <span>{h.time}</span>
                                 </div>
                               ))}
@@ -280,7 +307,7 @@ export default async function LocationPage({
                 {/* Services Available */}
                 <div>
                   <h2 className="text-2xl font-bold mb-6">
-                    Services Available in {location.name}
+                    Services Available {location.isHeadOffice ? "at Our Head Office" : `in ${location.name}`}
                   </h2>
                   <div className="grid md:grid-cols-2 gap-4">
                     {location.services.map((service) => (
@@ -295,27 +322,59 @@ export default async function LocationPage({
                   </div>
                 </div>
 
-                {/* Map Placeholder */}
-                <div>
-                  <h2 className="text-2xl font-bold mb-6">Find Us</h2>
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                      <p className="text-muted-foreground">
-                        {location.address}
-                      </p>
-                      <a
-                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.address)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-[#E31E24] hover:underline mt-2"
-                      >
-                        Open in Google Maps
-                        <ArrowRight className="ml-1 h-4 w-4" />
-                      </a>
+                {/* Map - Only show for head office */}
+                {location.isHeadOffice && (
+                  <div>
+                    <h2 className="text-2xl font-bold mb-6">Find Us</h2>
+                    <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                        <p className="text-muted-foreground font-medium">
+                          {headOfficeAddress.full}
+                        </p>
+                        
+                          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(headOfficeAddress.full)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-[#E31E24] hover:underline mt-2"
+                        >
+                          Open in Google Maps
+                          <ArrowRight className="ml-1 h-4 w-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
+
+                {/* Delivery Info - Only show for non-head office locations */}
+                {!location.isHeadOffice && (
+                  <Card className="bg-muted/50">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <Truck className="h-8 w-8 text-[#E31E24] flex-shrink-0" />
+                        <div>
+                          <h3 className="text-lg font-semibold mb-2">
+                            Delivery Service
+                          </h3>
+                          <p className="text-muted-foreground mb-4">
+                            We deliver both renovation materials and premium meats to {location.name}. 
+                            Contact us to discuss your project or place an order for delivery.
+                          </p>
+                          <div className="flex flex-wrap gap-3">
+                            <Button asChild size="sm" className="bg-[#E31E24] hover:bg-[#c91a1f]">
+                              <Link href="/quote">Request Quote</Link>
+                            </Button>
+                            <Button asChild size="sm" variant="outline">
+                              <a href={`tel:${location.phone.replace(/\s/g, "")}`}>
+                                Call {location.phone}
+                              </a>
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
               </div>
 
               {/* Sidebar */}
@@ -327,7 +386,7 @@ export default async function LocationPage({
                       Renovation Inquiry
                     </h3>
                     <p className="text-white/90 mb-4">
-                      Looking to transform your space in {location.name}? Get a
+                      Looking to transform your space {location.isHeadOffice ? "in Harare" : `in ${location.name}`}? Get a
                       free consultation.
                     </p>
                     <Button
@@ -345,15 +404,14 @@ export default async function LocationPage({
                     <Beef className="h-8 w-8 mb-4" />
                     <h3 className="text-xl font-bold mb-2">Order Meats</h3>
                     <p className="text-white/90 mb-4">
-                      Fresh, quality meats delivered to your door in{" "}
-                      {location.name}.
+                      Fresh, quality meats {location.isHeadOffice ? "available at our butchery or " : ""}delivered to {location.isHeadOffice ? "your door in Harare" : location.name}.
                     </p>
                     <Button
                       asChild
                       variant="secondary"
                       className="w-full bg-white text-[#8DC63F] hover:bg-white/90"
                     >
-                      <Link href="/order">Place Order</Link>
+                      <Link href="/meats">Place Order</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -361,7 +419,7 @@ export default async function LocationPage({
                 {/* Other Locations */}
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="font-semibold mb-4">Other Locations</h3>
+                    <h3 className="font-semibold mb-4">We Also Serve</h3>
                     <div className="space-y-3">
                       {Object.entries(locationData)
                         .filter(([key]) => key !== city)
@@ -369,10 +427,15 @@ export default async function LocationPage({
                           <Link
                             key={key}
                             href={`/locations/${key}`}
-                            className="flex items-center justify-between p-3 rounded-lg hover:bg-muted transition-colors"
+                            className="flex items-center justify-between p-3 rounded-lg hover:bg-muted transition-colors group"
                           >
-                            <span className="font-medium">{loc.name}</span>
-                            <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                            <div>
+                              <span className="font-medium block">{loc.name}</span>
+                              {loc.isHeadOffice && (
+                                <span className="text-xs text-muted-foreground">Head Office</span>
+                              )}
+                            </div>
+                            <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-[#E31E24] transition-colors" />
                           </Link>
                         ))}
                     </div>
