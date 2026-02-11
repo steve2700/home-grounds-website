@@ -19,7 +19,7 @@ import {
   Truck,
 } from "lucide-react"
 
-const locationData: Record
+const locationData: Record<
   string,
   {
     name: string
@@ -249,7 +249,7 @@ export default async function LocationPage({
                           <Phone className="h-6 w-6 text-[#E31E24] flex-shrink-0" />
                           <div>
                             <h3 className="font-semibold mb-2">Phone</h3>
-                            
+                            <a
                               href={`tel:${location.phone.replace(/\s/g, "")}`}
                               className="text-muted-foreground hover:text-[#E31E24]"
                             >
@@ -265,7 +265,7 @@ export default async function LocationPage({
                           <Mail className="h-6 w-6 text-[#E31E24] flex-shrink-0" />
                           <div>
                             <h3 className="font-semibold mb-2">Email</h3>
-                            
+                            <a
                               href={`mailto:${location.email}`}
                               className="text-muted-foreground hover:text-[#E31E24] break-all"
                             >
@@ -325,7 +325,7 @@ export default async function LocationPage({
                         <p className="text-muted-foreground font-medium">
                           {headOfficeAddress.full}
                         </p>
-                        
+                        <a
                           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(headOfficeAddress.full)}`}
                           target="_blank"
                           rel="noopener noreferrer"
