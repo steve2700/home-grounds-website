@@ -104,6 +104,15 @@ const services = [
     categoryColor: "bg-pink-600",
     categoryIcon: Beef,
   },
+  {
+    title: "Livestock Management",
+    description: "Professional care, feeding programs, and health management services",
+    image: "/images/livestock-management.jpg",
+    href: "/livestock/management",
+    category: "Livestock",
+    categoryColor: "bg-emerald-600",
+    categoryIcon: Beef,
+  },
 ]
 
 export function FeaturedServices() {
