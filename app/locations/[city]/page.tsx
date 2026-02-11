@@ -119,7 +119,6 @@ const locationData: Record
   },
 }
 
-// Physical head office address (used for all locations)
 const headOfficeAddress = {
   street: "Stand 2688 Crowhill Views Borrowdale",
   city: "Harare",
@@ -178,7 +177,6 @@ export default async function LocationPage({
       <LocalBusinessSchema location={location.name} />
 
       <main>
-        {/* Hero Section */}
         <section className="bg-[#2D2D2D] py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
@@ -210,13 +208,10 @@ export default async function LocationPage({
           </div>
         </section>
 
-        {/* Contact & Details */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-3 gap-12">
-              {/* Main Content */}
               <div className="lg:col-span-2 space-y-12">
-                {/* Location Details */}
                 <div>
                   <h2 className="text-2xl font-bold mb-6">
                     {location.isHeadOffice ? "Visit Our Head Office" : `Delivery to ${location.name}`}
@@ -304,7 +299,6 @@ export default async function LocationPage({
                   </div>
                 </div>
 
-                {/* Services Available */}
                 <div>
                   <h2 className="text-2xl font-bold mb-6">
                     Services Available {location.isHeadOffice ? "at Our Head Office" : `in ${location.name}`}
@@ -322,7 +316,6 @@ export default async function LocationPage({
                   </div>
                 </div>
 
-                {/* Map - Only show for head office */}
                 {location.isHeadOffice && (
                   <div>
                     <h2 className="text-2xl font-bold mb-6">Find Us</h2>
@@ -346,7 +339,6 @@ export default async function LocationPage({
                   </div>
                 )}
 
-                {/* Delivery Info - Only show for non-head office locations */}
                 {!location.isHeadOffice && (
                   <Card className="bg-muted/50">
                     <CardContent className="p-6">
@@ -377,7 +369,6 @@ export default async function LocationPage({
                 )}
               </div>
 
-              {/* Sidebar */}
               <div className="space-y-6">
                 <Card className="bg-[#E31E24] text-white">
                   <CardContent className="p-6">
@@ -416,7 +407,6 @@ export default async function LocationPage({
                   </CardContent>
                 </Card>
 
-                {/* Other Locations */}
                 <Card>
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-4">We Also Serve</h3>
