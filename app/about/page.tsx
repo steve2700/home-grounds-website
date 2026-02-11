@@ -10,7 +10,7 @@ import { ArrowRight, Heart, Shield, Users, Target, CheckCircle } from "lucide-re
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Home Grounds Investments - Zimbabwe's trusted partner for quality renovations and premium meats since establishment.",
+  description: "Learn about Home Ground Investments - Zimbabwe's trusted partner for quality renovations and premium meats since establishment.",
 }
 
 const values = [
@@ -55,7 +55,7 @@ export default function AboutPage() {
           <div className="absolute inset-0">
             <Image
               src="/images/zimbabwe-farm.jpg"
-              alt="Home Grounds Investments Zimbabwe"
+              alt="Home Ground Investments Zimbabwe"
               fill
               className="object-cover"
               priority
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <div className="relative container mx-auto px-4 py-20">
             <div className="max-w-2xl text-background">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                About Home Grounds
+                About Home Ground
               </h1>
               <p className="text-xl text-background/90 mb-8 leading-relaxed">
                 Building better homes. Feeding better lives. Since 2015, we've been Zimbabwe's trusted partner for quality.
@@ -83,7 +83,7 @@ export default function AboutPage() {
                   Our Story
                 </h2>
                 <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                  Home Grounds Investments was founded with a simple vision: to provide Zimbabweans with quality services they can trust. What started as a small renovation company in Waterfalls has grown into a diversified business serving thousands of clients across Zimbabwe.
+                  Home Ground Investments was founded with a simple vision: to provide Zimbabweans with quality services they can trust. What started as a small renovation company in Waterfalls has grown into a diversified business serving thousands of clients across Zimbabwe.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   In 2019, we expanded into the meats industry, recognizing the need for quality, farm-fresh products in our communities. Today, we operate two thriving divisions that share the same commitment to quality, integrity, and customer satisfaction.
@@ -101,7 +101,7 @@ export default function AboutPage() {
               <div className="relative h-[400px] rounded-2xl overflow-hidden">
                 <Image
                   src="/images/home-exterior.jpg"
-                  alt="Home Grounds team at work"
+                  alt="Home Ground team at work"
                   fill
                   className="object-cover"
                 />
