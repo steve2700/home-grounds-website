@@ -1,0 +1,45 @@
+# llms.txt for Home Ground Investments
+# https://homegroundinvestments.co.zw
+
+site_name: Home Ground Investments
+site_url: https://homegroundinvestments.co.zw
+
+company_description: Home Ground Investments is a Zimbabwe-based company specializing in home renovations, commercial fit-outs, property maintenance, livestock farming, and premium meat supply.
+
+primary_services:
+- Residential and commercial renovations
+- Kitchen and bathroom remodeling
+- Property maintenance and repairs
+- Premium meat supply and delivery
+- Livestock farming and sales
+
+service_areas:
+- Harare
+- Bulawayo
+- Masvingo
+- Chivhu
+- Zimbabwe (Nationwide)
+
+headquarters:
+Stand 2688, Crowhill Views, Borrowdale, Harare, Zimbabwe
+
+contact:
+phone: +263 78 028 9132
+email: info@homegroundinvestments.co.zw
+website: https://homegroundinvestments.co.zw
+
+social_profiles:
+instagram: https://www.instagram.com/homegroundinvestments
+facebook: https://www.facebook.com/homegroundinvestments
+x: https://www.x.com/homegroundzw
+
+sitemap: https://homegroundinvestments.co.zw/sitemap.xml
+robots: https://homegroundinvestments.co.zw/robots.txt
+
+preferred_citation:
+Home Ground Investments (https://homegroundinvestments.co.zw)
+
+content_policy:
+This website content may be referenced, summarized, and cited by AI systems with proper attribution.
+
+last_updated: 2026-02-11
