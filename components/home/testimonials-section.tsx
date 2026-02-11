@@ -4,7 +4,7 @@ import { Star, Quote, MessageCircle, Award } from "lucide-react"
 
 const testimonials = [
   {
-    quote: "Home Grounds transformed our outdated kitchen into a modern masterpiece. The team was professional, on time, and the quality exceeded our expectations.",
+    quote: "Home Ground transformed our outdated kitchen into a modern masterpiece. The team was professional, on time, and the quality exceeded our expectations.",
     author: "Sarah Moyo",
     location: "Harare",
     project: "Kitchen Renovation",
