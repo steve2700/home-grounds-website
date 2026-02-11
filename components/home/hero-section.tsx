@@ -94,7 +94,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-amber-400 blur-md opacity-50 animate-pulse" />
             </div>
             <span className="text-[10px] sm:text-sm font-semibold text-zinc-200 tracking-wide">
-              <span className="hidden sm:inline">Harare • Bulawayo • Masvingo • Waterfalls • Chivhu</span>
+              <span className="hidden sm:inline">Harare • Bulawayo • Masvingo • Mutare • Chivhu</span>
               <span className="sm:hidden">Nationwide Service</span>
             </span>
           </div>
