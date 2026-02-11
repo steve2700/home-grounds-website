@@ -1,5 +1,5 @@
 # Home Grounds Investments - Robots.txt
-# https://homegrounds.co.zw
+# https://homegroundinvestments.co.zw
 
 # Allow all crawlers
 User-agent: *
@@ -12,7 +12,7 @@ Disallow: /_next/
 Disallow: /private/
 
 # Sitemaps
-Sitemap: https://homegrounds.co.zw/sitemap.xml
+Sitemap: https://homegroundinvestments.co.zw/sitemap.xml
 
 # Crawl-delay (optional)
 Crawl-delay: 1
