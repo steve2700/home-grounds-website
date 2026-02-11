@@ -62,7 +62,7 @@ const breedingPrograms = [
   {
     title: "Dairy Breeds",
     description: "Jersey and Holstein Friesian cattle producing high-quality milk for commercial dairy operations.",
-    image: "/images/",
+    image: "/images/cattle-breed-dairy.jpg",
     features: ["High Milk Yield", "Quality Production", "Proven Genetics", "Expert Management"],
   },
 ]
