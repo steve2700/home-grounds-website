@@ -204,7 +204,7 @@ export function Footer() {
                   </div>
                   <div className="text-zinc-300">
                     <div className="font-semibold text-white mb-1">Stand 2688</div>
-                    <div>Crowhill Views</div>
+                    <div>Crowhill Views Borrowdale</div>
                     <div>Harare, Zimbabwe</div>
                   </div>
                 </div>
