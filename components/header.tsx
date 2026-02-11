@@ -51,30 +51,28 @@ export function Header() {
 
   return (
     <>
-      {/* Enhanced global styles to fix dropdown visibility */}
       <style jsx global>{`
-        [data-radix-navigation-menu-viewport] {
-          background: white !important;
-          border: 1px solid #e4e4e7 !important;
-          box-shadow: 0 10px 38px -10px rgba(0, 0, 0, 0.35), 0 10px 20px -15px rgba(0, 0, 0, 0.2) !important;
-          z-index: 9999 !important;
-          position: relative !important;
-        }
-        
-        [data-radix-popper-content-wrapper] {
-          z-index: 9999 !important;
-          position: relative !important;
-        }
+     [data-radix-navigation-menu-viewport] {
+    background: white !important;
+    border: 1px solid #e4e4e7 !important;
+    box-shadow: 0 10px 38px -10px rgba(0, 0, 0, 0.35),
+      0 10px 20px -15px rgba(0, 0, 0, 0.2) !important;
+    z-index: 9999 !important;
+  }
 
-        [data-radix-navigation-menu-content] {
-          background: white !important;
-          z-index: 9999 !important;
-          position: relative !important;
-        }
-      `}</style>
+  [data-radix-popper-content-wrapper] {
+    z-index: 9999 !important;
+  }
 
-      <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white backdrop-blur-md shadow-sm">
-        <div className="container mx-auto flex h-20 items-center justify-between px-4">
+  [data-radix-navigation-menu-content] {
+    background: white !important;
+    z-index: 9999 !important;
+  }
+`}</style>
+
+      <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white backdrop-blur-md shadow-sm overflow-visible">
+        <div className="container mx-auto flex h-20 items-center justify-between px-4 overflow-visible">
+
           {/* Updated Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative h-16 w-44 sm:h-20 sm:w-56 lg:h-24 lg:w-64 mb-4 transition-transform group-hover:scale-105">
@@ -89,7 +87,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
+          <NavigationMenu className="hidden lg:flex" viewport={false}>
             <NavigationMenuList className="gap-2">
               {/* Renovations Dropdown */}
               <NavigationMenuItem>
