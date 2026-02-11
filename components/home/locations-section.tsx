@@ -1,45 +1,43 @@
 "use client"
 
 import Link from "next/link"
-import { MapPin, Phone, Clock, ArrowRight, Building2, Star, CheckCircle } from "lucide-react"
+import { MapPin, Phone, ArrowRight, Building2, Star, CheckCircle, Tractor } from "lucide-react"
 
 const locations = [
   {
     city: "Harare",
-    description: "Capital city headquarters serving greater Harare area",
+    address: "Stand 2688, Crowhill Views, Borrowdale",
+    description: "Headquarters serving greater Harare area",
     services: ["Full Renovations", "Meat Delivery", "Consultations"],
     phone: "+263 78 028 9132",
-    hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/harare",
+    isHeadquarters: true,
     color: "amber",
   },
   {
     city: "Bulawayo",
     description: "Serving Bulawayo and surrounding provinces",
-    services: ["Residential", "Commercial", "Meat Orders"],
+    services: ["Residential", "Commercial", "Pickup Available"],
     phone: "+263 78 028 9132",
-    hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/bulawayo",
     color: "blue",
   },
   {
     city: "Masvingo",
     description: "Southern region services and delivery",
-    services: ["Home Renovations", "Fresh Meats", "Maintenance"],
+    services: ["Home Renovations", "Fresh Meats", "Pickup Available"],
     phone: "+263 78 028 9132",
-    hours: "Mon-Fri: 8AM-5PM",
     href: "/locations/masvingo",
     color: "green",
   },
   {
-    city: "Waterfalls",
-    description: "Head office and main operations center",
-    services: ["All Services", "Butchery", "Walk-in Available"],
+    city: "Chivhu",
+    description: "Our farms and livestock operations center",
+    services: ["Livestock Sales", "Farm Visits", "Pickup Available"],
     phone: "+263 78 028 9132",
-    hours: "Mon-Sat: 7AM-6PM",
-    href: "/locations/waterfalls",
-    isHeadquarters: true,
-    color: "red",
+    href: "/locations/chivhu",
+    isFarmLocation: true,
+    color: "emerald",
   },
 ]
 
@@ -62,11 +60,11 @@ const colorClasses = {
     icon: 'text-green-600',
     iconBg: 'bg-green-50',
   },
-  red: {
-    glow: 'bg-gradient-to-r from-red-500 to-orange-500',
-    badge: 'bg-red-50 text-red-700 border-red-200',
-    icon: 'text-red-600',
-    iconBg: 'bg-red-50',
+  emerald: {
+    glow: 'bg-gradient-to-r from-emerald-500 to-green-500',
+    badge: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+    icon: 'text-emerald-600',
+    iconBg: 'bg-emerald-50',
   },
 }
 
@@ -76,7 +74,7 @@ export function LocationsSection() {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-100/30 to-transparent rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/3 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-red-100/30 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute bottom-1/3 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-emerald-100/30 to-transparent rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
@@ -111,15 +109,27 @@ export function LocationsSection() {
                   {/* Card */}
                   <div className={`relative h-full bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border ${
                     location.isHeadquarters 
-                      ? 'border-red-300 ring-2 ring-red-200' 
+                      ? 'border-amber-300 ring-2 ring-amber-200' 
+                      : location.isFarmLocation
+                      ? 'border-emerald-300 ring-2 ring-emerald-200'
                       : 'border-zinc-200/50'
                   }`}>
-                    {/* Head Office Badge */}
+                    {/* Headquarters Badge */}
                     {location.isHeadquarters && (
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white text-xs font-bold uppercase tracking-wide px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                        <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white text-xs font-bold uppercase tracking-wide px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
                           <Star className="h-3 w-3 fill-white" />
-                          Head Office
+                          Headquarters
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Farm Location Badge */}
+                    {location.isFarmLocation && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-emerald-600 to-green-600 text-white text-xs font-bold uppercase tracking-wide px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                          <Tractor className="h-3 w-3" />
+                          Our Farms
                         </div>
                       </div>
                     )}
@@ -127,10 +137,21 @@ export function LocationsSection() {
                     {/* City Icon & Name */}
                     <div className="flex items-center gap-3 mb-4 mt-2">
                       <div className={`${colors.iconBg} p-3 rounded-2xl`}>
-                        <Building2 className={`h-6 w-6 ${colors.icon}`} />
+                        {location.isFarmLocation ? (
+                          <Tractor className={`h-6 w-6 ${colors.icon}`} />
+                        ) : (
+                          <Building2 className={`h-6 w-6 ${colors.icon}`} />
+                        )}
                       </div>
                       <h3 className="text-2xl font-bold text-zinc-900">{location.city}</h3>
                     </div>
+
+                    {/* Address (for Harare) */}
+                    {location.address && (
+                      <div className="mb-4">
+                        <p className="text-xs text-zinc-500 font-medium">{location.address}</p>
+                      </div>
+                    )}
 
                     {/* Description */}
                     <p className="text-zinc-600 text-sm leading-relaxed mb-6">
@@ -144,12 +165,6 @@ export function LocationsSection() {
                           <Phone className="h-4 w-4 text-zinc-600" />
                         </div>
                         <span className="text-sm text-zinc-700 font-medium">{location.phone}</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="bg-zinc-100 p-2 rounded-lg">
-                          <Clock className="h-4 w-4 text-zinc-600" />
-                        </div>
-                        <span className="text-sm text-zinc-700 font-medium">{location.hours}</span>
                       </div>
                     </div>
 
@@ -185,7 +200,7 @@ export function LocationsSection() {
                 Complete Zimbabwe Coverage
               </h3>
               <p className="text-zinc-600 text-lg">
-                Same-day service in major cities, next-day delivery to surrounding areas
+                Delivery service in major cities, pickup available at all locations
               </p>
             </div>
 
@@ -195,23 +210,23 @@ export function LocationsSection() {
                 <div className="bg-amber-50 w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="h-7 w-7 text-amber-600" />
                 </div>
-                <h4 className="font-bold text-zinc-900 mb-2">Same-Day Service</h4>
-                <p className="text-sm text-zinc-600">Available in Harare, Bulawayo, and Waterfalls</p>
+                <h4 className="font-bold text-zinc-900 mb-2">Delivery Service</h4>
+                <p className="text-sm text-zinc-600">Available in Harare, Bulawayo, and Masvingo</p>
               </div>
 
               {/* Coverage Feature 2 */}
               <div className="text-center p-6 bg-white rounded-2xl border border-zinc-200">
-                <div className="bg-blue-50 w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-7 w-7 text-blue-600" />
+                <div className="bg-emerald-50 w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Tractor className="h-7 w-7 text-emerald-600" />
                 </div>
-                <h4 className="font-bold text-zinc-900 mb-2">Wide Reach</h4>
-                <p className="text-sm text-zinc-600">Serving all major provinces and cities</p>
+                <h4 className="font-bold text-zinc-900 mb-2">Farm Pickups</h4>
+                <p className="text-sm text-zinc-600">Visit our farms in Chivhu for livestock</p>
               </div>
 
               {/* Coverage Feature 3 */}
               <div className="text-center p-6 bg-white rounded-2xl border border-zinc-200">
-                <div className="bg-red-50 w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Phone className="h-7 w-7 text-red-600" />
+                <div className="bg-blue-50 w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Phone className="h-7 w-7 text-blue-600" />
                 </div>
                 <h4 className="font-bold text-zinc-900 mb-2">Easy Contact</h4>
                 <p className="text-sm text-zinc-600">One number for all locations and services</p>
