@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Beef, CheckCircle, Phone, MapPin, Sprout, Heart, TrendingUp, Shield, Truck, Award, Users, ChefHat, Droplet, Sun, Wind, Thermometer, Activity, Target, Stethoscope, Leaf, Package, Sparkles } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Premium Cattle Farming Zimbabwe | Beef & Dairy Production | Home Grounds Livestock",
+  title: "Premium Cattle Farming Zimbabwe | Beef & Dairy Production | Home Ground Livestock",
   description: "Professional cattle farming in Zimbabwe. Grass-fed beef cattle, dairy operations, pasture management. Expert breeding programs in Harare, Masvingo, Bulawayo. Tour our farms.",
 }
 
@@ -44,7 +44,7 @@ const breedingPrograms = [
   {
     title: "Brahman Cattle",
     description: "Heat-tolerant beef cattle perfect for Zimbabwe's climate. Superior weight gain and disease resistance.",
-    image: "/images/cattle-brahman.jpg",
+    image: "/images/cattle.jpg",
     features: ["Heat Resistant", "Fast Weight Gain", "Disease Resistant", "Premium Beef Quality"],
   },
   {
@@ -62,7 +62,7 @@ const breedingPrograms = [
   {
     title: "Dairy Breeds",
     description: "Jersey and Holstein Friesian cattle producing high-quality milk for commercial dairy operations.",
-    image: "/images/cattle-dairy.jpg",
+    image: "/images/",
     features: ["High Milk Yield", "Quality Production", "Proven Genetics", "Expert Management"],
   },
 ]
@@ -475,7 +475,7 @@ export default function CattlePage() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl blur opacity-20" />
                 <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-zinc-200">
                   <Image
-                    src="/images/cattle-grazing-zimbabwe.jpg"
+                    src="/images/hero_image_small.png"
                     alt="Cattle grazing on Home Grounds farms in Zimbabwe"
                     fill
                     className="object-cover"
