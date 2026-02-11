@@ -44,7 +44,7 @@ const breedingPrograms = [
   {
     title: "Boer Goats",
     description: "Premium meat goats with exceptional growth rates and carcass quality. South Africa's finest breed optimized for Zimbabwe's climate and terrain.",
-    image: "/images/goats-boer.jpg",
+    image: "/images/goats.jpg",
     features: ["Fast Growth Rate", "Superior Meat Quality", "Hardy & Adaptable", "High Market Value"],
   },
   {
@@ -62,7 +62,7 @@ const breedingPrograms = [
   {
     title: "Indigenous Breeds",
     description: "Traditional Zimbabwean goats including Mashona and Matabele breeds. Hardy, adapted to local conditions, and ideal for smallholder farming.",
-    image: "/images/goats-indigenous.jpg",
+    image: "/images/goats.jpg",
     features: ["Zimbabwe Native", "Disease Resistant", "Low Input Costs", "Cultural Value"],
   },
 ]
@@ -154,7 +154,7 @@ export default function GoatsPage() {
           {/* Background */}
           <div className="absolute inset-0">
             <Image
-              src="/images/goats-hero-zimbabwe.jpg"
+              src="/images/goats.jpg"
               alt="HomeGround Investments goat farming operations in Zimbabwe"
               fill
               className="object-cover"
