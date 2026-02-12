@@ -50,7 +50,7 @@ const breedingPrograms = [
   {
     title: "Landrace Pigs",
     description: "Long-bodied pigs producing premium bacon and offering outstanding maternal characteristics with large litters.",
-    image: "/images/pigs-landrace.jpg",
+    image: "/images/pigs.jpg",
     features: ["Premium Bacon", "High Fertility", "12+ Piglets/Litter", "Good Temperament"],
   },
   {
@@ -475,7 +475,7 @@ export default function PigFarmingPage() {
                 <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-rose-500 rounded-3xl blur opacity-20" />
                 <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-zinc-200">
                   <Image
-                    src="/images/pig-farming-zimbabwe.jpg"
+                    src="/images/pigs.jpg"
                     alt="Pig farming operations at HomeGround Investments in Zimbabwe"
                     fill
                     className="object-cover"
