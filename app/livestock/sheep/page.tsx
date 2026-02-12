@@ -154,7 +154,7 @@ export default function SheepPage() {
           {/* Background */}
           <div className="absolute inset-0">
             <Image
-              src="/images/sheep-hero-zimbabwe.jpg"
+              src="/images/livestock-sheep.jpg"
               alt="HomeGround Investments sheep farming operations in Zimbabwe"
               fill
               className="object-cover"
