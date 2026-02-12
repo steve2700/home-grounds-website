@@ -50,19 +50,19 @@ const breedingPrograms = [
   {
     title: "Dorper Sheep",
     description: "Top meat sheep breed known for fast growth and excellent meat quality. South African breed perfectly suited for Zimbabwe's conditions.",
-    image: "/images/sheep-dorper.jpg",
+    image: "/images/livestock-sheep.jpg",
     features: ["Fast Growth Rate", "Premium Meat Quality", "Hair Sheep - No Shearing", "Heat Tolerant"],
   },
   {
     title: "Dual-Purpose Breeds",
     description: "Corriedale and Suffolk breeds providing both quality wool and meat. Versatile sheep for diversified farming operations.",
-    image: "/images/sheep-dual-purpose.jpg",
+    image: "/images/livestock-sheep.jpg",
     features: ["Wool & Meat Production", "Good Mothering Ability", "Adaptable to Climate", "Efficient Grazers"],
   },
   {
     title: "Indigenous Breeds",
     description: "Traditional Zimbabwean sheep including Sabi and local breeds. Hardy, disease-resistant, and ideal for smallholder farming.",
-    image: "/images/sheep-indigenous.jpg",
+    image: "/images/livestock-sheep.jpg",
     features: ["Zimbabwe Native", "Disease Resistant", "Low Maintenance", "Cultural Heritage"],
   },
 ]
