@@ -56,13 +56,13 @@ const breedingPrograms = [
   {
     title: "Duroc Pigs",
     description: "Red-coated breed valued for excellent meat quality, marbling, and superior growth performance in Zimbabwe's climate.",
-    image: "/images/pigs-duroc.jpg",
+    image: "/images/pigs-duroc.webp",
     features: ["Marbled Meat", "Heat Tolerant", "Fast Growing", "Premium Quality"],
   },
   {
     title: "Commercial Crosses",
     description: "Hybrid vigor pigs combining the best traits of multiple breeds for optimal production and profitability.",
-    image: "/images/pigs-crosses.jpg",
+    image: "/images/pigs.jpg",
     features: ["Hybrid Vigor", "Best Performance", "Market Ready", "Consistent Quality"],
   },
 ]
@@ -154,7 +154,7 @@ export default function PigFarmingPage() {
           {/* Background */}
           <div className="absolute inset-0">
             <Image
-              src="/images/pig-farm-hero-zimbabwe.jpg"
+              src="/images/pigs.jpg"
               alt="HomeGround Investments pig farming operations in Zimbabwe"
               fill
               className="object-cover"
