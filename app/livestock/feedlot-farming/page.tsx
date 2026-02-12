@@ -62,14 +62,14 @@ const farmTypes = [
   {
     title: "Cattle Farms",
     description: "Comprehensive management of beef and dairy operations including breeding, feeding programs, and herd health",
-    image: "/images/management-cattle.jpg",
+    image: "/images/cattle.jpg",
     services: ["Herd Management", "Pasture Rotation", "Breeding Programs", "Health Protocols"],
     icon: Target,
   },
   {
     title: "Poultry Operations",
     description: "Expert oversight of broiler and layer farms with focus on biosecurity, production efficiency, and quality control",
-    image: "/images/management-poultry.jpg",
+    image: "/images/live-poultry.jpg",
     services: ["Flock Management", "Feed Programs", "Biosecurity", "Production Tracking"],
     icon: Target,
   },
@@ -221,7 +221,7 @@ export default function FarmManagementPage() {
           {/* Background */}
           <div className="absolute inset-0">
             <Image
-              src="/images/farm-management-hero-zimbabwe.jpg"
+              src="/images/cattle.jpg"
               alt="HomeGround Investments professional farm management services in Zimbabwe"
               fill
               className="object-cover"
