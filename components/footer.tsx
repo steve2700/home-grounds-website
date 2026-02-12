@@ -154,7 +154,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/meats/butchery" className="text-sm hover:text-red-400 transition-colors flex items-center gap-2 group">
+                <Link href="/meats/butchery-services" className="text-sm hover:text-red-400 transition-colors flex items-center gap-2 group">
                   <ArrowRight className="h-3 w-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                   <span className="group-hover:translate-x-1 transition-transform">Butchery Services</span>
                 </Link>
