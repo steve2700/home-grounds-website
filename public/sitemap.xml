@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://homegroundinvestments.co.zw/</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Core -->
+  <url><loc>https://homegroundinvestments.co.zw/about</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/contact</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/portfolio</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/quote</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/order</loc></url>
+
+  <!-- Hubs -->
+  <url><loc>https://homegroundinvestments.co.zw/renovations</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/meats</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/livestock</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/locations</loc></url>
+
+  <!-- Locations -->
+  <url><loc>https://homegroundinvestments.co.zw/locations/harare</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/locations/bulawayo</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/locations/masvingo</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/locations/chivhu</loc></url>
+
+  <!-- Renovations -->
+  <url><loc>https://homegroundinvestments.co.zw/renovations/residential</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/renovations/kitchen-renovations</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/renovations/bathroom-renovations</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/renovations/commercial</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/renovations/maintenance</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/renovations/sustainable-solutions</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/renovations/interior-remodeling</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/renovations/exterior-home-improvements</loc></url>
+
+  <!-- Meats -->
+  <url><loc>https://homegroundinvestments.co.zw/meats/beef</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/meats/pork</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/meats/poultry</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/meats/butchery-services</loc></url>
+
+  <!-- Livestock -->
+  <url><loc>https://homegroundinvestments.co.zw/livestock/cattle</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/livestock/goats</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/livestock/sheep</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/livestock/poultry</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/livestock/pigs</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/livestock/management</loc></url>
+
+</urlset>
