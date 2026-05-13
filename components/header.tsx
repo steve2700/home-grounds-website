@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
-import { Menu, Phone, MessageCircle, X, ChevronDown, Hammer, Beef, Sprout } from "lucide-react"
+import { Menu, Phone, MessageCircle, X, ChevronDown, Hammer } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const renovationsLinks = [
@@ -24,30 +24,12 @@ const renovationsLinks = [
   { title: "Maintenance", href: "/renovations/maintenance", description: "Property maintenance & repairs" },
   { title: "Sustainable Solutions", href: "/renovations/sustainable-solutions", description: "Solar, energy & smart home systems" },
   { title: "Interior Remodeling", href: "/renovations/interior-remodeling", description: "Modern interior improvements" },
-  { title: "Exterior Home Improvements", href: "/renovations/exterior-home-improvements", description: "Modern interior improvements" },  
-]
-
-const meatsLinks = [
-  { title: "Beef", href: "/meats/beef", description: "Premium grass-fed & grain-fed cuts" },
-  { title: "Pork", href: "/meats/pork", description: "Fresh pork cuts & sausages" },
-  { title: "Poultry", href: "/meats/poultry", description: "Farm-fresh chickens & portions" },
-  { title: "Butchery Services", href: "/meats/butchery", description: "Custom cutting & party packs" },
-]
-
-const livestockLinks = [
-  { title: "Cattle Farming", href: "/livestock/cattle", description: "Beef and dairy cattle operations" },
-  { title: "Goat Farming", href: "/livestock/goats", description: "Boer, dairy & indigenous goats" },
-  { title: "Sheep Farming", href: "/livestock/sheep", description: "Wool & meat sheep production" },
-  { title: "Poultry Farming", href: "/livestock/poultry", description: "Commercial chicken farming" },
-  { title: "Pig Farming", href: "/livestock/pigs", description: "Quality pork production" },
-  { title: "Farm Management", href: "/livestock/management", description: "Modern farming solutions" },
+  { title: "Exterior Home Improvements", href: "/renovations/exterior-home-improvements", description: "Modern exterior improvements" },
 ]
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [renovationsOpen, setRenovationsOpen] = useState(false)
-  const [meatsOpen, setMeatsOpen] = useState(false)
-  const [livestockOpen, setLivestockOpen] = useState(false)
 
   return (
     <>
@@ -73,7 +55,7 @@ export function Header() {
       <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white backdrop-blur-md shadow-sm overflow-visible">
         <div className="container mx-auto flex h-20 items-center justify-between px-4 overflow-visible">
 
-          {/* Updated Logo */}
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative h-16 w-44 sm:h-20 sm:w-56 lg:h-24 lg:w-64 mb-4 transition-transform group-hover:scale-105">
               <Image
@@ -91,13 +73,13 @@ export function Header() {
             <NavigationMenuList className="gap-2">
               {/* Renovations Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger 
+                <NavigationMenuTrigger
                   className="h-11 bg-transparent text-zinc-900 hover:bg-amber-50 hover:text-amber-900 data-[state=open]:bg-amber-50 data-[state=open]:text-amber-900 font-semibold"
                 >
                   <Hammer className="h-4 w-4 mr-2" />
                   Renovations
                 </NavigationMenuTrigger>
-                <NavigationMenuContent 
+                <NavigationMenuContent
                   className="!bg-white shadow-2xl border border-zinc-200"
                 >
                   <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2 bg-white">
@@ -123,88 +105,6 @@ export function Header() {
                           className="flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-amber-700 hover:gap-3 transition-all"
                         >
                           View All Renovation Services →
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              {/* Meats Dropdown */}
-              <NavigationMenuItem>
-                <NavigationMenuTrigger 
-                  className="h-11 bg-transparent text-zinc-900 hover:bg-red-50 hover:text-red-900 data-[state=open]:bg-red-50 data-[state=open]:text-red-900 font-semibold"
-                >
-                  <Beef className="h-4 w-4 mr-2" />
-                  Meats
-                </NavigationMenuTrigger>
-                <NavigationMenuContent 
-                  className="!bg-white shadow-2xl border border-zinc-200"
-                >
-                  <ul className="grid w-[450px] gap-3 p-6 md:w-[550px] md:grid-cols-2 bg-white">
-                    {meatsLinks.map((item) => (
-                      <li key={item.title}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={item.href}
-                            className="block select-none space-y-1 rounded-xl p-4 leading-none no-underline outline-none transition-colors hover:bg-red-50 hover:text-red-900 focus:bg-red-50 focus:text-red-900 border border-transparent hover:border-red-200 bg-white"
-                          >
-                            <div className="text-sm font-bold leading-none text-zinc-900">{item.title}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-zinc-600 mt-2">
-                              {item.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                    <li className="col-span-2 border-t border-zinc-200 pt-4 mt-2 bg-white">
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="/meats"
-                          className="flex items-center gap-2 text-sm font-bold text-red-600 hover:text-red-700 hover:gap-3 transition-all"
-                        >
-                          Order Premium Meats Now →
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              {/* Livestock Farming Dropdown - UPDATED */}
-              <NavigationMenuItem>
-                <NavigationMenuTrigger 
-                  className="h-11 bg-transparent text-zinc-900 hover:bg-green-50 hover:text-green-900 data-[state=open]:bg-green-50 data-[state=open]:text-green-900 font-semibold"
-                >
-                  <Sprout className="h-4 w-4 mr-2" />
-                  Livestock
-                </NavigationMenuTrigger>
-                <NavigationMenuContent 
-                  className="!bg-white shadow-2xl border border-zinc-200"
-                >
-                  <ul className="grid w-[450px] gap-3 p-6 md:w-[600px] md:grid-cols-2 bg-white">
-                    {livestockLinks.map((item) => (
-                      <li key={item.title}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={item.href}
-                            className="block select-none space-y-1 rounded-xl p-4 leading-none no-underline outline-none transition-colors hover:bg-green-50 hover:text-green-900 focus:bg-green-50 focus:text-green-900 border border-transparent hover:border-green-200 bg-white"
-                          >
-                            <div className="text-sm font-bold leading-none text-zinc-900">{item.title}</div>
-                            <p className="line-clamp-2 text-sm leading-snug text-zinc-600 mt-2">
-                              {item.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                    <li className="col-span-2 border-t border-zinc-200 pt-4 mt-2 bg-white">
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="/livestock"
-                          className="flex items-center gap-2 text-sm font-bold text-green-600 hover:text-green-700 hover:gap-3 transition-all"
-                        >
-                          Explore All Livestock Farming →
                         </Link>
                       </NavigationMenuLink>
                     </li>
@@ -239,13 +139,10 @@ export function Header() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* Desktop CTAs */}
+          {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Button asChild className="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-zinc-900 font-bold shadow-md hover:shadow-lg transition-all">
               <Link href="/quote">Get Quote</Link>
-            </Button>
-            <Button asChild className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold shadow-md hover:shadow-lg transition-all">
-              <Link href="/order">Order Meats</Link>
             </Button>
           </div>
 
@@ -340,76 +237,6 @@ export function Header() {
                         )}
                       </div>
 
-                      {/* Meats Accordion */}
-                      <div>
-                        <button
-                          onClick={() => setMeatsOpen(!meatsOpen)}
-                          className="flex w-full items-center justify-between py-2 text-lg font-bold text-zinc-900 hover:text-red-600 transition-colors"
-                        >
-                          <span className="flex items-center gap-2">
-                            <Beef className="h-5 w-5" />
-                            Meats
-                          </span>
-                          <ChevronDown className={cn("h-5 w-5 transition-transform", meatsOpen && "rotate-180")} />
-                        </button>
-                        {meatsOpen && (
-                          <div className="ml-4 mt-2 space-y-2 border-l-2 border-red-600 pl-4">
-                            {meatsLinks.map((item) => (
-                              <Link
-                                key={item.href}
-                                href={item.href}
-                                className="block py-1.5 text-zinc-600 hover:text-red-600 font-medium transition-colors"
-                                onClick={() => setMobileOpen(false)}
-                              >
-                                {item.title}
-                              </Link>
-                            ))}
-                            <Link
-                              href="/meats"
-                              className="block py-1.5 font-bold text-red-600 hover:text-red-700 transition-colors"
-                              onClick={() => setMobileOpen(false)}
-                            >
-                              Order Now →
-                            </Link>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Livestock Accordion - UPDATED */}
-                      <div>
-                        <button
-                          onClick={() => setLivestockOpen(!livestockOpen)}
-                          className="flex w-full items-center justify-between py-2 text-lg font-bold text-zinc-900 hover:text-green-600 transition-colors"
-                        >
-                          <span className="flex items-center gap-2">
-                            <Sprout className="h-5 w-5" />
-                            Livestock
-                          </span>
-                          <ChevronDown className={cn("h-5 w-5 transition-transform", livestockOpen && "rotate-180")} />
-                        </button>
-                        {livestockOpen && (
-                          <div className="ml-4 mt-2 space-y-2 border-l-2 border-green-600 pl-4">
-                            {livestockLinks.map((item) => (
-                              <Link
-                                key={item.href}
-                                href={item.href}
-                                className="block py-1.5 text-zinc-600 hover:text-green-600 font-medium transition-colors"
-                                onClick={() => setMobileOpen(false)}
-                              >
-                                {item.title}
-                              </Link>
-                            ))}
-                            <Link
-                              href="/livestock"
-                              className="block py-1.5 font-bold text-green-600 hover:text-green-700 transition-colors"
-                              onClick={() => setMobileOpen(false)}
-                            >
-                              Learn More →
-                            </Link>
-                          </div>
-                        )}
-                      </div>
-
                       <Link
                         href="/portfolio"
                         className="block py-2 text-lg font-bold text-zinc-900 hover:text-amber-600 transition-colors"
@@ -434,13 +261,10 @@ export function Header() {
                     </div>
                   </nav>
 
-                  {/* Mobile Footer CTAs */}
+                  {/* Mobile Footer CTA */}
                   <div className="p-4 border-t border-zinc-200 space-y-3 bg-zinc-50">
                     <Button asChild className="w-full h-12 bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-zinc-900 font-bold shadow-md">
                       <Link href="/quote" onClick={() => setMobileOpen(false)}>Get Quote</Link>
-                    </Button>
-                    <Button asChild className="w-full h-12 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold shadow-md">
-                      <Link href="/order" onClick={() => setMobileOpen(false)}>Order Meats</Link>
                     </Button>
                   </div>
                 </div>
