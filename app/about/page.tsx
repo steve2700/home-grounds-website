@@ -131,8 +131,8 @@ export default function AboutPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-primary/80 flex items-center justify-center">
-                    <h3 className="text-xl font-bold text-primary-foreground text-center px-4">Residential Renovations</h3>
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-zinc-900/90 to-transparent px-4 py-4">
+                    <h3 className="text-xl font-bold text-white">Residential Renovations</h3>
                   </div>
                 </div>
                 <CardContent className="p-6">
@@ -161,8 +161,8 @@ export default function AboutPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-primary/80 flex items-center justify-center">
-                    <h3 className="text-xl font-bold text-primary-foreground text-center px-4">Commercial Fit-Outs</h3>
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-zinc-900/90 to-transparent px-4 py-4">
+                    <h3 className="text-xl font-bold text-white">Commercial Fit-Outs</h3>
                   </div>
                 </div>
                 <CardContent className="p-6">
@@ -191,8 +191,8 @@ export default function AboutPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-primary/80 flex items-center justify-center">
-                    <h3 className="text-xl font-bold text-primary-foreground text-center px-4">Sustainable Solutions</h3>
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-zinc-900/90 to-transparent px-4 py-4">
+                    <h3 className="text-xl font-bold text-white">Sustainable Solutions</h3>
                   </div>
                 </div>
                 <CardContent className="p-6">
