@@ -5,14 +5,12 @@ import { Analytics } from '@vercel/analytics/next'
 import { OrganizationSchema } from '@/components/schema/organization-schema'
 import './globals.css'
 
-// Using Outfit for a bold, modern look (matches your hero design)
 const outfit = Outfit({ 
   subsets: ["latin"],
   variable: '--font-outfit',
   display: 'swap',
 })
 
-// Inter as a clean secondary font
 const inter = Inter({ 
   subsets: ["latin"],
   variable: '--font-inter',
@@ -23,11 +21,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://homegroundinvestments.co.zw'),
   
   title: {
-    default: 'Home Ground Investments | Quality Renovations & Premium Meats in Zimbabwe',
+    default: 'Home Ground Investments | Quality Renovations in Zimbabwe',
     template: '%s | Home Ground Investments'
   },
   
-  description: "Zimbabwe's trusted provider of quality home renovations, commercial fit-outs, and premium farm-fresh meats. Serving Harare, Bulawayo, Masvingo, and Chivhu. Growing value from the ground up.",
+  description: "Zimbabwe's trusted provider of quality home renovations and commercial fit-outs. Serving Harare, Bulawayo, Masvingo, and Mutare. Growing value from the ground up.",
   
   keywords: [
     // Renovation keywords - Zimbabwe focused
@@ -41,30 +39,21 @@ export const metadata: Metadata = {
     'commercial fit-outs zimbabwe',
     'home extensions harare',
     'property renovations masvingo',
-    'house renovation chivhu',
+    'house renovation mutare',
+    'interior remodeling harare',
+    'exterior home improvements zimbabwe',
+    'sustainable solutions harare',
+    'solar installation zimbabwe',
     'heritage property restoration bulawayo',
-    
-    // Meat & Butchery keywords
-    'premium meats zimbabwe',
-    'butchery harare',
-    'farm fresh meat zimbabwe',
-    'beef supplier harare',
-    'pork zimbabwe',
-    'fresh poultry harare',
-    'meat delivery zimbabwe',
-    'butchery services borrowdale',
-    'wholesale meat supplier zimbabwe',
-    'custom butchery harare',
-    'livestock zimbabwe',
-    
+
     // Location-specific
-    'borrowdale butchery',
     'crowhill views',
+    'borrowdale renovations',
     'harare renovations',
-    'bulawayo meats',
+    'bulawayo renovations',
     'masvingo construction',
-    'chivhu delivery',
-    
+    'mutare renovations',
+
     // Brand
     'home ground investments',
     'home grounds zimbabwe',
@@ -85,8 +74,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_ZW',
     url: 'https://homegroundinvestments.co.zw',
-    title: 'Home Ground Investments | Quality Renovations & Premium Meats',
-    description: "Zimbabwe's trusted provider of quality home renovations and premium farm-fresh meats. Serving Harare, Bulawayo, Masvingo, and Chivhu.",
+    title: 'Home Ground Investments | Quality Renovations in Zimbabwe',
+    description: "Zimbabwe's trusted provider of quality home renovations and commercial fit-outs. Serving Harare, Bulawayo, Masvingo, and Mutare.",
     siteName: 'Home Ground Investments',
     images: [
       {
@@ -100,8 +89,8 @@ export const metadata: Metadata = {
   
   twitter: {
     card: 'summary_large_image',
-    title: 'Home Ground Investments | Quality Renovations & Premium Meats',
-    description: "Zimbabwe's trusted provider of quality home renovations and premium farm-fresh meats.",
+    title: 'Home Ground Investments | Quality Renovations in Zimbabwe',
+    description: "Zimbabwe's trusted provider of quality home renovations and commercial fit-outs.",
     images: ['/og-image.png'],
     creator: '@homegroundzw',
   },
@@ -149,7 +138,6 @@ export const metadata: Metadata = {
   
   category: 'business',
   
-  // Additional metadata for better SEO
   other: {
     'geo.region': 'ZW-HA',
     'geo.placename': 'Harare',
@@ -167,7 +155,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Theme and mobile app configuration */}
-        <meta name="theme-color" content="#E31E24" />
+        <meta name="theme-color" content="#F59E0B" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Home Ground" />
