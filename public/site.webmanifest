@@ -1,11 +1,11 @@
 {
   "name": "Home Ground Investments",
   "short_name": "Home Ground",
-  "description": "Quality Renovations & Premium Meats in Zimbabwe",
+  "description": "Quality Renovations in Zimbabwe",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#E31E24",
+  "theme_color": "#F59E0B",
   "orientation": "portrait-primary",
   "icons": [
     {
