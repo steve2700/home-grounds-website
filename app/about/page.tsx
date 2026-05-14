@@ -10,14 +10,14 @@ import { ArrowRight, Heart, Shield, Users, Target, CheckCircle } from "lucide-re
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Home Ground Investments - Zimbabwe's trusted partner for quality renovations and premium meats since establishment.",
+  description: "Learn about Home Ground Investments - Zimbabwe's trusted partner for quality renovations and property improvements since 2015.",
 }
 
 const values = [
   {
     icon: Shield,
     title: "Quality First",
-    description: "We never compromise on quality. Every project, every product meets our high standards.",
+    description: "We never compromise on quality. Every project meets our high standards.",
   },
   {
     icon: Heart,
@@ -39,9 +39,9 @@ const values = [
 const timeline = [
   { year: "2015", event: "Company founded in Waterfalls, Harare" },
   { year: "2017", event: "Expanded to commercial renovations" },
-  { year: "2019", event: "Launched meats division" },
-  { year: "2021", event: "Opened Bulawayo branch" },
-  { year: "2023", event: "Expanded to Masvingo" },
+  { year: "2019", event: "Opened Bulawayo branch" },
+  { year: "2021", event: "Expanded sustainable solutions division" },
+  { year: "2023", event: "Expanded to Masvingo and Mutare" },
   { year: "2026", event: "Serving 500+ satisfied clients" },
 ]
 
@@ -54,7 +54,7 @@ export default function AboutPage() {
         <section className="relative min-h-[50vh] flex items-center">
           <div className="absolute inset-0">
             <Image
-              src="/images/zimbabwe-farm.jpg"
+              src="/images/hero-renovations.jpg"
               alt="Home Ground Investments Zimbabwe"
               fill
               className="object-cover"
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 About Home Ground
               </h1>
               <p className="text-xl text-background/90 mb-8 leading-relaxed">
-                Building better homes. Feeding better lives. Since 2015, we've been Zimbabwe's trusted partner for quality.
+                Building better homes and spaces. Since 2015, we've been Zimbabwe's trusted partner for quality renovations.
               </p>
             </div>
           </div>
@@ -83,10 +83,10 @@ export default function AboutPage() {
                   Our Story
                 </h2>
                 <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                  Home Ground Investments was founded with a simple vision: to provide Zimbabweans with quality services they can trust. What started as a small renovation company in Waterfalls has grown into a diversified business serving thousands of clients across Zimbabwe.
+                  Home Ground Investments was founded with a simple vision: to provide Zimbabweans with quality renovation services they can trust. What started as a small renovation company in Waterfalls has grown into a well-established business serving hundreds of clients across Zimbabwe.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  In 2019, we expanded into the meats industry, recognizing the need for quality, farm-fresh products in our communities. Today, we operate two thriving divisions that share the same commitment to quality, integrity, and customer satisfaction.
+                  Over the years, we've expanded from residential renovations into commercial fit-outs, sustainable solutions, and full property maintenance — always driven by the same commitment to craftsmanship and client satisfaction.
                 </p>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
                   We're proud to be a family-owned business that treats every customer like family. Our success is built on the trust of our community, and we work hard every day to earn that trust.
@@ -110,46 +110,73 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Two Divisions */}
+        {/* What We Do */}
         <section className="py-20 bg-muted">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Two Divisions, One Mission
+                What We Do
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Our diversified approach allows us to serve our community in multiple ways, all with the same commitment to quality.
+                From kitchens and bathrooms to full commercial fit-outs — quality craftsmanship across every project.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <Card className="border-0 shadow-lg overflow-hidden">
                 <div className="relative h-48">
                   <Image
-                    src="/images/hero-renovations.jpg"
-                    alt="Renovations division"
+                    src="/images/kitchen-renovation-harare.jpg"
+                    alt="Residential renovations"
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-primary/80 flex items-center justify-center">
-                    <h3 className="text-2xl font-bold text-primary-foreground">Renovations & Improvements</h3>
+                    <h3 className="text-xl font-bold text-primary-foreground text-center px-4">Residential Renovations</h3>
                   </div>
                 </div>
-                <CardContent className="p-8">
-                  <p className="text-muted-foreground mb-4">
-                    Professional renovation services for homes and businesses. From kitchen makeovers to complete commercial fit-outs, we deliver quality craftsmanship.
-                  </p>
+                <CardContent className="p-6">
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-sm">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Residential renovations</span>
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span>Kitchen & bathroom remodels</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Commercial fit-outs</span>
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span>Interior remodeling</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span>Exterior improvements</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 shadow-lg overflow-hidden">
+                <div className="relative h-48">
+                  <Image
+                    src="/images/commercial-renovation.jpg"
+                    alt="Commercial fit-outs"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-primary/80 flex items-center justify-center">
+                    <h3 className="text-xl font-bold text-primary-foreground text-center px-4">Commercial Fit-Outs</h3>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span>Office fit-outs</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span>Retail renovations</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                       <span>Property maintenance</span>
                     </li>
                   </ul>
@@ -159,31 +186,28 @@ export default function AboutPage() {
               <Card className="border-0 shadow-lg overflow-hidden">
                 <div className="relative h-48">
                   <Image
-                    src="/images/hero-meats.jpg"
-                    alt="Meats division"
+                    src="/images/hero-renovations.jpg"
+                    alt="Sustainable solutions"
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-secondary/80 flex items-center justify-center">
-                    <h3 className="text-2xl font-bold text-secondary-foreground">Meats & Butcher</h3>
+                  <div className="absolute inset-0 bg-primary/80 flex items-center justify-center">
+                    <h3 className="text-xl font-bold text-primary-foreground text-center px-4">Sustainable Solutions</h3>
                   </div>
                 </div>
-                <CardContent className="p-8">
-                  <p className="text-muted-foreground mb-4">
-                    Farm-to-table premium meats from Zimbabwe's finest farms. Quality beef, pork, and poultry with professional butchery services.
-                  </p>
+                <CardContent className="p-6">
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-sm">
-                      <CheckCircle className="h-4 w-4 text-secondary" />
-                      <span>Premium beef & pork</span>
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span>Solar installations</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
-                      <CheckCircle className="h-4 w-4 text-secondary" />
-                      <span>Fresh poultry</span>
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span>Energy-efficient systems</span>
                     </li>
                     <li className="flex items-center gap-2 text-sm">
-                      <CheckCircle className="h-4 w-4 text-secondary" />
-                      <span>Custom butchery</span>
+                      <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span>Smart home upgrades</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -226,7 +250,7 @@ export default function AboutPage() {
                 Our Journey
               </h2>
               <p className="text-background/70 text-lg max-w-2xl mx-auto">
-                From humble beginnings to serving thousands across Zimbabwe.
+                From humble beginnings to serving hundreds across Zimbabwe.
               </p>
             </div>
 
@@ -237,7 +261,7 @@ export default function AboutPage() {
                     <div className="flex-shrink-0 w-20 text-right">
                       <span className="text-primary font-bold text-xl">{item.year}</span>
                     </div>
-                    <div className="w-4 h-4 rounded-full bg-primary" />
+                    <div className="w-4 h-4 rounded-full bg-primary flex-shrink-0" />
                     <div className="flex-1">
                       <p className="text-background/90">{item.event}</p>
                     </div>
@@ -252,7 +276,7 @@ export default function AboutPage() {
         <section className="py-20 bg-primary">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-              Ready to Work With Us?
+              Ready to Transform Your Space?
             </h2>
             <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
               Join hundreds of satisfied clients across Zimbabwe.
