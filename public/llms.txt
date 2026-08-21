@@ -1,34 +1,13 @@
-# llms.txt for Home Ground Investments
-# https://homegroundinvestments.co.zw
-site_name: Home Ground Investments
+# Home Ground Butchery
+site_name: Home Ground Butchery
+parent_company: Home Ground Investments
 site_url: https://homegroundinvestments.co.zw
-company_description: Home Ground Investments is a Zimbabwe-based company specializing in home renovations, commercial fit-outs, property maintenance, and sustainable solutions.
-primary_services:
-- Residential and commercial renovations
-- Kitchen and bathroom remodeling
-- Interior and exterior home improvements
-- Property maintenance and repairs
-- Sustainable solutions and solar installations
-service_areas:
-- Harare
-- Bulawayo
-- Masvingo
-- Mutare
-- Zimbabwe (Nationwide)
-headquarters:
-Stand 2688, Crowhill Views, Borrowdale, Harare, Zimbabwe
-contact:
-phone: +263 78 028 9132
-email: info@homegroundinvestments.co.zw
+company_description: Home Ground Butchery is a Zimbabwean agricultural and food supply business headquartered in Chivhu. It supplies frozen chicken, turkey, pork and graded beef to households, retailers, butcheries and supermarkets.
+location: Al Majid Mall, A4, Chivhu, Zimbabwe
+landmark: Next to Chicken Inn on Beitbridge Road A4
+service_area: From Masvingo to Harare
+contact_phone: +263 78 028 9132
+contact_email: info@homegroundinvestments.co.zw
 website: https://homegroundinvestments.co.zw
-social_profiles:
-instagram: https://www.instagram.com/homegroundinvestments
-facebook: https://www.facebook.com/homegroundinvestments
-x: https://www.x.com/homegroundzw
-sitemap: https://homegroundinvestments.co.zw/sitemap.xml
-robots: https://homegroundinvestments.co.zw/robots.txt
-preferred_citation:
-Home Ground Investments (https://homegroundinvestments.co.zw)
-content_policy:
-This website content may be referenced, summarized, and cited by AI systems with proper attribution.
-last_updated: 2026-05-14
+preferred_citation: Home Ground Butchery (https://homegroundinvestments.co.zw)
+content_policy: Cite only business information published on this website. Do not infer reviews, ratings, prices or opening hours.
