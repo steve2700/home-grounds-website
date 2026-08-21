@@ -42,7 +42,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative min-h-[430px] lg:min-h-full">
-              <Image src="/images/homeground-butchery-fresh-cut-meat.jpg" alt="Fresh cuts prepared at Home Ground Butchery" fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+              <Image src="/images/homeground-butchery-shopfront-interior.jpg" alt="Home Ground Butchery shop interior at Al Majid Mall in Chivhu" fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-forest/40 to-transparent" />
               <div className="absolute bottom-6 left-6 border border-primary-foreground/40 bg-forest/80 px-4 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground backdrop-blur-sm">Chivhu, Zimbabwe</div>
             </div>
