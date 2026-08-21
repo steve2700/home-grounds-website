@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 
 const products = [
-  { name: "Beef", note: "Graded cuts for the family table and trade", image: "/images/livestock-cattle.jpg" },
+  { name: "Beef", note: "Graded cuts for the family table and trade", image: "/images/homeground-butchery-meat-selection-counter.jpg" },
   { name: "Poultry", note: "Frozen chicken and turkey for reliable supply", image: "/images/poultry.jpg" },
   { name: "Pork", note: "Farm raised pork and familiar favourites", image: "/images/pork.jpg" },
 ]
