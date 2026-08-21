@@ -1,34 +1,22 @@
-# llms.txt for Home Ground Investments
-# https://homegroundinvestments.co.zw
-site_name: Home Ground Investments
-site_url: https://homegroundinvestments.co.zw
-company_description: Home Ground Investments is a Zimbabwe-based company specializing in home renovations, commercial fit-outs, property maintenance, and sustainable solutions.
-primary_services:
-- Residential and commercial renovations
-- Kitchen and bathroom remodeling
-- Interior and exterior home improvements
-- Property maintenance and repairs
-- Sustainable solutions and solar installations
-service_areas:
-- Harare
-- Bulawayo
-- Masvingo
-- Mutare
-- Zimbabwe (Nationwide)
-headquarters:
-Stand 2688, Crowhill Views, Borrowdale, Harare, Zimbabwe
-contact:
-phone: +263 78 028 9132
-email: info@homegroundinvestments.co.zw
-website: https://homegroundinvestments.co.zw
-social_profiles:
-instagram: https://www.instagram.com/homegroundinvestments
-facebook: https://www.facebook.com/homegroundinvestments
-x: https://www.x.com/homegroundzw
-sitemap: https://homegroundinvestments.co.zw/sitemap.xml
-robots: https://homegroundinvestments.co.zw/robots.txt
-preferred_citation:
-Home Ground Investments (https://homegroundinvestments.co.zw)
-content_policy:
-This website content may be referenced, summarized, and cited by AI systems with proper attribution.
-last_updated: 2026-05-14
+# Home Ground Butchery
+
+Home Ground Butchery trades under Home Ground Investments, a Zimbabwean agricultural enterprise headquartered in Chivhu.
+
+## Location
+
+Al Majid Mall, A4, Chivhu, Zimbabwe, next to Chicken Inn.
+
+## Products and supply
+
+The business supplies farm fresh frozen chicken, turkey, pork, and graded beef. Home Ground Butchery serves walk in retail customers and commercial buyers including retailers, butcheries, and supermarkets. Distribution supports customers from Masvingo to Harare.
+
+## Contact
+
+Phone: +263 78 028 9132
+Email: info@homegroundinvestments.co.zw
+
+Official pages:
+- https://homegroundinvestments.co.zw/
+- https://homegroundinvestments.co.zw/about
+- https://homegroundinvestments.co.zw/locations/chivhu
+- https://homegroundinvestments.co.zw/contact
