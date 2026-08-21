@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Home Grounds Investments privacy policy. Learn how we collect, use, and protect your personal information.",
   alternates: {
-    canonical: "https://homegrounds.co.zw/privacy",
+    canonical: "https://homegroundinvestments.co.zw/privacy",
   },
 }
 
@@ -146,10 +146,10 @@ export default function PrivacyPage() {
                 <li>
                   <strong>Email:</strong>{" "}
                   <a
-                    href="mailto:privacy@homegrounds.co.zw"
+                    href="mailto:privacy@homegroundinvestments.co.zw"
                     className="text-[#E31E24] hover:underline"
                   >
-                    privacy@homegrounds.co.zw
+                    privacy@homegroundinvestments.co.zw
                   </a>
                 </li>
                 <li>

@@ -1,0 +1,23 @@
+import type { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowUpRight, Mail, MapPin, Phone, Truck } from "lucide-react"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import { LocalBusinessSchema } from "@/components/schema/organization-schema"
+
+export const metadata: Metadata = {
+  title: "Home Ground Butchery Chivhu | Al Majid Mall on the A4",
+  description: "Visit Home Ground Butchery at Al Majid Mall on the A4 in Chivhu, next to Chicken Inn. Retail customers and commercial buyers can enquire about chicken, turkey, pork and graded beef.",
+  alternates: { canonical: "https://homegroundinvestments.co.zw/locations/chivhu" },
+  openGraph: { title: "Home Ground Butchery in Chivhu", description: "Farm fresh meat supply from Al Majid Mall on the A4 in Chivhu.", images: [{ url: "/images/homeground-butchery-al-majid-mall-exterior.jpg", alt: "Home Ground Butchery at Al Majid Mall in Chivhu" }] },
+}
+
+export default function ChivhuLocationPage() {
+  return <><Header /><LocalBusinessSchema location="Chivhu" /><main>
+    <section className="bg-sand px-6 py-16 sm:px-10 lg:px-16 lg:py-24"><div className="mx-auto grid max-w-7xl items-end gap-10 lg:grid-cols-[1fr_0.8fr]"><div><p className="eyebrow">Find us in Chivhu</p><h1 className="mt-5 max-w-3xl font-display text-5xl font-semibold leading-[0.98] text-forest sm:text-6xl">Your local Home Ground for quality meat.</h1></div><p className="max-w-xl text-lg leading-8 text-forest/75">Visit Home Ground Butchery at Al Majid Mall on the A4, next to Chicken Inn. We welcome walk in shoppers and commercial buyers sourcing dependable supply.</p></div></section>
+    <section className="bg-background px-6 py-20 sm:px-10 lg:px-16 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"><div className="relative aspect-[4/3] overflow-hidden"><Image src="/images/homeground-butchery-al-majid-mall-exterior.jpg" alt="Home Ground Butchery exterior at Al Majid Mall on the A4 in Chivhu" fill priority sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover" /></div><div><p className="eyebrow">The Chivhu branch</p><h2 className="mt-4 font-display text-4xl font-semibold leading-tight text-forest">A convenient stop on the A4.</h2><p className="mt-6 text-base leading-7 text-muted-foreground">Our Chivhu butchery is part of Home Ground Investments, a Zimbabwean agricultural enterprise focused on sustainable livestock farming, commercial poultry production, and food supply.</p><p className="mt-5 text-base leading-7 text-muted-foreground">Come in for farm fresh frozen chicken, turkey, pork, and graded beef. If you buy for a retailer, butchery, supermarket, or other food business, contact our team about your requirements.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link href="https://www.google.com/maps/search/?api=1&query=Al+Majid+Mall+Chivhu+Zimbabwe" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground">Get directions <ArrowUpRight className="size-4" /></Link><Link href="/contact" className="inline-flex items-center justify-center gap-2 border border-border px-6 py-3.5 text-sm font-bold text-forest">Contact the team</Link></div></div></div></section>
+    <section className="bg-forest px-6 py-20 text-primary-foreground sm:px-10 lg:px-16 lg:py-24"><div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3"><div><MapPin className="size-7 text-wheat" /><h2 className="mt-5 font-display text-2xl font-semibold">Our address</h2><p className="mt-3 leading-7 text-primary-foreground/75">Al Majid Mall<br />A4, Chivhu<br />Next to Chicken Inn<br />Zimbabwe</p></div><div><Truck className="size-7 text-wheat" /><h2 className="mt-5 font-display text-2xl font-semibold">Retail and wholesale</h2><p className="mt-3 leading-7 text-primary-foreground/75">Walk in for household purchases or speak with us about high volume supply and distribution from Masvingo to Harare.</p></div><div><Phone className="size-7 text-wheat" /><h2 className="mt-5 font-display text-2xl font-semibold">Talk to Home Ground</h2><div className="mt-3 flex flex-col gap-2 text-primary-foreground/75"><a href="tel:+263780289132" className="hover:text-wheat">+263 78 028 9132</a><a href="mailto:info@homegroundinvestments.co.zw" className="flex items-center gap-2 hover:text-wheat"><Mail className="size-4" /> info@homegroundinvestments.co.zw</a></div></div></div></section>
+  </main><Footer /><WhatsAppButton /></>
+}

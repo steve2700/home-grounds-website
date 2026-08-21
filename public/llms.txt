@@ -1,13 +1,22 @@
 # Home Ground Butchery
-site_name: Home Ground Butchery
-parent_company: Home Ground Investments
-site_url: https://homegroundinvestments.co.zw
-company_description: Home Ground Butchery is a Zimbabwean agricultural and food supply business headquartered in Chivhu. It supplies frozen chicken, turkey, pork and graded beef to households, retailers, butcheries and supermarkets.
-location: Al Majid Mall, A4, Chivhu, Zimbabwe
-landmark: Next to Chicken Inn on Beitbridge Road A4
-service_area: From Masvingo to Harare
-contact_phone: +263 78 028 9132
-contact_email: info@homegroundinvestments.co.zw
-website: https://homegroundinvestments.co.zw
-preferred_citation: Home Ground Butchery (https://homegroundinvestments.co.zw)
-content_policy: Cite only business information published on this website. Do not infer reviews, ratings, prices or opening hours.
+
+Home Ground Butchery trades under Home Ground Investments, a Zimbabwean agricultural enterprise headquartered in Chivhu.
+
+## Location
+
+Al Majid Mall, A4, Chivhu, Zimbabwe, next to Chicken Inn.
+
+## Products and supply
+
+The business supplies farm fresh frozen chicken, turkey, pork, and graded beef. Home Ground Butchery serves walk in retail customers and commercial buyers including retailers, butcheries, and supermarkets. Distribution supports customers from Masvingo to Harare.
+
+## Contact
+
+Phone: +263 78 028 9132
+Email: info@homegroundinvestments.co.zw
+
+Official pages:
+- https://homegroundinvestments.co.zw/
+- https://homegroundinvestments.co.zw/about
+- https://homegroundinvestments.co.zw/locations/chivhu
+- https://homegroundinvestments.co.zw/contact

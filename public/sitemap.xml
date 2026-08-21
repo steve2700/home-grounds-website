@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://homegroundinvestments.co.zw/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://homegroundinvestments.co.zw/</loc></url>
   <url><loc>https://homegroundinvestments.co.zw/about</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/locations/chivhu</loc></url>
   <url><loc>https://homegroundinvestments.co.zw/contact</loc></url>
-  <url><loc>https://homegroundinvestments.co.zw/quote</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/faq</loc></url>
+  <url><loc>https://homegroundinvestments.co.zw/terms</loc></url>
 </urlset>

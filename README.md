@@ -1,30 +1,43 @@
-# Home Grounds Website
+# Home Ground Butchery
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Home Ground Butchery is the customer facing website for Home Ground Investments, a Zimbabwean agricultural enterprise headquartered in Chivhu.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/nyaruwatastewart27-gmailcoms-projects/v0-home-grounds-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/niFXwr1TPVc)
+## Business
 
-## Overview
+The business focuses on sustainable livestock farming, commercial poultry production, and supply of farm fresh frozen chicken, turkey, pork, and graded beef. Home Ground Butchery serves walk in customers from Al Majid Mall on the A4 in Chivhu, next to Chicken Inn. It also supports retailers, butcheries, supermarkets, and other commercial buyers with wholesale enquiries and distribution from Masvingo to Harare.
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Website routes
 
-## Deployment
+- `/` Home page
+- `/about` About Home Ground Investments and Home Ground Butchery
+- `/locations/chivhu` Chivhu address, directions, retail, and wholesale information
+- `/contact` Retail and commercial contact details
+- `/faq` Frequently asked questions
+- `/terms` Terms of use
 
-Your project is live at:
+## Local development
 
-**[https://vercel.com/nyaruwatastewart27-gmailcoms-projects/v0-home-grounds-website](https://vercel.com/nyaruwatastewart27-gmailcoms-projects/v0-home-grounds-website)**
+```bash
+npm install
+npm run dev
+```
 
-## Build your app
+Create a production build with:
 
-Continue building your app on:
+```bash
+npm run build
+npm run start
+```
 
-**[https://v0.app/chat/niFXwr1TPVc](https://v0.app/chat/niFXwr1TPVc)**
+## SEO principles
 
-## How It Works
+The site uses truthful local business copy, canonical metadata, descriptive image alt text, an XML sitemap, robots guidance, and JSON LD for the parent organization and Chivhu food establishment. Do not add unverified opening hours, ratings, reviews, prices, coordinates, statistics, or delivery promises.
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Contact
+
+Home Ground Butchery
+Al Majid Mall, A4, Chivhu, Zimbabwe
+Next to Chicken Inn
+
+Phone: +263 78 028 9132
+Email: info@homegroundinvestments.co.zw
