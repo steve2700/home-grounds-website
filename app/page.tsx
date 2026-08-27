@@ -206,7 +206,7 @@ export default function HomePage() {
           <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="/images/livestock-management.jpg"
+                src="/images/livestock-hero.jpg"
                 alt="Livestock management connected to Home Ground Investments in Zimbabwe"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
